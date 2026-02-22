@@ -151,12 +151,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- SECRET CODE SYSTEM ----
   const secretSequence = [];
   const TARGET_CODE = 'UMBRA';
+  const EXEC_CODE = 'REDLINE'; // Executive access only
 
   document.addEventListener('keydown', (e) => {
     secretSequence.push(e.key.toUpperCase());
     if (secretSequence.length > 20) secretSequence.shift();
 
     const currentStr = secretSequence.join('');
+    
+    // Check for executive code first (takes priority)
+    if (currentStr.includes(EXEC_CODE)) {
+      window.location.href = 'executive.html';
+      return;
+    }
+    
+    // Then check for standard classified access
     if (currentStr.includes(TARGET_CODE)) {
       window.location.href = 'classified.html';
     }

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>████████████ — EXÉCUTIF</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <style>
+    /* Page-specific overrides for executive page */
+    body {
+      background: #000000;
+    }
+
+    body::before {
+      opacity: 0.08;
+    }
+
+    .executive-header {
+      background: linear-gradient(180deg, rgba(255, 26, 26, 0.2) 0%, transparent 100%);
+      border-bottom: 3px solid var(--red-accent);
+      padding: 10rem 0 3rem;
+      text-align: center;
+    }
+
+    .executive-watermark {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-35deg);
+      font-family: var(--font-heading);
+      font-size: 10rem;
+      color: rgba(255, 26, 26, 0.05);
+      letter-spacing: 0.3em;
+      pointer-events: none;
+      z-index: 1;
+      white-space: nowrap;
+    }
+
+    .redacted-heavy {
+      background: #1a1a1a;
+      color: transparent;
+      cursor: not-allowed;
+      user-select: none;
+      padding: 0.2rem 0.5rem;
+      display: inline-block;
+      border-bottom: 2px dashed var(--red-accent);
+    }
+
+    .access-log-exec {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      color: var(--red-accent);
+      letter-spacing: 0.1em;
+      padding: 1.5rem;
+      background: rgba(255, 26, 26, 0.08);
+      border: 2px solid var(--red-accent);
+      margin-bottom: 2rem;
+      line-height: 2.2;
+    }
+
+    .executive-section {
+      background: rgba(0, 0, 0, 0.95);
+      border: 2px solid var(--red-accent);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .executive-section::before {
+      content: 'EXÉCUTIF';
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      font-family: var(--font-mono);
+      font-size: 0.5rem;
+      color: var(--red-accent);
+      background: rgba(255, 26, 26, 0.1);
+      padding: 0.4rem 1rem;
+      letter-spacing: 0.2em;
+      border-bottom: 2px solid var(--red-accent);
+      border-left: 2px solid var(--red-accent);
+    }
+
+    .heavily-redacted {
+      background: linear-gradient(90deg, transparent 0%, #1a1a1a 25%, #1a1a1a 75%, transparent 100%);
+      color: transparent;
+      min-height: 60px;
+      user-select: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .heavily-redacted::after {
+      content: '█████ █████████ ███████ ██████ █████';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--red-accent);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .executive-page .section {
+      position: relative;
+      z-index: 2;
+    }
+
+    .threat-indicator {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      background: rgba(255, 26, 26, 0.2);
+      border: 1px solid var(--red-accent);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--red-accent);
+      letter-spacing: 0.1em;
+      margin: 0.5rem 0;
+    }
+
+  </style>
+</head>
+<body class="executive-page">
+
+  <div class="executive-watermark">EXÉCUTIF</div>
+
+  <!-- NAVIGATION (minimal) -->
+  <nav class="nav" style="border-bottom-color: var(--red-accent);">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div>
+          <div class="nav-logo-text" style="color: var(--red-accent);">Fluxx</div>
+          <div class="nav-logo-sub" style="color: var(--red-accent);">ACCÈS EXÉCUTIF — NIVEAU ZÉRO</div>
+        </div>
+      </a>
+      <div class="nav-toggle">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="classified.html">Dossiers</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- EXECUTIVE HEADER -->
+  <section class="executive-header">
+    <div class="container">
+      <div class="fade-in">
+        <div class="threat-indicator">
+          NIVEAU D'ACCÈS : DIRECTEURS UNIQUEMENT — REDLINE PROTOCOL
+        </div>
+        <h1 style="font-size: 2.5rem; color: var(--red-accent); margin: 1.5rem 0 0.5rem;" class="glitch" data-text="SITUATION OPÉRATIONNELLE">SITUATION OPÉRATIONNELLE</h1>
+        <p style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray); letter-spacing: 0.2em;">
+          RAPPORTS CONFIDENTIELS — DIRECTEURS JUS██SQ & DA██OO UNIQUEMENT
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXECUTIVE ACCESS LOG -->
+  <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+    <div class="container">
+      <div class="access-log-exec fade-in">
+        > REDLINE PROTOCOL ACTIVÉ — SESSION EXÉCUTIVE<br>
+        > AUTORISÉS : JustMisq, dayfloo<br>
+        > SESSION ID: <span id="sessionId" style="font-weight: bold;"></span><br>
+        > TIMESTAMP: <span id="accessTime"></span><br>
+        > DONNÉES SENSIBLES — SÉCURITÉ MAXIMALE REQUISE<br>
+        > ⚠ ACCÈS NON-AUTORISÉ REMONTE AUTOMATIQUEMENT AU COMMANDEMENT
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: OPÉRATIONS ACTIVES -->
+  <section class="section">
+    <div class="container">
+      <div class="executive-section fade-in">
+        <div style="color: var(--red-accent); font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">
+          § I — OPÉRATIONS ACTIVES EN COURS (REDLINE PRIORITY)
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <div style="color: var(--red-primary); font-weight: bold; margin-bottom: 0.5rem;">OP. NIGHTFALL — Sécurisation Asset Stratégique (Secteur Kepler)</div>
+          <p style="color: var(--gray-light); font-size: 0.85rem; margin-bottom: 0.5rem;">
+            Status: PHASE 2 — En déploiement<br>
+            Lead: <span class="redacted-heavy">███████████</span> (Tier Alpha)<br>
+            Personnel assigné: 7 operatives<br>
+            Timeline: Extraction prévue J+14 (margin J+7)<br>
+            Budget alloué: 2.3M credits
+          </p>
+          <p style="color: var(--gray-light); font-size: 0.8rem; font-style: italic;">
+            Objectif: Neutraliser accès concurrent et établir contrôle informationnel sur asset value estimée 45M+ credits. Opération classée UMBRA — documentation externe minimale.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem; border-left: 3px solid var(--red-deep); padding-left: 1rem;">
+          <div style="color: var(--red-primary); font-weight: bold; margin-bottom: 0.5rem;">OP. VORTEX — Disruption Réseau Ennemi</div>
+          <p style="color: var(--gray-light); font-size: 0.85rem; margin-bottom: 0.5rem;">
+            Status: PHASE 1 — Intelligence gathering<br>
+            Lead: CI██R (Cyber Ops)<br>
+            Personnel assigné: 3 specialists<br>
+            Timeline: Initiation J+21<br>
+            Risque: MODÉRÉ (infrastructure blindée estimée)
+          </p>
+          <p style="color: var(--gray-light); font-size: 0.8rem; font-style: italic;">
+            Objectif: Compromission du réseau de <span class="redacted-heavy">███████████</span> pour créer confusion opérationnelle. Windows d'opportunité limité — coordination serré avec alliances.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <div style="color: var(--red-primary); font-weight: bold; margin-bottom: 0.5rem;">OP. PHANTOM RUN — Extraction Personnel VIP</div>
+          <p style="color: var(--gray-light); font-size: 0.85rem; margin-bottom: 0.5rem;">
+            Status: EN ATTENTE (Standby mode)<br>
+            Lead: <span class="redacted-heavy">████████</span><br>
+            Personnel: Response team 5-8 operatives<br>
+            Timeline: Activation possible immédiate<br>
+            Condition: Directive directe Commandement uniquement
+          </p>
+          <p style="color: var(--gray-light); font-size: 0.8rem; font-style: italic;">
+            Objectif: Extraction rapide de cible haut-profil. ROE classé SECRET — briefing verbal seul. Plausible deniability totale requise. Cette opération crée des implications long-terme — utiliser comme dernier recours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: ZONES ET ALLIANCES STRATÉGIQUES -->
+  <section class="section">
+    <div class="container">
+      <div class="executive-section fade-in" style="animation-delay: 0.1s;">
+        <div style="color: var(--red-accent); font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">
+          § II — ZONES OPÉRATIONNELLES & RELATIONS EXTERNES
+        </div>
+
+        <p style="color: var(--gray-light); margin-bottom: 1.5rem; font-weight: bold; color: var(--red-primary);">
+          SECTEUR KEPLER (Primary Operations Zone)
+        </p>
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          Zone grise où Fluxx a établi dominance complète. Présence physique: 12 operatives permanentes base cachée. Contrôle informationnel: ~85%. Ressources: infrastructure de communication robuste, safehouses, logistics hub. Alliance locale: Syndicat Independent (neutralité négociée — coût: 15K credits/mois).
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 1.5rem; font-weight: bold; color: var(--red-primary);">
+          SECTEUR VEGA (Contested Zone)
+        </p>
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          Théâtre d'opérations secondaire. Présence: Operatives en mission uniquement (pas de base permanente). Coalition locale (Coalition Vega) offre soutien tacite (intel, safe passage) mais demande deniability complète. Marges opérationnelles: étroites mais rentables. Contrats en cours: 3 (valeur totale 8.7M credits estimés).
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 1.5rem; font-weight: bold; color: var(--red-primary);">
+          SECTEUR ROSS (Gray Market Hub)
+        </p>
+        <p style="color: var(--gray-light);">
+          Zone neutre — marché pour assets, informations, recruitment. Pas d'opérations directives ici, mais présence commerciale importante. Contact principal: <span class="redacted-heavy">████████</span> — trustworthy mais toujours en perspective de profit personnel. Utiliser pour acquisitions équipement et recruitment spécialistes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: STRUCTURE INTERNE & CAPACITÉS -->
+  <section class="section">
+    <div class="container">
+      <div class="executive-section fade-in" style="animation-delay: 0.2s;">
+        <div style="color: var(--red-accent); font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">
+          § III — RESSOURCES INTERNES & HIÉRARCHIE OPÉRATIONNELLE
+        </div>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem; font-weight: bold;">
+          Commandement (JustMisq & dayfloo)
+        </p>
+        <p style="color: var(--gray-light); margin-bottom: 1.5rem;">
+          Stratégie globale, allocation ressources, relations diplomatiques. Vision partagée garantit continuité opérationnelle en cas d'incapacitation d'un leader. Communication sécurisée: Channel privé cryptage niveau militaire. Autorité décisionnelle: conjointe pour décisions >5M credits ou opérations UMBRA.
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem; font-weight: bold;">
+          Tier Opérationnel (ProfessorZundag + 2 Captains)
+        </p>
+        <p style="color: var(--gray-light); margin-bottom: 1.5rem;">
+          Exécution tactique, gestion personnel terrain, planification mission. ProfessorZundag supervise 12 operatives. Deux Captains (REEVES, NAKAMURA) gèrent chacun spécialisations (REEVES: Assaut/Force; NAKAMURA: Logistique/Support). Personnel total Tier opérationnel: ~20 individuals.
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem; font-weight: bold;">
+          Divisions Spécialisées
+        </p>
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          <strong style="color: var(--red-primary);">UMBRA Division:</strong> Estimated 5-7 operatives (exact number unknown even to standard staff). Mission: Opérations deniable, intelligence noire, operatives impossibles à attribuer. Leader: Spécial designation (likely SPECTRE ou autre). Rapporte directement commandement. Budget séparé — non documenté dans bilans standard.
+        </p>
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          <strong style="color: var(--red-primary);">Cyber Operations:</strong> 3 specialists (CHEN lead). Capability: Network intrusion, data harvesting, infrastructure sabotage. Actuellement: Support à OP. VORTEX. Limitation: Personnel bottleneck — besoin recruiter 2-3 specialists supplémentaires.
+        </p>
+        <p style="color: var(--gray-light); margin-bottom: 1.5rem;">
+          <strong style="color: var(--red-primary);">Logistics & Support:</strong> 8 personnel non-combat (HARTMANN command). Handling: Equipment maintenance, safe-house operation, supply chain, documentation cover. Criticité: ÉLEVÉE — any compromise here cascade vers tout.
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem; font-weight: bold;">
+          Ressources Matériques
+        </p>
+        <p style="color: var(--gray-light);">
+          • Equipment: Arsenal standard militaire + spécialisé (infiltration gear, electronic warfare). Estimated replacement cycle: 3 ans<br>
+          • Véhicules: 2 shuttles, 1 cargo transport (Kepler base), various civilian transports (deniability)<br>
+          • Infrastructure: 3 safe-houses (Kepler), 1 secure HQ (data center, backup systems), distributed servers (redundancy)<br>
+          • Finances: Liquid reserves ~12M credits, accounts distributed 5 jurisdictions. Monthly operational cost: ~1.2M credits.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: STRATÉGIE À LONG TERME -->
+  <section class="section">
+    <div class="container">
+      <div class="executive-section fade-in" style="animation-delay: 0.3s;">
+        <div style="color: var(--red-accent); font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">
+          § IV — OBJECTIFS STRATÉGIQUES 24-36 MOIS
+        </div>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          <strong style="color: var(--red-primary);">Objectif Primaire:</strong> Établir Fluxx comme "go-to" operator pour missions impossibles, maintenant deniability complète. Target: 40% augmentation contract value, 20% augmentation profit margin.
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          <strong style="color: var(--red-primary);">Objectif Secondaire:</strong> Renforcer présence Secteur Vega sans levée de suspicion. Création 2 safehouses additionnelles, augmentation personnel de 5. Timeline: 18 mois.
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          <strong style="color: var(--red-primary);">Objectif Tertaire:</strong> Développement cyber-warfare capacity. Recruitement 3-4 top-tier specialists. Investment: ~2M credits. ROI: Elevé mais timeline de payoff long (2+ ans avant monetization réelle).
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          <strong style="color: var(--red-primary);">Objectif UMBRA:</strong> Expansion UMBRA division à 10-12 operatives. Création tier "black ops" totalement séparé, zero crossover with standard operations. Permet portfolio contract plus diversifié sans exposing main organization.
+        </p>
+
+        <p style="color: var(--gray-light);">
+          <strong style="color: var(--red-primary);">Contingency:</strong> Si toute opération est compromise, avoir exit strategy pré-planifié. Liquidation assets, redirection personnel, restructuration sous nouveau identity. Preparation time: 3 mois avec warning, 1 mois emergency protocol.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: RAPPORT DIRECTEURS PRIVÉ -->
+  <section class="section">
+    <div class="container">
+      <div class="executive-section fade-in" style="animation-delay: 0.4s; border-left: 4px solid var(--red-accent);">
+        <div style="color: var(--red-accent); font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 1.5rem;">
+          § V — NOTES DIRECTEURS (CONFIDENTIEL ABSOLU)
+        </div>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          <strong>JustMisq → dayfloo:</strong>
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          Organisation est stable mais nous atteignons ceiling. Avec l'équipe qu'on a maintenant, on peut pas dépasser ~25M credits/an revenue sans augmenter exposure. UMBRA division est la solution — elle permet contracts qu'on peux pas taker publiquement. ProfessorZundag exécute bien, mais il faut garder eye sur lui. Il commence question certaines opérations. Rappelle-lui que operatives follow directive, pas les inverse.
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          Coalition Vega commence se fissurer. Leur internal politics crée opportunités pour nous mais aussi risques. Si situation collapse, Secteur Vega devient ungoverned space — option pour expansion mais aussi pour enemies. Monitor la situation, prepare plan B.
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 2rem;">
+          Biggest risk: Personnel retention. Operatives like money mais aussi like stability. Perte ProfessorZundag ou CHEN serait critical. Start thinking succession planning.
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          <strong>dayfloo → JustMisq:</strong>
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          Agree sur UMBRA expansion. Terrain is getting hot — UEE intelligence probably knows plus qu'on pense. NIGHTFALL operation va attirer attention unfortunately. Une fois complete, suggest we go dark pour 6-8 mois. Let attention disperse.
+        </p>
+
+        <p style="color: var(--gray-light); margin-bottom: 1rem;">
+          Cyber ops bottleneck est real problem. Without capacity, we're operating blind increasingly. Push recruitement harder — i don't care about price point, juste find people we can trust.
+        </p>
+
+        <p style="color: var(--red-accent); font-style: italic;">
+          « Fluxx a été fondée parce qu'on voyait les gaps. Les gaps existent toujours et ils grandissent. Question est: on reste proactive ou on devient reactive. Je préfère proactive. Toi? »
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" style="border-top: 2px solid var(--red-accent);">
+    <div class="container">
+      <div class="footer-symbol" style="color: var(--red-accent);">◆</div>
+      <div class="footer-content" style="color: var(--red-accent);">
+        FLUXX EXECUTIVE RECORDS — REDLINE PROTOCOL<br>
+        DERNIER ACCÈS ENREGISTRÉ : <span id="footerTime"></span><br>
+        <span class="secret-symbol">REDLINE:EXEC:ACTIVE:DIRECTORS-ONLY</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Generate session ID and timestamps
+    document.getElementById('sessionId').textContent = 'EX-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+    const now = new Date();
+    const timeStr = now.toISOString().replace(/[T-]/g, '.').substr(0, 16);
+    document.getElementById('accessTime').textContent = timeStr;
+    document.getElementById('footerTime').textContent = timeStr;
+
+    // Auto-redirect after 5 minutes of inactivity
+    let inactivityTimer;
+    function resetInactivityTimer() {
+      clearTimeout(inactivityTimer);
+      inactivityTimer = setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 5 * 60 * 1000);
+    }
+
+    document.addEventListener('mousemove', resetInactivityTimer);
+    document.addEventListener('keypress', resetInactivityTimer);
+    resetInactivityTimer();
+  </script>
+
+  <script src="js/core.js"></script>
+</body>
+</html>
