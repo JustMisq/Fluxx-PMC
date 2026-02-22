@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>███████ — CLASSIFIÉ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <style>
+    /* Page-specific overrides for classified page */
+    body {
+      background: #050505;
+    }
+
+    body::before {
+      opacity: 0.06;
+    }
+
+    .classified-header {
+      background: linear-gradient(180deg, rgba(139, 0, 0, 0.15) 0%, transparent 100%);
+      border-bottom: 2px solid var(--red-deep);
+      padding: 10rem 0 3rem;
+      text-align: center;
+    }
+
+    .classified-watermark {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-35deg);
+      font-family: var(--font-heading);
+      font-size: 8rem;
+      color: rgba(139, 0, 0, 0.03);
+      letter-spacing: 0.3em;
+      pointer-events: none;
+      z-index: 1;
+      white-space: nowrap;
+    }
+
+    .access-log {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--red-primary);
+      letter-spacing: 0.1em;
+      padding: 1rem;
+      background: rgba(139, 0, 0, 0.05);
+      border: 1px solid rgba(139, 0, 0, 0.2);
+      margin-bottom: 2rem;
+      line-height: 2;
+    }
+
+    .threat-meter {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .threat-bar {
+      flex: 1;
+      height: 4px;
+      background: var(--gray-dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .threat-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #ff6600, var(--red-accent));
+      transition: width 1s ease;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .profile-card {
+      background: rgba(10, 10, 10, 0.9);
+      border: 1px solid rgba(196, 30, 58, 0.3);
+      padding: 2rem;
+      position: relative;
+    }
+
+    .profile-card::before {
+      content: 'CLASSIFIÉ';
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      color: var(--red-primary);
+      background: rgba(139, 0, 0, 0.2);
+      padding: 0.3rem 0.8rem;
+      letter-spacing: 0.15em;
+      border-bottom: 1px solid rgba(196, 30, 58, 0.3);
+      border-left: 1px solid rgba(196, 30, 58, 0.3);
+    }
+
+    .internal-note {
+      background: rgba(139, 0, 0, 0.05);
+      border-left: 3px solid var(--red-deep);
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--gray-light);
+      line-height: 1.8;
+    }
+
+    .classified-page .section {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body class="classified-page">
+
+  <div class="classified-watermark">CLASSIFIÉ</div>
+
+  <!-- NAVIGATION (no visible link to this page) -->
+  <nav class="nav" style="border-bottom-color: rgba(196, 30, 58, 0.4);">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div>
+          <div class="nav-logo-text" style="color: var(--red-primary);">Fluxx</div>
+          <div class="nav-logo-sub" style="color: var(--red-deep);">ACCÈS CLASSIFIÉ — SIGMA</div>
+        </div>
+      </a>
+      <div class="nav-toggle">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="charter.html">Charte</a></li>
+        <li><a href="members.html">Membres</a></li>
+        <li><a href="dossiers.html">Dossiers</a></li>
+        <li><a href="archives.html">Archives</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CLASSIFIED HEADER -->
+  <section class="classified-header">
+    <div class="container">
+      <div class="fade-in">
+        <div class="classified-badge level-2" style="font-size: 0.8rem; padding: 0.4rem 1.5rem; margin-bottom: 1.5rem;">
+          NIVEAU D'ACCÈS : SIGMA — YEUX SEULS
+        </div>
+        <h1 style="font-size: 2.2rem; color: var(--red-primary); margin-bottom: 0.5rem;" class="glitch" data-text="DOSSIER UMBRA">DOSSIER UMBRA</h1>
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray); letter-spacing: 0.2em;">
+          ÉVALUATION UEE INTERNE — RAPPORT DE MENACE — DIFFUSION INTERDITE
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS LOG -->
+  <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+    <div class="container">
+      <div class="access-log fade-in">
+        > ACCÈS AUTORISÉ — SIGNATURE VÉRIFIÉE<br>
+        > SESSION ID: <span id="sessionId"></span><br>
+        > TIMESTAMP: <span id="accessTime"></span><br>
+        > NIVEAU: SIGMA — TOUTES DONNÉES DÉCLASSIFIÉES POUR CETTE SESSION<br>
+        > ⚠ TOUTE COPIE OU TRANSMISSION DE CE DOCUMENT EST UNE VIOLATION DU CODE PÉNAL UEE §447.B
+      </div>
+    </div>
+  </section>
+
+  <!-- UEE ASSESSMENT -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="document fade-in" style="border-color: rgba(196, 30, 58, 0.3);">
+        <div class="document-header" style="border-bottom-color: var(--red-primary);">
+          <div class="document-classification" style="color: var(--red-accent);">CLASSIFICATION : SIGMA — CONFIDENTIEL DÉFENSE — YEUX SEULS</div>
+          <div class="document-id">Réf: UEE/INTEL/SIGMA/2954-FL-001</div>
+          <h2 class="document-title" style="color: var(--red-primary);">Évaluation de Menace : Entité « FLUXX »</h2>
+          <div class="document-meta">
+            <dl>
+              <dt>Autorité émettrice</dt>
+              <dd>UEE Naval Intelligence — Section Menaces Non-Étatiques</dd>
+            </dl>
+            <dl>
+              <dt>Date</dt>
+              <dd>2954.10.28</dd>
+            </dl>
+            <dl>
+              <dt>Analyste principal</dt>
+              <dd>CDR. L. Morrison — Badge #NI-4471</dd>
+            </dl>
+            <dl>
+              <dt>Niveau de menace</dt>
+              <dd style="color: var(--red-accent);">ÉLEVÉ — CATÉGORIE ALPHA</dd>
+            </dl>
+          </div>
+        </div>
+
+        <!-- EXECUTIVE SUMMARY -->
+        <div class="document-section">
+          <div class="document-section-title" style="color: var(--red-primary);">Résumé Exécutif</div>
+          <p style="color: var(--gray-light);">
+            L'entité désignée « FLUXX » représente l'une des menaces non-étatiques les plus sophistiquées actuellement actives dans l'espace UEE. Contrairement aux organisations criminelles conventionnelles ou aux milices factionnelles, Fluxx opère avec un niveau de discipline, de coordination et d'intelligence opérationnelle comparable aux meilleurs corps militaires étatiques.
+          </p>
+          <p style="color: var(--gray-light);">
+            Ce qui rend Fluxx particulièrement préoccupant n'est pas sa capacité offensive — bien qu'elle soit considérable — mais son <em style="color: var(--red-primary);">invisibilité institutionnelle</em>. En dépit de multiples observations, interceptions et analyses, nous ne disposons d'aucune preuve légalement exploitable de la moindre activité criminelle. Chaque opération est conçue pour être plausiblement niable.
+          </p>
+          <div class="internal-note">
+            <strong>NOTE DE L'ANALYSTE :</strong> J'ai passé 18 mois sur ce dossier. Fluxx n'est pas un groupe criminel qui se cache bien. C'est une organisation qui a intégré l'invisibilité dans son ADN opérationnel. Ils ne violent pas la loi — ils opèrent dans les espaces où la loi n'existe pas encore. Et quand la loi arrive, ils sont déjà ailleurs.
+          </div>
+        </div>
+
+        <!-- THREAT ASSESSMENT -->
+        <div class="document-section">
+          <div class="document-section-title" style="color: var(--red-primary);">Évaluation de Menace Détaillée</div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray-light); margin-bottom: 0.3rem;">
+              <span>Capacité militaire</span>
+              <span class="text-red">9.2 / 10</span>
+            </div>
+            <div class="threat-meter">
+              <div class="threat-bar">
+                <div class="threat-fill" style="width: 92%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray-light); margin-bottom: 0.3rem;">
+              <span>Sophistication informationnelle</span>
+              <span class="text-red">9.7 / 10</span>
+            </div>
+            <div class="threat-meter">
+              <div class="threat-bar">
+                <div class="threat-fill" style="width: 97%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray-light); margin-bottom: 0.3rem;">
+              <span>Résilience organisationnelle</span>
+              <span class="text-red">8.8 / 10</span>
+            </div>
+            <div class="threat-meter">
+              <div class="threat-bar">
+                <div class="threat-fill" style="width: 88%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray-light); margin-bottom: 0.3rem;">
+              <span>Capacité de pénétration</span>
+              <span class="text-red">9.4 / 10</span>
+            </div>
+            <div class="threat-meter">
+              <div class="threat-bar">
+                <div class="threat-fill" style="width: 94%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray-light); margin-bottom: 0.3rem;">
+              <span>Imprévisibilité</span>
+              <span class="text-red">7.5 / 10</span>
+            </div>
+            <div class="threat-meter">
+              <div class="threat-bar">
+                <div class="threat-fill" style="width: 75%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="internal-note">
+            <strong>NOTE :</strong> Le score d'imprévisibilité est paradoxalement bas. Fluxx est <em>prévisible</em> dans sa méthodologie — ils servent toujours leurs intérêts. Ce qui est imprévisible, c'est notre capacité à déterminer quels sont ces intérêts à un moment donné.
+          </div>
+        </div>
+
+        <!-- DIVISION UMBRA -->
+        <div class="document-section">
+          <div class="document-section-title" style="color: var(--red-accent);">Division UMBRA — Évaluation Spéciale</div>
+          <p style="color: var(--gray-light);">
+            La « Division UMBRA » est le nom de code attribué par nos analystes à une sous-unité de Fluxx dont l'existence n'est pas officiellement reconnue par l'organisation. Les preuves de son existence sont circonstancielles mais convergentes.
+          </p>
+          <p style="color: var(--gray-light);">
+            D'après nos analyses, UMBRA est responsable des opérations que Fluxx ne peut pas associer publiquement à son image de « PMC professionnelle ». Cela inclut :
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-dark); font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
+              <span class="text-red">▸</span> Opérations de déstabilisation ciblée
+            </li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-dark); font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
+              <span class="text-red">▸</span> Élimination sélective de cibles d'intérêt stratégique
+            </li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-dark); font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
+              <span class="text-red">▸</span> Infiltration de réseaux ennemis (et potentiellement alliés)
+            </li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-dark); font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
+              <span class="text-red">▸</span> Guerre informationnelle et manipulation de données
+            </li>
+            <li style="padding: 0.5rem 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
+              <span class="text-red">▸</span> Opérations « drapeau noir » — attribution impossible par conception
+            </li>
+          </ul>
+          <div class="internal-note">
+            <strong>NOTE PERSONNELLE — CDR. MORRISON :</strong> Si UMBRA existe réellement dans la forme décrite, alors nous avons affaire à l'équivalent d'un service de renseignement souverain opérant sans les contraintes d'un gouvernement. Pas de supervision parlementaire. Pas de comptes à rendre. Pas de limites politiques. Juste l'objectif, et les moyens de l'atteindre.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASSIFIED PROFILES -->
+  <div class="section-divider" style="background: linear-gradient(90deg, transparent, var(--red-primary), transparent);"></div>
+  <section class="section">
+    <div class="container">
+      <div class="fade-in" style="margin-bottom: 2rem;">
+        <h2 style="color: var(--red-primary); margin-bottom: 0.5rem;">Profils Classifiés</h2>
+        <div class="document-classification" style="color: var(--red-accent);">SIGMA — PROFILS DE MENACE INDIVIDUELS</div>
+      </div>
+
+      <div class="profile-grid">
+
+        <!-- PROFILE: VOSS -->
+        <div class="profile-card fade-in">
+          <h3 style="font-size: 1rem; color: var(--red-primary); margin-bottom: 0.5rem;">VOSS</h3>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray); margin-bottom: 1rem;">
+            DÉSIGNATION : DIRECTEUR — FONDATEUR<br>
+            NIVEAU DE MENACE : <span class="text-red">CRITIQUE</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--gray-light); line-height: 1.7;">
+            Identité réelle inconnue. Aucune correspondance biométrique dans les bases UEE. L'individu désigné « Voss » a émergé dans les registres de renseignement en 2946 — un an avant la constitution formelle de Fluxx. Son passé avant cette date est vierge. Pas d'historique militaire, commercial, ou civil.
+          </p>
+          <div class="internal-note" style="margin-top: 1rem;">
+            Évaluation psychologique (distante) : Personnalité méthodique, probablement formée au renseignement. Aucun trait narcissique visible — ce qui est atypique pour un dirigeant d'organisation paramilitaire. Voss ne cherche pas le pouvoir pour le pouvoir. Voss cherche le contrôle. La différence est significative.
+          </div>
+        </div>
+
+        <!-- PROFILE: SPECTRE -->
+        <div class="profile-card fade-in" style="animation-delay: 0.1s;">
+          <h3 style="font-size: 1rem; color: var(--red-primary); margin-bottom: 0.5rem;">SPECTRE</h3>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray); margin-bottom: 1rem;">
+            DÉSIGNATION : OPÉRATEUR UMBRA-02<br>
+            NIVEAU DE MENACE : <span class="text-red">ÉLEVÉ</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--gray-light); line-height: 1.7;">
+            Callsign utilisé dans 23 interceptions de communications. Profil opérationnel suggère un spécialiste en opérations clandestines et infiltration de longue durée. A été corrélé à au moins 4 incidents dans des systèmes différents sur une période de 3 mois — impliquant soit une mobilité exceptionnelle, soit l'existence de plusieurs individus utilisant le même callsign.
+          </p>
+          <div class="internal-note" style="margin-top: 1rem;">
+            L'hypothèse « callsign partagé » est la plus préoccupante. Cela signifierait que UMBRA a développé des protocoles d'identité interchangeables — un opérateur peut devenir un autre à tout moment. L'individu n'existe pas. Seule la fonction existe.
+          </div>
+        </div>
+
+        <!-- PROFILE: KESSLER -->
+        <div class="profile-card fade-in" style="animation-delay: 0.2s;">
+          <h3 style="font-size: 1rem; color: var(--red-primary); margin-bottom: 0.5rem;">KESSLER</h3>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray); margin-bottom: 1rem;">
+            DÉSIGNATION : SOUS-DIRECTEUR — TACTIQUE<br>
+            NIVEAU DE MENACE : <span class="text-red">ÉLEVÉ</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--gray-light); line-height: 1.7;">
+            Seul membre du commandement Fluxx avec un historique partiellement traçable. Correspondance de signature biométrique (74% de confiance) avec un ancien officier de la Navy, section opérations spéciales, supposément décédé en 2947 dans un incident classifié au système Vega.
+          </p>
+          <div class="internal-note" style="margin-top: 1rem;">
+            Si l'identification est correcte, Kessler a simulé sa mort pour rejoindre Fluxx — ou a été recruté pendant l'incident. Dans les deux cas, cela implique une capacité de falsification de données à un niveau qui devrait être impossible pour une entité non-étatique.
+          </div>
+        </div>
+
+        <!-- PROFILE: UNKNOWN -->
+        <div class="profile-card fade-in" style="animation-delay: 0.3s; border-color: rgba(196, 30, 58, 0.5);">
+          <h3 style="font-size: 1rem; color: var(--red-accent); margin-bottom: 0.5rem;">UMBRA-03</h3>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray); margin-bottom: 1rem;">
+            DÉSIGNATION : INCONNUE<br>
+            NIVEAU DE MENACE : <span style="color: var(--red-accent);">INDÉTERMINÉ — DONNÉES INSUFFISANTES</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--gray-light); line-height: 1.7;">
+            Existence déduite uniquement de l'analyse de schémas de communication. Aucune transmission directe interceptée. Aucune observation. Aucune trace biométrique. UMBRA-03 est un fantôme dans les données — un espace négatif que nos algorithmes détectent mais ne peuvent pas définir.
+          </p>
+          <div class="internal-note" style="margin-top: 1rem;">
+            Soit UMBRA-03 n'existe pas et nos modèles prédictifs sont défaillants, soit il existe et représente le niveau d'invisibilité le plus avancé que nous ayons jamais documenté. Je ne sais pas quelle option est la plus inquiétante.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TACTICAL ANALYSIS -->
+  <div class="section-divider" style="background: linear-gradient(90deg, transparent, var(--red-primary), transparent);"></div>
+  <section class="section">
+    <div class="container">
+      <div class="document fade-in" style="border-color: rgba(196, 30, 58, 0.3);">
+        <div class="document-header" style="border-bottom-color: var(--red-primary);">
+          <div class="document-classification" style="color: var(--red-accent);">ANALYSES TACTIQUES — USAGE INTERNE UNIQUEMENT</div>
+          <h2 class="document-title" style="color: var(--red-primary);">Conclusions et Recommandations</h2>
+        </div>
+
+        <div class="document-section">
+          <div class="document-section-title" style="color: var(--red-primary);">Analyse Opérationnelle</div>
+          <p style="color: var(--gray-light);">
+            Fluxx opère selon un modèle que nous qualifions de « précision systémique ». Chaque opération documentée (ou suspectée) présente les caractéristiques suivantes :
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+            <li style="padding: 0.4rem 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
+              <span class="text-red">1.</span> Un objectif unique et clairement défini — pas de mission secondaire improvisée
+            </li>
+            <li style="padding: 0.4rem 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
+              <span class="text-red">2.</span> Une fenêtre d'exécution minimale — présence réduite au strict nécessaire
+            </li>
+            <li style="padding: 0.4rem 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
+              <span class="text-red">3.</span> Aucune trace exploitable — nettoyage digital et physique systématique
+            </li>
+            <li style="padding: 0.4rem 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
+              <span class="text-red">4.</span> Déni plausible intégré — chaque action peut être expliquée autrement
+            </li>
+            <li style="padding: 0.4rem 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
+              <span class="text-red">5.</span> Évaluation continue — ils s'adaptent plus vite que nos protocoles de réponse
+            </li>
+          </ul>
+        </div>
+
+        <div class="document-section">
+          <div class="document-section-title" style="color: var(--red-primary);">Recommandations au Commandement</div>
+          <p style="color: var(--gray-light);">
+            <span class="text-red">R-1 :</span> <strong>Ne pas engager directement.</strong> Fluxx n'est pas un ennemi conventionnel. Une confrontation ouverte donnerait à l'organisation un motif de représailles et un argument de victimisation publique. Leur façade de PMC légitime est leur meilleur bouclier — ne pas leur fournir de raison de l'activer.
+          </p>
+          <p style="color: var(--gray-light);">
+            <span class="text-red">R-2 :</span> <strong>Surveillance passive renforcée.</strong> Augmenter les capacités de monitoring sur les corridors identifiés. Concentrer les ressources SIGINT sur les schémas de communication NOEUD.
+          </p>
+          <p style="color: var(--gray-light);">
+            <span class="text-red">R-3 :</span> <strong>Infiltration de longue durée.</strong> Recommandation controversée mais nécessaire. Nous devons placer un actif à l'intérieur de l'organisation. Probabilité de succès estimée : 12%. Risque de compromission : élevé.
+          </p>
+          <p style="color: var(--gray-light);">
+            <span class="text-red">R-4 :</span> <strong>Accepter la coexistence conditionnelle.</strong> Tant que les activités de Fluxx ne menacent pas directement les intérêts fondamentaux de l'UEE, la confrontation est contre-productive. La réduction de piraterie dans leurs zones d'opération est un bénéfice collatéral que nous ne pouvons pas ignorer.
+          </p>
+          <div class="internal-note" style="border-left-color: var(--red-accent);">
+            <strong>NOTE FINALE — CDR. MORRISON :</strong><br><br>
+            On m'a demandé une conclusion claire. La voici :<br><br>
+            Fluxx n'est pas une menace que nous pouvons éliminer. C'est une menace que nous devons <em>comprendre</em>. Et je ne suis pas certain que nous en soyons capables.<br><br>
+            Ils ne sont pas chaotiques. Ils ne sont pas idéologiques. Ils ne sont pas irrationnels. Ce sont peut-être les adversaires les plus rationnels que le renseignement UEE ait jamais documentés. Et c'est précisément ce qui les rend dangereux.<br><br>
+            Un ennemi motivé par la haine fait des erreurs. Un ennemi motivé par la cupidité est prévisible. Un ennemi motivé par <em>l'efficacité pure</em>... est un instrument. Et les instruments ne s'arrêtent pas. Ils fonctionnent. Jusqu'à ce qu'ils ne soient plus nécessaires.<br><br>
+            La question que personne ne veut poser : <em style="color: var(--red-primary);">nécessaires pour qui ?</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <div class="section-divider" style="background: linear-gradient(90deg, transparent, var(--red-accent), transparent);"></div>
+  <section class="section" style="text-align: center;">
+    <div class="container">
+      <div class="fade-in">
+        <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--red-primary); letter-spacing: 0.2em; line-height: 2.5;">
+          « L'instrument n'a pas d'allégeance.<br>
+          L'instrument n'a pas de conscience.<br>
+          L'instrument fonctionne. »
+        </p>
+        <p style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--gray-dark); margin-top: 2rem; letter-spacing: 0.1em;">
+          — Intercepté. Source : réseau NOEUD. Non attribué.
+        </p>
+        <div style="margin-top: 3rem;">
+          <p style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--gray-dark); letter-spacing: 0.15em;">
+            FIN DU DOCUMENT — CLASSIFICATION SIGMA<br>
+            DESTRUCTION AUTOMATIQUE APRÈS LECTURE : <span class="text-red" id="countdown">DÉSACTIVÉE (SESSION ACTIVE)</span>
+          </p>
+        </div>
+        <div style="margin-top: 2rem;">
+          <a href="index.html" class="btn" style="border-color: var(--red-primary); color: var(--red-primary);">RETOUR AU RÉSEAU PUBLIC</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" style="border-top-color: var(--red-deep);">
+    <div class="container">
+      <div class="footer-symbol" style="color: var(--red-primary);">◆</div>
+      <div class="footer-content" style="color: var(--gray);">
+        DOCUMENT UEE NAVAL INTELLIGENCE — SECTION MENACES NON-ÉTATIQUES<br>
+        CLASSIFICATION SIGMA — REPRODUCTION INTERDITE<br>
+        FLUXX EST OBSERVÉ. FLUXX LE SAIT. ET ILS CONTINUENT.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/core.js"></script>
+  <script>
+    // Generate session ID
+    document.getElementById('sessionId').textContent =
+      'SIG-' + Math.random().toString(36).substr(2, 8).toUpperCase() + '-' + Date.now().toString(36).toUpperCase();
+
+    // Set access timestamp
+    document.getElementById('accessTime').textContent =
+      new Date().toISOString().replace('T', ' ').substr(0, 19) + ' UTC';
+
+    // Glitch effect on page load
+    setTimeout(() => {
+      document.body.style.filter = 'hue-rotate(5deg) brightness(1.1)';
+      setTimeout(() => {
+        document.body.style.filter = 'none';
+      }, 100);
+    }, 2000);
+
+    // Random noise bursts
+    setInterval(() => {
+      if (Math.random() > 0.85) {
+        document.body.style.setProperty('--scanline-opacity', '0.12');
+        setTimeout(() => {
+          document.body.style.setProperty('--scanline-opacity', '0.06');
+        }, 80);
+      }
+    }, 4000);
+  </script>
+</body>
+</html>

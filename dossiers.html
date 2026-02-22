@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLUXX — Dossiers UEE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div>
+          <div class="nav-logo-text">Fluxx</div>
+          <div class="nav-logo-sub">Private Military Contractor</div>
+        </div>
+      </a>
+      <div class="nav-toggle">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="charter.html">Charte</a></li>
+        <li><a href="members.html">Membres</a></li>
+        <li><a href="dossiers.html" class="active">Dossiers</a></li>
+        <li><a href="archives.html">Archives</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="section" style="padding-top: 10rem;">
+    <div class="container">
+      <div class="fade-in">
+        <div class="status-bar">
+          <div class="indicator"></div>
+          <span>DOSSIERS PUBLICS — SOURCE : REGISTRES UEE</span>
+        </div>
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Dossiers UEE</h1>
+        <p class="hero-subtitle" style="margin-bottom: 0;">Rapports, incidents et observations — Documents publics</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- DISCLAIMER -->
+  <section class="section" style="padding: 2rem 0;">
+    <div class="container">
+      <div class="fade-in" style="background: var(--black-light); border: 1px solid var(--gray-dark); padding: 1.5rem 2rem; border-left: 3px solid var(--gray-mid);">
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray-light); letter-spacing: 0.05em; line-height: 1.8;">
+          <strong style="color: var(--gray-light);">AVERTISSEMENT :</strong> Les documents présentés ci-dessous sont extraits des registres publics de l'United Empire of Earth (UEE). Ils constituent des observations, rapports d'incidents et logs de communication non classifiés. Ces documents ne constituent ni une preuve ni une accusation. Ils sont fournis à titre informatif uniquement.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOSSIER LIST -->
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="fade-in" style="margin-bottom: 2rem;">
+        <h2 style="margin-bottom: 0.5rem;">Rapports d'Incidents</h2>
+        <div class="document-classification">Source : Bureau des Affaires Civiles — UEE Navy Intelligence Liaison</div>
+      </div>
+
+      <div class="dossier-list">
+
+        <!-- DOSSIER 1 -->
+        <div class="dossier-item fade-in" onclick="this.querySelector('.dossier-expand')?.classList.toggle('open')">
+          <div class="dossier-id">UEE-IR<br>2954-0847</div>
+          <div class="dossier-content">
+            <div class="dossier-title">Incident de Convoi — Corridor Stanton-Pyro</div>
+            <div class="dossier-excerpt">
+              Un convoi commercial de 3 vaisseaux cargo a signalé la présence d'une escorte non identifiée dans le corridor Stanton-Pyro, secteur 7G. L'escorte a maintenu une formation parallèle pendant 47 minutes avant de disparaître des capteurs. Aucune communication. Aucune agression. Le convoi est arrivé intact.
+            </div>
+            <div class="dossier-expand" style="margin-top: 1rem; display: none; border-top: 1px solid var(--gray-dark); padding-top: 1rem;">
+              <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray-light); line-height: 1.8;">
+                <strong>Note du rapporteur :</strong> Les signatures capteurs correspondent à un profil de configuration militaire. Cependant, aucun groupe enregistré ne correspond à la formation observée. Le propriétaire du convoi a refusé de commenter. Lors d'un entretien ultérieur, le pilote principal a mentionné avoir « reçu une recommandation d'itinéraire » d'une source non spécifiée avant le départ.<br><br>
+                <strong>Conclusion :</strong> Incident classé — Aucune suite judiciaire. Observation consignée.
+              </p>
+              <div class="coordinates" style="margin-top: 0.5rem; font-size: 0.6rem;">SECTEUR 7G // 47.2°N 8.5°E EQUIV</div>
+            </div>
+          </div>
+          <div class="dossier-date">2954.09.12</div>
+        </div>
+
+        <!-- DOSSIER 2 -->
+        <div class="dossier-item fade-in" onclick="this.querySelector('.dossier-expand')?.classList.toggle('open')">
+          <div class="dossier-id">UEE-IR<br>2954-0623</div>
+          <div class="dossier-content">
+            <div class="dossier-title">Anomalie de Communication — Station Relais Clio</div>
+            <div class="dossier-excerpt">
+              La station relais Clio (système Stanton) a enregistré une série de transmissions chiffrées sur une fréquence non-standard pendant une période de 6 heures. Les transmissions n'ont pas pu être décodées. Le schéma de fréquence ne correspond à aucun protocole militaire ou commercial enregistré.
+            </div>
+            <div class="dossier-expand" style="margin-top: 1rem; display: none; border-top: 1px solid var(--gray-dark); padding-top: 1rem;">
+              <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray-light); line-height: 1.8;">
+                <strong>Analyse technique :</strong> Les transmissions utilisent un chiffrement à rotation asymétrique. La structure suggère un réseau point-à-point avec au minimum 4 noeuds actifs. Les tentatives de triangulation ont échoué — les points d'émission semblent changer de position à intervalles de 12 minutes.<br><br>
+                <strong>Corrélation :</strong> Des schémas similaires ont été observés dans 3 autres systèmes sur les 6 derniers mois. Aucune attribution confirmée.<br><br>
+                <strong>Conclusion :</strong> Surveillance passive recommandée. Pas de base juridique pour intervention.
+              </p>
+            </div>
+          </div>
+          <div class="dossier-date">2954.07.03</div>
+        </div>
+
+        <!-- DOSSIER 3 -->
+        <div class="dossier-item fade-in" onclick="this.querySelector('.dossier-expand')?.classList.toggle('open')">
+          <div class="dossier-id">UEE-IR<br>2954-0412</div>
+          <div class="dossier-content">
+            <div class="dossier-title">Rapport d'Observation — Zone Minière Non-Assignée</div>
+            <div class="dossier-excerpt">
+              Un patrouilleur UEE a observé un groupe de 5 vaisseaux en formation tactique dans une zone minière non-assignée du système Nyx. Le groupe a quitté la zone en moins de 3 minutes après détection radar. Les vaisseaux ne portaient aucun identifiant visible.
+            </div>
+            <div class="dossier-expand" style="margin-top: 1rem; display: none; border-top: 1px solid var(--gray-dark); padding-top: 1rem;">
+              <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray-light); line-height: 1.8;">
+                <strong>Note :</strong> La vitesse de désengagement et la coordination de manoeuvre suggèrent un entraînement militaire de haut niveau. Les résidus d'émission capteurs indiquent des vaisseaux lourdement modifiés avec des systèmes de brouillage actifs.<br><br>
+                <strong>Remarque de l'officier :</strong> « Ils savaient qu'on était là avant qu'on les détecte. Ils ont attendu qu'on les voie avant de partir. »<br><br>
+                <strong>Conclusion :</strong> Aucune infraction constatée. Zone non-assignée = pas de juridiction. Observation loguée.
+              </p>
+            </div>
+          </div>
+          <div class="dossier-date">2954.04.28</div>
+        </div>
+
+        <!-- DOSSIER 4 -->
+        <div class="dossier-item fade-in" onclick="this.querySelector('.dossier-expand')?.classList.toggle('open')">
+          <div class="dossier-id">UEE-IR<br>2953-1891</div>
+          <div class="dossier-content">
+            <div class="dossier-title">Disparition de Cargo — Registre Maritime Interstellaire</div>
+            <div class="dossier-excerpt">
+              Le cargo « Meridian Star » (class Hull-B) a disparu des registres de suivi pendant 14 heures dans le corridor Terra-Magnus avant de réapparaître à son point de destination final, intact, à l'heure prévue. L'équipage a déclaré n'avoir « rien à signaler ».
+            </div>
+            <div class="dossier-expand" style="margin-top: 1rem; display: none; border-top: 1px solid var(--gray-dark); padding-top: 1rem;">
+              <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray-light); line-height: 1.8;">
+                <strong>Enquête :</strong> L'interrogatoire de l'équipage n'a révélé aucune incohérence — mais aussi aucun détail. Les membres d'équipage ont fourni des réponses identiques, mot pour mot, ce qui est statistiquement improbable sans coordination préalable.<br><br>
+                <strong>Données de vol :</strong> Les données du boîtier de vol ont été « corrompues » pendant la période d'absence. Le fabricant confirme que ce type de corruption est « techniquement impossible sans accès physique au matériel ».<br><br>
+                <strong>Conclusion :</strong> Dossier classé — Insuffisance de preuves. Note interne : <span class="text-dim">[REDIRIGÉ VERS SECTION ████]</span>
+              </p>
+            </div>
+          </div>
+          <div class="dossier-date">2953.12.07</div>
+        </div>
+
+        <!-- DOSSIER 5 -->
+        <div class="dossier-item fade-in" onclick="this.querySelector('.dossier-expand')?.classList.toggle('open')">
+          <div class="dossier-id">UEE-IR<br>2953-1204</div>
+          <div class="dossier-content">
+            <div class="dossier-title">Interférence Système — Base Navale Kilian</div>
+            <div class="dossier-excerpt">
+              Les systèmes de surveillance périphérique de la base navale de Kilian ont enregistré une interférence structurée de 23 secondes. Pendant cette fenêtre, un vaisseau non identifié a transité dans le couloir de sécurité extérieur sans déclencher les protocoles d'alerte.
+            </div>
+            <div class="dossier-expand" style="margin-top: 1rem; display: none; border-top: 1px solid var(--gray-dark); padding-top: 1rem;">
+              <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray-light); line-height: 1.8;">
+                <strong>Analyse :</strong> L'interférence n'était pas un brouillage. Les analystes décrivent le signal comme un « remplacement structuré » — les capteurs ont reçu des données normales pendant que le transit s'effectuait. Cela implique une connaissance intime des protocoles de surveillance de la base.<br><br>
+                <strong>Impact :</strong> Aucun dommage. Aucune intrusion. Le vaisseau a simplement traversé. Sa destination et son origine restent inconnues.<br><br>
+                <strong>Conclusion :</strong> Investigation en cours. Classification relevée à <span class="classified-badge">SENSIBLE</span>
+              </p>
+              <div class="cipher" data-decoded="FL-7742 — SIGMA-7 — LE PASSAGE SILENCIEUX" style="margin-top: 1rem;">
+                464c2d37373432202d205349474d412d37202d204c45205041535341474520 53494c454e434945 5558
+              </div>
+            </div>
+          </div>
+          <div class="dossier-date">2953.08.19</div>
+        </div>
+
+        <!-- DOSSIER 6 -->
+        <div class="dossier-item fade-in" onclick="this.querySelector('.dossier-expand')?.classList.toggle('open')">
+          <div class="dossier-id">UEE-OBS<br>2953-0067</div>
+          <div class="dossier-content">
+            <div class="dossier-title">Note d'Observation — Tendances de Piraterie (Secteurs Frontaliers)</div>
+            <div class="dossier-excerpt">
+              Les statistiques de piraterie dans les corridors commerciaux des systèmes Stanton et Pyro montrent une réduction de 34% dans les zones où une « présence privée non-identifiée » a été rapportée. Corrélation notée, causalité non établie.
+            </div>
+            <div class="dossier-expand" style="margin-top: 1rem; display: none; border-top: 1px solid var(--gray-dark); padding-top: 1rem;">
+              <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray-light); line-height: 1.8;">
+                <strong>Analyse statistique :</strong> Les groupes de pirates actifs dans ces zones ont soit cessé leurs opérations, soit se sont relocalisés. Certains leaders de ces groupes ont « disparu » sans trace ni conflit documenté.<br><br>
+                <strong>Hypothèse de travail :</strong> Une ou plusieurs entités privées exercent un contrôle territorial non-officiel sur ces corridors. La nature de cet arrangement (commercial, contractuel, ou spontané) n'est pas déterminée.<br><br>
+                <strong>Recommandation :</strong> Surveillance continue. Pas d'intervention recommandée — la réduction de piraterie est techniquement bénéfique.
+              </p>
+            </div>
+          </div>
+          <div class="dossier-date">2953.03.14</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOG TRANSMISSIONS -->
+  <div class="section-divider"></div>
+  <section class="section">
+    <div class="container">
+      <div class="fade-in" style="margin-bottom: 2rem;">
+        <h2 style="margin-bottom: 0.5rem;">Logs de Transmission Interceptés</h2>
+        <div class="document-classification">Source : Surveillance passive — Non attribué</div>
+      </div>
+
+      <div class="document fade-in">
+        <div class="document-header">
+          <div class="document-classification">NON CLASSIFIÉ — USAGE ANALYTIQUE</div>
+          <div class="document-id">LOG-INTERCEPT-2954-BATCH</div>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray-light); line-height: 2.2;">
+          <div style="border-bottom: 1px solid var(--gray-dark); padding: 0.8rem 0;">
+            <span class="text-dim">[2954.08.14 — 03:42:17 UTC]</span> <span class="text-red">NOD-7:</span> Vecteur confirmé. Le paquet est en transit. ETA conforme.
+          </div>
+          <div style="border-bottom: 1px solid var(--gray-dark); padding: 0.8rem 0;">
+            <span class="text-dim">[2954.08.14 — 03:42:19 UTC]</span> <span class="text-red">NOD-3:</span> Reçu. Périmètre sécurisé. Aucune présence hostile. Procédez.
+          </div>
+          <div style="border-bottom: 1px solid var(--gray-dark); padding: 0.8rem 0;">
+            <span class="text-dim">[2954.08.14 — 03:47:01 UTC]</span> <span class="text-red">NOD-7:</span> Contact visuel — deux patrouilles UEE secteur adjacent. Pas de risque. Ils ne regardent pas.
+          </div>
+          <div style="border-bottom: 1px solid var(--gray-dark); padding: 0.8rem 0;">
+            <span class="text-dim">[2954.08.14 — 03:47:04 UTC]</span> <span class="text-red">NOD-3:</span> Ils ne regardent jamais.
+          </div>
+          <div style="border-bottom: 1px solid var(--gray-dark); padding: 0.8rem 0;">
+            <span class="text-dim">[2954.08.14 — 04:12:33 UTC]</span> <span class="text-red">NOD-7:</span> Livraison effectuée. Le client confirme. Désengagement en cours.
+          </div>
+          <div style="padding: 0.8rem 0;">
+            <span class="text-dim">[2954.08.14 — 04:12:35 UTC]</span> <span class="text-red">NOD-1:</span> Bon travail. L'instrument fonctionne. <span class="strikethrough">Protocole SIGMA activé</span>.
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--gray-dark);">
+          <p style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray);">
+            Note de l'analyste : L'attribution de ces transmissions n'a pas été possible. Le terme « l'instrument » apparaît dans 67% des communications interceptées attribuées au même réseau. Voir aussi : dossier <span class="text-dim">FL-7742</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-symbol">◆</div>
+      <div class="footer-content">
+        FLUXX PRIVATE MILITARY CONTRACTOR — DOSSIERS PUBLICS<br>
+        SOURCE : REGISTRES UEE — DONNÉES NON VÉRIFIÉES<br>
+        <span class="secret-symbol">FL-7742:CORRELATED</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/core.js"></script>
+  <script>
+    // Dossier expand toggle
+    document.querySelectorAll('.dossier-item').forEach(item => {
+      item.style.cursor = 'pointer';
+      const expand = item.querySelector('.dossier-expand');
+      if (expand) {
+        expand.style.display = 'none';
+        item.addEventListener('click', () => {
+          const isOpen = expand.style.display === 'block';
+          expand.style.display = isOpen ? 'none' : 'block';
+        });
+      }
+    });
+  </script>
+</body>
+</html>
