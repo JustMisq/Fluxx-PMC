@@ -6,6 +6,9 @@
   <title>FLUXX — Personnel</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="alternate" hreflang="fr" href="members.html">
+  <link rel="alternate" hreflang="en" href="members.html">
+  <link rel="alternate" hreflang="x-default" href="members.html">
 </head>
 <body>
 
@@ -22,11 +25,11 @@
         <span></span><span></span><span></span>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="charter.html">Charte</a></li>
-        <li><a href="members.html" class="active">Membres</a></li>
-        <li><a href="dossiers.html">Dossiers</a></li>
-        <li><a href="archives.html">Archives</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="charter.html" data-i18n="nav.charter">Charte</a></li>
+        <li><a href="members.html" class="active" data-i18n="nav.members">Membres</a></li>
+        <li><a href="dossiers.html" data-i18n="nav.dossiers">Dossiers</a></li>
+        <li><a href="archives.html" data-i18n="nav.archives">Archives</a></li>
       </ul>
     </div>
   </nav>
@@ -37,10 +40,10 @@
       <div class="fade-in">
         <div class="status-bar">
           <div class="indicator"></div>
-          <span>REGISTRE DU PERSONNEL — MISE À JOUR CONTINUE</span>
+          <span data-i18n="header.status">REGISTRE DU PERSONNEL — MISE À JOUR CONTINUE</span>
         </div>
-        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Personnel Opérationnel</h1>
-        <p class="hero-subtitle" style="margin-bottom: 0;">Registre des opérateurs actifs — Niveau d'accès : Standard</p>
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;" data-i18n="header.title">Personnel Opérationnel</h1>
+        <p class="hero-subtitle" style="margin-bottom: 0;" data-i18n="header.subtitle">Registre des opérateurs actifs — Niveau d'accès : Standard</p>
       </div>
     </div>
   </section>
@@ -51,8 +54,8 @@
   <section class="section">
     <div class="container">
       <div class="fade-in" style="margin-bottom: 3rem;">
-        <h2 style="margin-bottom: 1rem;">Structure Hiérarchique</h2>
-        <p style="color: var(--gray-light); max-width: 700px;">
+        <h2 style="margin-bottom: 1rem;" data-i18n="structure.title">Structure Hiérarchique</h2>
+        <p style="color: var(--gray-light); max-width: 700px;" data-i18n="structure.desc">
           La chaîne de commandement Fluxx est conçue pour l'efficacité opérationnelle. Chaque grade reflète un niveau de compétence validé et une zone de responsabilité définie.
         </p>
       </div>
@@ -61,23 +64,23 @@
       <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 4rem;" class="fade-in">
         <div class="card" style="text-align: center; border-top: 2px solid var(--red-primary);">
           <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--red-primary); letter-spacing: 0.2em; margin-bottom: 0.5rem;">TIER 1</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.3rem;">Commandement</h4>
-          <p style="font-size: 0.75rem; color: var(--gray); font-family: var(--font-mono);">Directeur • Sous-Directeur</p>
+          <h4 style="font-size: 0.9rem; margin-bottom: 0.3rem;" data-i18n="tier1.title">Commandement</h4>
+          <p style="font-size: 0.75rem; color: var(--gray); font-family: var(--font-mono);" data-i18n="tier1.ranks">Directeur • Sous-Directeur</p>
         </div>
         <div class="card" style="text-align: center; border-top: 2px solid var(--red-deep);">
           <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--red-deep); letter-spacing: 0.2em; margin-bottom: 0.5rem;">TIER 2</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.3rem;">Officiers</h4>
-          <p style="font-size: 0.75rem; color: var(--gray); font-family: var(--font-mono);">Capitaine • Lieutenant</p>
+          <h4 style="font-size: 0.9rem; margin-bottom: 0.3rem;" data-i18n="tier2.title">Officiers</h4>
+          <p style="font-size: 0.75rem; color: var(--gray); font-family: var(--font-mono);" data-i18n="tier2.ranks">Capitaine • Lieutenant</p>
         </div>
         <div class="card" style="text-align: center; border-top: 2px solid var(--gray-mid);">
           <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--gray-light); letter-spacing: 0.2em; margin-bottom: 0.5rem;">TIER 3</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.3rem;">Opérateurs</h4>
-          <p style="font-size: 0.75rem; color: var(--gray); font-family: var(--font-mono);">Spécialiste • Opérateur</p>
+          <h4 style="font-size: 0.9rem; margin-bottom: 0.3rem;" data-i18n="tier3.title">Opérateurs</h4>
+          <p style="font-size: 0.75rem; color: var(--gray); font-family: var(--font-mono);" data-i18n="tier3.ranks">Spécialiste • Opérateur</p>
         </div>
         <div class="card" style="text-align: center; border-top: 2px solid var(--gray-dark);">
           <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--gray); letter-spacing: 0.2em; margin-bottom: 0.5rem;">TIER 4</div>
-          <h4 style="font-size: 0.9rem; margin-bottom: 0.3rem;">Recrues</h4>
-          <p style="font-size: 0.75rem; color: var(--gray); font-family: var(--font-mono);">Recrue • En évaluation</p>
+          <h4 style="font-size: 0.9rem; margin-bottom: 0.3rem;" data-i18n="tier4.title">Recrues</h4>
+          <p style="font-size: 0.75rem; color: var(--gray); font-family: var(--font-mono);" data-i18n="tier4.ranks">Recrue • En évaluation</p>
         </div>
       </div>
     </div>
@@ -89,131 +92,131 @@
   <section class="section">
     <div class="container">
       <div class="fade-in" style="margin-bottom: 2rem;">
-        <h2 style="margin-bottom: 0.5rem;">Registre Actif</h2>
-        <div class="document-classification">Données mises à jour : 2954.11.15 — <span class="text-dim">Certaines entrées sont restreintes</span></div>
+        <h2 style="margin-bottom: 0.5rem;" data-i18n="roster.title">Registre Actif</h2>
+        <div class="document-classification" data-i18n="roster.meta">Données mises à jour : 2954.11.15 — <span class="text-dim">Certaines entrées sont restreintes</span></div>
       </div>
 
       <div class="member-grid">
 
         <!-- COMMANDEMENT -->
         <div class="member-card fade-in">
-          <div class="member-rank">Maréchal — RANK 5</div>
+          <div class="member-rank" data-i18n="rank.marechal">Maréchal — RANK 5</div>
           <div class="member-name">JustMisq</div>
-          <div class="member-role">Commandement Stratégique — Direction Générale</div>
+          <div class="member-role" data-i18n="justmisq.role">Commandement Stratégique — Direction Générale</div>
           <div class="member-status">
             <span class="dot"></span>
-            <span>ACTIF</span>
+            <span data-i18n="status.active">ACTIF</span>
           </div>
-          <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray);">
+          <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray);" data-i18n="justmisq.bio">
             Opérateur senior. Architecte de la stratégie opérationnelle Fluxx.
           </div>
         </div>
 
         <div class="member-card fade-in">
-          <div class="member-rank">Maréchal — RANK 5</div>
+          <div class="member-rank" data-i18n="rank.marechal">Maréchal — RANK 5</div>
           <div class="member-name">dayfloo</div>
-          <div class="member-role">Commandement Tactique — Coordination Opérations</div>
+          <div class="member-role" data-i18n="dayfloo.role">Commandement Tactique — Coordination Opérations</div>
           <div class="member-status">
             <span class="dot"></span>
-            <span>ACTIF</span>
+            <span data-i18n="status.active">ACTIF</span>
           </div>
-          <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray);">
+          <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray);" data-i18n="dayfloo.bio">
             Spécialiste coordination multi-vecteurs. Expertise terrain confirmée.
           </div>
         </div>
 
         <!-- OFFICIERS -->
         <div class="member-card fade-in">
-          <div class="member-rank">Major — RANK 4</div>
+          <div class="member-rank" data-i18n="rank.major">Major — RANK 4</div>
           <div class="member-name">ProfessorZundag</div>
-          <div class="member-role">Division Opérations — Chef d'Escouade</div>
+          <div class="member-role" data-i18n="zundag.role">Division Opérations — Chef d'Escouade</div>
           <div class="member-status">
             <span class="dot"></span>
-            <span>ACTIF</span>
+            <span data-i18n="status.active">ACTIF</span>
           </div>
-          <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray);">
+          <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray);" data-i18n="zundag.bio">
             Opérateur vétéran. Expertise operationnelle validée sur multiple déploiements.
           </div>
         </div>
 
         <div class="member-card fade-in">
-          <div class="member-rank">Capitaine — RANK 4</div>
+          <div class="member-rank" data-i18n="rank.capitaine">Capitaine — RANK 4</div>
           <div class="member-name">REEVES</div>
-          <div class="member-role">Division Assaut — Chef d'Escouade Alpha</div>
+          <div class="member-role" data-i18n="reeves.role">Division Assaut — Chef d'Escouade Alpha</div>
           <div class="member-status">
             <span class="dot"></span>
-            <span>ACTIF — DEPUIS 2949</span>
+            <span data-i18n="status.active.2949">ACTIF — DEPUIS 2949</span>
           </div>
         </div>
 
         <div class="member-card fade-in">
-          <div class="member-rank">Capitaine — RANK 4</div>
+          <div class="member-rank" data-i18n="rank.capitaine">Capitaine — RANK 4</div>
           <div class="member-name">NAKAMURA</div>
-          <div class="member-role">Division Logistique — Coordination Transport</div>
+          <div class="member-role" data-i18n="nakamura.role">Division Logistique — Coordination Transport</div>
           <div class="member-status">
             <span class="dot"></span>
-            <span>ACTIF — DEPUIS 2949</span>
+            <span data-i18n="status.active.2949">ACTIF — DEPUIS 2949</span>
           </div>
         </div>
 
         <div class="member-card fade-in">
-          <div class="member-rank">Lieutenant — RANK 3</div>
+          <div class="member-rank" data-i18n="rank.lieutenant">Lieutenant — RANK 3</div>
           <div class="member-name">DRAKE</div>
-          <div class="member-role">Division Reconnaissance — Opérations Terrain</div>
+          <div class="member-role" data-i18n="drake.role">Division Reconnaissance — Opérations Terrain</div>
           <div class="member-status">
             <span class="dot"></span>
-            <span>ACTIF — DEPUIS 2950</span>
+            <span data-i18n="status.active.2950">ACTIF — DEPUIS 2950</span>
           </div>
         </div>
 
         <div class="member-card fade-in">
-          <div class="member-rank">Lieutenant — RANK 3</div>
+          <div class="member-rank" data-i18n="rank.lieutenant">Lieutenant — RANK 3</div>
           <div class="member-name">VASQUEZ</div>
-          <div class="member-role">Division Communication — Guerre Informationnelle</div>
+          <div class="member-role" data-i18n="vasquez.role">Division Communication — Guerre Informationnelle</div>
           <div class="member-status">
             <span class="dot"></span>
-            <span>ACTIF — DEPUIS 2951</span>
+            <span data-i18n="status.active.2951">ACTIF — DEPUIS 2951</span>
           </div>
         </div>
 
         <!-- OPÉRATEURS -->
         <div class="member-card fade-in">
-          <div class="member-rank">Spécialiste — RANK 2</div>
+          <div class="member-rank" data-i18n="rank.specialiste">Spécialiste — RANK 2</div>
           <div class="member-name">VOLKOV</div>
-          <div class="member-role">Ingénierie de Combat — Systèmes d'Armement</div>
+          <div class="member-role" data-i18n="volkov.role">Ingénierie de Combat — Systèmes d'Armement</div>
           <div class="member-status">
             <span class="dot"></span>
-            <span>ACTIF — DEPUIS 2951</span>
+            <span data-i18n="status.active.2951">ACTIF — DEPUIS 2951</span>
           </div>
         </div>
 
         <div class="member-card fade-in">
-          <div class="member-rank">Spécialiste — RANK 2</div>
+          <div class="member-rank" data-i18n="rank.specialiste">Spécialiste — RANK 2</div>
           <div class="member-name">CHEN</div>
-          <div class="member-role">Systèmes Informatiques — Cybersécurité</div>
+          <div class="member-role" data-i18n="chen.role">Systèmes Informatiques — Cybersécurité</div>
           <div class="member-status">
             <span class="dot"></span>
-            <span>ACTIF — DEPUIS 2952</span>
+            <span data-i18n="status.active.2952">ACTIF — DEPUIS 2952</span>
           </div>
         </div>
 
         <div class="member-card fade-in">
-          <div class="member-rank">Opérateur — RANK 1</div>
+          <div class="member-rank" data-i18n="rank.operateur">Opérateur — RANK 1</div>
           <div class="member-name">HARTMANN</div>
-          <div class="member-role">Pilotage — Extraction & Déploiement</div>
+          <div class="member-role" data-i18n="hartmann.role">Pilotage — Extraction & Déploiement</div>
           <div class="member-status">
             <span class="dot"></span>
-            <span>ACTIF — DEPUIS 2953</span>
+            <span data-i18n="status.active.2953">ACTIF — DEPUIS 2953</span>
           </div>
         </div>
 
         <div class="member-card fade-in">
-          <div class="member-rank">Opérateur — RANK 1</div>
+          <div class="member-rank" data-i18n="rank.operateur">Opérateur — RANK 1</div>
           <div class="member-name">OKAFOR</div>
-          <div class="member-role">Médecine Tactique — Soutien Opérationnel</div>
+          <div class="member-role" data-i18n="okafor.role">Médecine Tactique — Soutien Opérationnel</div>
           <div class="member-status">
             <span class="dot"></span>
-            <span>ACTIF — DEPUIS 2953</span>
+            <span data-i18n="status.active.2953">ACTIF — DEPUIS 2953</span>
           </div>
         </div>
 
@@ -221,10 +224,10 @@
         <div class="member-card shadow-division fade-in">
           <div class="member-rank" style="color: var(--gray);">█████ — <span class="classified-badge level-2">CLASSIFIÉ</span></div>
           <div class="member-name glitch-strong" data-text="[DONNÉES CORROMPUES]" style="color: var(--gray);">[DONNÉES CORROMPUES]</div>
-          <div class="member-role" style="font-style: italic;">Division : ██████ — Rôle : <span class="redacted">EXPURGÉ</span></div>
+          <div class="member-role" style="font-style: italic;" data-i18n="shadow.role.expurged">Division : ██████ — Rôle : <span class="redacted">EXPURGÉ</span></div>
           <div class="member-status">
             <span class="dot classified"></span>
-            <span>STATUT INDÉTERMINÉ</span>
+            <span data-i18n="shadow.status.undetermined">STATUT INDÉTERMINÉ</span>
           </div>
           <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.65rem; color: var(--gray-dark);">
             REF: ██-UMBRA-01
@@ -236,10 +239,10 @@
           <div class="member-name glitch-strong" data-text="SPECTRE" style="color: var(--gray-light);">
             <span data-hidden-info="CALLSIGN: SPECTRE">S̴̛P̷E̵̡C̶T̷R̶E̵</span>
           </div>
-          <div class="member-role" style="font-style: italic;">Division : ██████ — Rôle : Opérations <span class="strikethrough">non-conventionnelles</span></div>
+          <div class="member-role" style="font-style: italic;" data-i18n="shadow.role.unconventional">Division : ██████ — Rôle : Opérations <span class="strikethrough">non-conventionnelles</span></div>
           <div class="member-status">
             <span class="dot classified"></span>
-            <span>ACTIF — LOCALISATION INCONNUE</span>
+            <span data-i18n="shadow.status.unknown">ACTIF — LOCALISATION INCONNUE</span>
           </div>
           <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.65rem; color: var(--gray-dark);">
             REF: ██-UMBRA-02 // SIGMA-7
@@ -249,7 +252,7 @@
         <div class="member-card shadow-division fade-in">
           <div class="member-rank" style="color: var(--gray);">█████ — <span class="classified-badge level-2">CLASSIFIÉ</span></div>
           <div class="member-name glitch-strong" data-text="[ERREUR SYSTÈME]" style="color: var(--gray);">[ERREUR SYST̵̢ÈME]</div>
-          <div class="member-role" style="font-style: italic;">Division : ██████ — Rôle : <span class="redacted">EFFACÉ</span></div>
+          <div class="member-role" style="font-style: italic;" data-i18n="shadow.role.erased">Division : ██████ — Rôle : <span class="redacted">EFFACÉ</span></div>
           <div class="member-status">
             <span class="dot classified"></span>
             <span>██████████</span>
@@ -263,7 +266,7 @@
 
       <!-- PERSONNEL COUNT -->
       <div class="fade-in" style="margin-top: 3rem; text-align: center;">
-        <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray); letter-spacing: 0.15em;">
+        <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray); letter-spacing: 0.15em;" data-i18n="count">
           EFFECTIF AFFICHÉ : 13 OPÉRATEURS — EFFECTIF TOTAL : <span class="text-dim">[DONNÉE NON DISPONIBLE]</span>
         </div>
         <div class="coordinates" style="margin-top: 1rem; font-size: 0.6rem;">
@@ -277,7 +280,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-symbol">◆</div>
-      <div class="footer-content">
+      <div class="footer-content" data-i18n="footer.members">
         FLUXX PRIVATE MILITARY CONTRACTOR — REGISTRE PERSONNEL<br>
         DERNIÈRE SYNCHRONISATION : 2954.11.15 — NOEUD SÉCURISÉ<br>
         <span class="secret-symbol">UMBRA:3:ACTIVE:SIGMA-7</span>
@@ -285,6 +288,7 @@
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/core.js"></script>
 </body>
 </html>

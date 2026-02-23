@@ -6,6 +6,9 @@
   <title>███████ — CLASSIFIÉ</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="alternate" hreflang="fr" href="classified.html">
+  <link rel="alternate" hreflang="en" href="classified.html">
+  <link rel="alternate" hreflang="x-default" href="classified.html">
   <style>
     /* Page-specific overrides for classified page */
     body {
@@ -125,18 +128,18 @@
       <a href="index.html" class="nav-logo">
         <div>
           <div class="nav-logo-text" style="color: var(--red-primary);">Fluxx</div>
-          <div class="nav-logo-sub" style="color: var(--red-deep);">ACCÈS CLASSIFIÉ — SIGMA</div>
+          <div class="nav-logo-sub" style="color: var(--red-deep);" data-i18n="nav.classified.sub">ACCÈS CLASSIFIÉ — SIGMA</div>
         </div>
       </a>
       <div class="nav-toggle">
         <span></span><span></span><span></span>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="charter.html">Charte</a></li>
-        <li><a href="members.html">Membres</a></li>
-        <li><a href="dossiers.html">Dossiers</a></li>
-        <li><a href="archives.html">Archives</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="charter.html" data-i18n="nav.charter">Charte</a></li>
+        <li><a href="members.html" data-i18n="nav.members">Membres</a></li>
+        <li><a href="dossiers.html" data-i18n="nav.dossiers">Dossiers</a></li>
+        <li><a href="archives.html" data-i18n="nav.archives">Archives</a></li>
       </ul>
     </div>
   </nav>
@@ -145,11 +148,11 @@
   <section class="classified-header">
     <div class="container">
       <div class="fade-in">
-        <div class="classified-badge level-2" style="font-size: 0.8rem; padding: 0.4rem 1.5rem; margin-bottom: 1.5rem;">
+        <div class="classified-badge level-2" style="font-size: 0.8rem; padding: 0.4rem 1.5rem; margin-bottom: 1.5rem;" data-i18n="header.badge">
           NIVEAU D'ACCÈS : SIGMA — YEUX SEULS
         </div>
         <h1 style="font-size: 2.2rem; color: var(--red-primary); margin-bottom: 0.5rem;" class="glitch" data-text="DOSSIER UMBRA">DOSSIER UMBRA</h1>
-        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray); letter-spacing: 0.2em;">
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray); letter-spacing: 0.2em;" data-i18n="header.subtitle">
           ÉVALUATION UEE INTERNE — RAPPORT DE MENACE — DIFFUSION INTERDITE
         </p>
       </div>
@@ -174,50 +177,50 @@
     <div class="container">
       <div class="document fade-in" style="border-color: rgba(196, 30, 58, 0.3);">
         <div class="document-header" style="border-bottom-color: var(--red-primary);">
-          <div class="document-classification" style="color: var(--red-accent);">CLASSIFICATION : SIGMA — CONFIDENTIEL DÉFENSE — YEUX SEULS</div>
+          <div class="document-classification" style="color: var(--red-accent);" data-i18n="doc.classification">CLASSIFICATION : SIGMA — CONFIDENTIEL DÉFENSE — YEUX SEULS</div>
           <div class="document-id">Réf: UEE/INTEL/SIGMA/2954-FL-001</div>
-          <h2 class="document-title" style="color: var(--red-primary);">Évaluation de Menace : Entité « FLUXX »</h2>
+          <h2 class="document-title" style="color: var(--red-primary);" data-i18n="doc.title">Évaluation de Menace : Entité « FLUXX »</h2>
           <div class="document-meta">
             <dl>
-              <dt>Autorité émettrice</dt>
-              <dd>UEE Naval Intelligence — Section Menaces Non-Étatiques</dd>
+              <dt data-i18n="doc.meta.authority.label">Autorité émettrice</dt>
+              <dd data-i18n="doc.meta.authority.value">UEE Naval Intelligence — Section Menaces Non-Étatiques</dd>
             </dl>
             <dl>
               <dt>Date</dt>
               <dd>2954.10.28</dd>
             </dl>
             <dl>
-              <dt>Analyste principal</dt>
+              <dt data-i18n="doc.meta.analyst.label">Analyste principal</dt>
               <dd>CDR. L. Morrison — Badge #NI-4471</dd>
             </dl>
             <dl>
-              <dt>Niveau de menace</dt>
-              <dd style="color: var(--red-accent);">ÉLEVÉ — CATÉGORIE ALPHA</dd>
+              <dt data-i18n="doc.meta.threat.label">Niveau de menace</dt>
+              <dd style="color: var(--red-accent);" data-i18n="doc.meta.threat.value">ÉLEVÉ — CATÉGORIE ALPHA</dd>
             </dl>
           </div>
         </div>
 
         <!-- EXECUTIVE SUMMARY -->
         <div class="document-section">
-          <div class="document-section-title" style="color: var(--red-primary);">Résumé Exécutif</div>
-          <p style="color: var(--gray-light);">
+          <div class="document-section-title" style="color: var(--red-primary);" data-i18n="summary.title">Résumé Exécutif</div>
+          <p style="color: var(--gray-light);" data-i18n="summary.p1">
             L'entité désignée « FLUXX » représente l'une des menaces non-étatiques les plus sophistiquées actuellement actives dans l'espace UEE. Contrairement aux organisations criminelles conventionnelles ou aux milices factionnelles, Fluxx opère avec un niveau de discipline, de coordination et d'intelligence opérationnelle comparable aux meilleurs corps militaires étatiques.
           </p>
-          <p style="color: var(--gray-light);">
+          <p style="color: var(--gray-light);" data-i18n="summary.p2">
             Ce qui rend Fluxx particulièrement préoccupant n'est pas sa capacité offensive — bien qu'elle soit considérable — mais son <em style="color: var(--red-primary);">invisibilité institutionnelle</em>. En dépit de multiples observations, interceptions et analyses, nous ne disposons d'aucune preuve légalement exploitable de la moindre activité criminelle. Chaque opération est conçue pour être plausiblement niable.
           </p>
-          <div class="internal-note">
+          <div class="internal-note" data-i18n="summary.note">
             <strong>NOTE DE L'ANALYSTE :</strong> J'ai passé 18 mois sur ce dossier. Fluxx n'est pas un groupe criminel qui se cache bien. C'est une organisation qui a intégré l'invisibilité dans son ADN opérationnel. Ils ne violent pas la loi — ils opèrent dans les espaces où la loi n'existe pas encore. Et quand la loi arrive, ils sont déjà ailleurs.
           </div>
         </div>
 
         <!-- THREAT ASSESSMENT -->
         <div class="document-section">
-          <div class="document-section-title" style="color: var(--red-primary);">Évaluation de Menace Détaillée</div>
+          <div class="document-section-title" style="color: var(--red-primary);" data-i18n="threat.title">Évaluation de Menace Détaillée</div>
 
           <div style="margin-bottom: 1.5rem;">
             <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray-light); margin-bottom: 0.3rem;">
-              <span>Capacité militaire</span>
+              <span data-i18n="threat.military">Capacité militaire</span>
               <span class="text-red">9.2 / 10</span>
             </div>
             <div class="threat-meter">
@@ -229,7 +232,7 @@
 
           <div style="margin-bottom: 1.5rem;">
             <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray-light); margin-bottom: 0.3rem;">
-              <span>Sophistication informationnelle</span>
+              <span data-i18n="threat.info">Sophistication informationnelle</span>
               <span class="text-red">9.7 / 10</span>
             </div>
             <div class="threat-meter">
@@ -241,7 +244,7 @@
 
           <div style="margin-bottom: 1.5rem;">
             <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray-light); margin-bottom: 0.3rem;">
-              <span>Résilience organisationnelle</span>
+              <span data-i18n="threat.resilience">Résilience organisationnelle</span>
               <span class="text-red">8.8 / 10</span>
             </div>
             <div class="threat-meter">
@@ -253,7 +256,7 @@
 
           <div style="margin-bottom: 1.5rem;">
             <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray-light); margin-bottom: 0.3rem;">
-              <span>Capacité de pénétration</span>
+              <span data-i18n="threat.penetration">Capacité de pénétration</span>
               <span class="text-red">9.4 / 10</span>
             </div>
             <div class="threat-meter">
@@ -265,7 +268,7 @@
 
           <div style="margin-bottom: 1.5rem;">
             <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray-light); margin-bottom: 0.3rem;">
-              <span>Imprévisibilité</span>
+              <span data-i18n="threat.unpredictability">Imprévisibilité</span>
               <span class="text-red">7.5 / 10</span>
             </div>
             <div class="threat-meter">
@@ -275,38 +278,38 @@
             </div>
           </div>
 
-          <div class="internal-note">
+          <div class="internal-note" data-i18n="threat.note">
             <strong>NOTE :</strong> Le score d'imprévisibilité est paradoxalement bas. Fluxx est <em>prévisible</em> dans sa méthodologie — ils servent toujours leurs intérêts. Ce qui est imprévisible, c'est notre capacité à déterminer quels sont ces intérêts à un moment donné.
           </div>
         </div>
 
         <!-- DIVISION UMBRA -->
         <div class="document-section">
-          <div class="document-section-title" style="color: var(--red-accent);">Division UMBRA — Évaluation Spéciale</div>
-          <p style="color: var(--gray-light);">
+          <div class="document-section-title" style="color: var(--red-accent);" data-i18n="umbra.title">Division UMBRA — Évaluation Spéciale</div>
+          <p style="color: var(--gray-light);" data-i18n="umbra.p1">
             La « Division UMBRA » est le nom de code attribué par nos analystes à une sous-unité de Fluxx dont l'existence n'est pas officiellement reconnue par l'organisation. Les preuves de son existence sont circonstancielles mais convergentes.
           </p>
-          <p style="color: var(--gray-light);">
+          <p style="color: var(--gray-light);" data-i18n="umbra.p2">
             D'après nos analyses, UMBRA est responsable des opérations que Fluxx ne peut pas associer publiquement à son image de « PMC professionnelle ». Cela inclut :
           </p>
           <ul style="list-style: none; padding: 0; margin: 1rem 0;">
             <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-dark); font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
-              <span class="text-red">▸</span> Opérations de déstabilisation ciblée
+              <span class="text-red">▸</span> <span data-i18n="umbra.li1">Opérations de déstabilisation ciblée</span>
             </li>
             <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-dark); font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
-              <span class="text-red">▸</span> Élimination sélective de cibles d'intérêt stratégique
+              <span class="text-red">▸</span> <span data-i18n="umbra.li2">Élimination sélective de cibles d'intérêt stratégique</span>
             </li>
             <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-dark); font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
-              <span class="text-red">▸</span> Infiltration de réseaux ennemis (et potentiellement alliés)
+              <span class="text-red">▸</span> <span data-i18n="umbra.li3">Infiltration de réseaux ennemis (et potentiellement alliés)</span>
             </li>
             <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-dark); font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
-              <span class="text-red">▸</span> Guerre informationnelle et manipulation de données
+              <span class="text-red">▸</span> <span data-i18n="umbra.li4">Guerre informationnelle et manipulation de données</span>
             </li>
             <li style="padding: 0.5rem 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
-              <span class="text-red">▸</span> Opérations « drapeau noir » — attribution impossible par conception
+              <span class="text-red">▸</span> <span data-i18n="umbra.li5">Opérations « drapeau noir » — attribution impossible par conception</span>
             </li>
           </ul>
-          <div class="internal-note">
+          <div class="internal-note" data-i18n="umbra.note">
             <strong>NOTE PERSONNELLE — CDR. MORRISON :</strong> Si UMBRA existe réellement dans la forme décrite, alors nous avons affaire à l'équivalent d'un service de renseignement souverain opérant sans les contraintes d'un gouvernement. Pas de supervision parlementaire. Pas de comptes à rendre. Pas de limites politiques. Juste l'objectif, et les moyens de l'atteindre.
           </div>
         </div>
@@ -319,8 +322,8 @@
   <section class="section">
     <div class="container">
       <div class="fade-in" style="margin-bottom: 2rem;">
-        <h2 style="color: var(--red-primary); margin-bottom: 0.5rem;">Profils Classifiés</h2>
-        <div class="document-classification" style="color: var(--red-accent);">SIGMA — PROFILS DE MENACE INDIVIDUELS</div>
+        <h2 style="color: var(--red-primary); margin-bottom: 0.5rem;" data-i18n="profiles.title">Profils Classifiés</h2>
+        <div class="document-classification" style="color: var(--red-accent);" data-i18n="profiles.classification">SIGMA — PROFILS DE MENACE INDIVIDUELS</div>
       </div>
 
       <div class="profile-grid">
@@ -395,49 +398,49 @@
     <div class="container">
       <div class="document fade-in" style="border-color: rgba(196, 30, 58, 0.3);">
         <div class="document-header" style="border-bottom-color: var(--red-primary);">
-          <div class="document-classification" style="color: var(--red-accent);">ANALYSES TACTIQUES — USAGE INTERNE UNIQUEMENT</div>
-          <h2 class="document-title" style="color: var(--red-primary);">Conclusions et Recommandations</h2>
+          <div class="document-classification" style="color: var(--red-accent);" data-i18n="analysis.classification">ANALYSES TACTIQUES — USAGE INTERNE UNIQUEMENT</div>
+          <h2 class="document-title" style="color: var(--red-primary);" data-i18n="analysis.title">Conclusions et Recommandations</h2>
         </div>
 
         <div class="document-section">
-          <div class="document-section-title" style="color: var(--red-primary);">Analyse Opérationnelle</div>
-          <p style="color: var(--gray-light);">
+          <div class="document-section-title" style="color: var(--red-primary);" data-i18n="analysis.section.title">Analyse Opérationnelle</div>
+          <p style="color: var(--gray-light);" data-i18n="analysis.intro">
             Fluxx opère selon un modèle que nous qualifions de « précision systémique ». Chaque opération documentée (ou suspectée) présente les caractéristiques suivantes :
           </p>
           <ul style="list-style: none; padding: 0; margin: 1rem 0;">
             <li style="padding: 0.4rem 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
-              <span class="text-red">1.</span> Un objectif unique et clairement défini — pas de mission secondaire improvisée
+              <span class="text-red">1.</span> <span data-i18n="analysis.li1">Un objectif unique et clairement défini — pas de mission secondaire improvisée</span>
             </li>
             <li style="padding: 0.4rem 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
-              <span class="text-red">2.</span> Une fenêtre d'exécution minimale — présence réduite au strict nécessaire
+              <span class="text-red">2.</span> <span data-i18n="analysis.li2">Une fenêtre d'exécution minimale — présence réduite au strict nécessaire</span>
             </li>
             <li style="padding: 0.4rem 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
-              <span class="text-red">3.</span> Aucune trace exploitable — nettoyage digital et physique systématique
+              <span class="text-red">3.</span> <span data-i18n="analysis.li3">Aucune trace exploitable — nettoyage digital et physique systématique</span>
             </li>
             <li style="padding: 0.4rem 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
-              <span class="text-red">4.</span> Déni plausible intégré — chaque action peut être expliquée autrement
+              <span class="text-red">4.</span> <span data-i18n="analysis.li4">Déni plausible intégré — chaque action peut être expliquée autrement</span>
             </li>
             <li style="padding: 0.4rem 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gray-light);">
-              <span class="text-red">5.</span> Évaluation continue — ils s'adaptent plus vite que nos protocoles de réponse
+              <span class="text-red">5.</span> <span data-i18n="analysis.li5">Évaluation continue — ils s'adaptent plus vite que nos protocoles de réponse</span>
             </li>
           </ul>
         </div>
 
         <div class="document-section">
-          <div class="document-section-title" style="color: var(--red-primary);">Recommandations au Commandement</div>
-          <p style="color: var(--gray-light);">
+          <div class="document-section-title" style="color: var(--red-primary);" data-i18n="rec.title">Recommandations au Commandement</div>
+          <p style="color: var(--gray-light);" data-i18n="rec.r1">
             <span class="text-red">R-1 :</span> <strong>Ne pas engager directement.</strong> Fluxx n'est pas un ennemi conventionnel. Une confrontation ouverte donnerait à l'organisation un motif de représailles et un argument de victimisation publique. Leur façade de PMC légitime est leur meilleur bouclier — ne pas leur fournir de raison de l'activer.
           </p>
-          <p style="color: var(--gray-light);">
+          <p style="color: var(--gray-light);" data-i18n="rec.r2">
             <span class="text-red">R-2 :</span> <strong>Surveillance passive renforcée.</strong> Augmenter les capacités de monitoring sur les corridors identifiés. Concentrer les ressources SIGINT sur les schémas de communication NOEUD.
           </p>
-          <p style="color: var(--gray-light);">
+          <p style="color: var(--gray-light);" data-i18n="rec.r3">
             <span class="text-red">R-3 :</span> <strong>Infiltration de longue durée.</strong> Recommandation controversée mais nécessaire. Nous devons placer un actif à l'intérieur de l'organisation. Probabilité de succès estimée : 12%. Risque de compromission : élevé.
           </p>
-          <p style="color: var(--gray-light);">
+          <p style="color: var(--gray-light);" data-i18n="rec.r4">
             <span class="text-red">R-4 :</span> <strong>Accepter la coexistence conditionnelle.</strong> Tant que les activités de Fluxx ne menacent pas directement les intérêts fondamentaux de l'UEE, la confrontation est contre-productive. La réduction de piraterie dans leurs zones d'opération est un bénéfice collatéral que nous ne pouvons pas ignorer.
           </p>
-          <div class="internal-note" style="border-left-color: var(--red-accent);">
+          <div class="internal-note" style="border-left-color: var(--red-accent);" data-i18n="rec.note">
             <strong>NOTE FINALE — CDR. MORRISON :</strong><br><br>
             On m'a demandé une conclusion claire. La voici :<br><br>
             Fluxx n'est pas une menace que nous pouvons éliminer. C'est une menace que nous devons <em>comprendre</em>. Et je ne suis pas certain que nous en soyons capables.<br><br>
@@ -455,22 +458,22 @@
   <section class="section" style="text-align: center;">
     <div class="container">
       <div class="fade-in">
-        <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--red-primary); letter-spacing: 0.2em; line-height: 2.5;">
+        <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--red-primary); letter-spacing: 0.2em; line-height: 2.5;" data-i18n="closing.quote">
           « L'instrument n'a pas d'allégeance.<br>
           L'instrument n'a pas de conscience.<br>
           L'instrument fonctionne. »
         </p>
-        <p style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--gray-dark); margin-top: 2rem; letter-spacing: 0.1em;">
+        <p style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--gray-dark); margin-top: 2rem; letter-spacing: 0.1em;" data-i18n="closing.source">
           — Intercepté. Source : réseau NOEUD. Non attribué.
         </p>
         <div style="margin-top: 3rem;">
-          <p style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--gray-dark); letter-spacing: 0.15em;">
+          <p style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--gray-dark); letter-spacing: 0.15em;" data-i18n="closing.destruction">
             FIN DU DOCUMENT — CLASSIFICATION SIGMA<br>
             DESTRUCTION AUTOMATIQUE APRÈS LECTURE : <span class="text-red" id="countdown">DÉSACTIVÉE (SESSION ACTIVE)</span>
           </p>
         </div>
         <div style="margin-top: 2rem;">
-          <a href="index.html" class="btn" style="border-color: var(--red-primary); color: var(--red-primary);">RETOUR AU RÉSEAU PUBLIC</a>
+          <a href="index.html" class="btn" style="border-color: var(--red-primary); color: var(--red-primary);" data-i18n="closing.btn">RETOUR AU RÉSEAU PUBLIC</a>
         </div>
       </div>
     </div>
@@ -480,7 +483,7 @@
   <footer class="footer" style="border-top-color: var(--red-deep);">
     <div class="container">
       <div class="footer-symbol" style="color: var(--red-primary);">◆</div>
-      <div class="footer-content" style="color: var(--gray);">
+      <div class="footer-content" style="color: var(--gray);" data-i18n="footer.classified">
         DOCUMENT UEE NAVAL INTELLIGENCE — SECTION MENACES NON-ÉTATIQUES<br>
         CLASSIFICATION SIGMA — REPRODUCTION INTERDITE<br>
         FLUXX EST OBSERVÉ. FLUXX LE SAIT. ET ILS CONTINUENT.
@@ -488,6 +491,7 @@
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/core.js"></script>
   <script>
     // Generate session ID

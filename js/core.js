@@ -8,18 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- BOOT SEQUENCE ----
   const bootScreen = document.querySelector('.boot-screen');
   if (bootScreen) {
-    const lines = [
-      '> INITIALIZING FLUXX SECURE NETWORK...',
-      '> CONNECTING TO NODE [ENCRYPTED]...',
-      '> VERIFYING CLEARANCE LEVEL...',
-      '> SCANNING BIOMETRIC SIGNATURE...',
-      '> LOADING OPERATIONAL FRAMEWORK...',
-      '> DECRYPTING COMMUNICATION CHANNELS...',
-      '> STATUS: <span class="text-red">OPERATIONAL</span>',
-      '> ACCESS GRANTED — CLEARANCE: STANDARD',
-      '> ═══════════════════════════════════',
-      '> WELCOME TO FLUXX',
-    ];
+    const lines = (typeof FluxxI18n !== 'undefined')
+      ? FluxxI18n.getBootLines()
+      : [
+        '> INITIALIZING FLUXX SECURE NETWORK...',
+        '> CONNECTING TO NODE [ENCRYPTED]...',
+        '> VERIFYING CLEARANCE LEVEL...',
+        '> SCANNING BIOMETRIC SIGNATURE...',
+        '> LOADING OPERATIONAL FRAMEWORK...',
+        '> DECRYPTING COMMUNICATION CHANNELS...',
+        '> STATUS: <span class="text-red">OPERATIONAL</span>',
+        '> ACCESS GRANTED — CLEARANCE: STANDARD',
+        '> ═══════════════════════════════════',
+        '> WELCOME TO FLUXX',
+      ];
 
     const bootText = bootScreen.querySelector('.boot-text');
     const progressBar = bootScreen.querySelector('.boot-progress-bar');

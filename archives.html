@@ -6,6 +6,9 @@
   <title>FLUXX — Archives Opérationnelles</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="alternate" hreflang="fr" href="archives.html">
+  <link rel="alternate" hreflang="en" href="archives.html">
+  <link rel="alternate" hreflang="x-default" href="archives.html">
 </head>
 <body>
 
@@ -22,11 +25,11 @@
         <span></span><span></span><span></span>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="charter.html">Charte</a></li>
-        <li><a href="members.html">Membres</a></li>
-        <li><a href="dossiers.html">Dossiers</a></li>
-        <li><a href="archives.html" class="active">Archives</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="charter.html" data-i18n="nav.charter">Charte</a></li>
+        <li><a href="members.html" data-i18n="nav.members">Membres</a></li>
+        <li><a href="dossiers.html" data-i18n="nav.dossiers">Dossiers</a></li>
+        <li><a href="archives.html" class="active" data-i18n="nav.archives">Archives</a></li>
       </ul>
     </div>
   </nav>
@@ -37,10 +40,10 @@
       <div class="fade-in">
         <div class="status-bar">
           <div class="indicator"></div>
-          <span>ARCHIVES OPÉRATIONNELLES — ACCÈS PARTIEL</span>
+          <span data-i18n="header.status">ARCHIVES OPÉRATIONNELLES — ACCÈS PARTIEL</span>
         </div>
-        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Archives Opérationnelles</h1>
-        <p class="hero-subtitle" style="margin-bottom: 0;">Dossiers détaillés — Coordonnées — Extraits classifiés</p>
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;" data-i18n="header.title">Archives Opérationnelles</h1>
+        <p class="hero-subtitle" style="margin-bottom: 0;" data-i18n="header.subtitle">Dossiers détaillés — Coordonnées — Extraits classifiés</p>
       </div>
     </div>
   </section>
@@ -51,7 +54,7 @@
   <section class="section" style="padding: 2rem 0;">
     <div class="container">
       <div class="fade-in" style="background: rgba(139, 0, 0, 0.08); border: 1px solid var(--red-deep); padding: 1.5rem 2rem;">
-        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--red-primary); letter-spacing: 0.05em; line-height: 1.8;">
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--red-primary); letter-spacing: 0.05em; line-height: 1.8;" data-i18n="warning">
           <strong>⚠ AVERTISSEMENT :</strong> Les documents suivants contiennent des données partiellement expurgées. Certains passages ont été supprimés, chiffrés ou altérés conformément au protocole de sécurité interne. Les informations visibles ne représentent qu'une fraction du contenu original. L'accès aux données complètes requiert une autorisation de niveau supérieur.
         </p>
       </div>
@@ -63,41 +66,41 @@
     <div class="container">
       <div class="document fade-in">
         <div class="document-header">
-          <div class="document-classification">CLASSIFICATION : RESTREINT — DIFFUSION CONTRÔLÉE</div>
+          <div class="document-classification" data-i18n="a1.classification">CLASSIFICATION : RESTREINT — DIFFUSION CONTRÔLÉE</div>
           <div class="document-id">Réf: FX/OPS/2954-117 — <span class="classified-badge">RESTREINT</span></div>
-          <h2 class="document-title">Rapport Post-Opérationnel — Opération « TRANSIT FROID »</h2>
+          <h2 class="document-title" data-i18n="a1.title">Rapport Post-Opérationnel — Opération « TRANSIT FROID »</h2>
           <div class="document-meta">
             <dl>
-              <dt>Date d'opération</dt>
+              <dt data-i18n="a1.meta.date.label">Date d'opération</dt>
               <dd>2954.06.14 — 2954.06.16</dd>
             </dl>
             <dl>
-              <dt>Zone d'opération</dt>
-              <dd>Système Nyx — Secteur <span class="redacted">EXPURGÉ</span></dd>
+              <dt data-i18n="a1.meta.zone.label">Zone d'opération</dt>
+              <dd data-i18n="a1.meta.zone.value">Système Nyx — Secteur <span class="redacted">EXPURGÉ</span></dd>
             </dl>
             <dl>
-              <dt>Effectif déployé</dt>
-              <dd><span class="strikethrough">12 opérateurs</span> [CORRIGÉ]</dd>
+              <dt data-i18n="a1.meta.personnel.label">Effectif déployé</dt>
+              <dd data-i18n="a1.meta.personnel.value"><span class="strikethrough">12 opérateurs</span> [CORRIGÉ]</dd>
             </dl>
             <dl>
-              <dt>Commandant de mission</dt>
-              <dd><span class="redacted">CLASSIFIÉ</span></dd>
+              <dt data-i18n="a1.meta.commander.label">Commandant de mission</dt>
+              <dd data-i18n="a1.meta.commander.value"><span class="redacted">CLASSIFIÉ</span></dd>
             </dl>
           </div>
         </div>
 
         <div class="document-section">
-          <div class="document-section-title">Résumé de Mission</div>
-          <p style="color: var(--gray-light);">
+          <div class="document-section-title" data-i18n="a1.summary.title">Résumé de Mission</div>
+          <p style="color: var(--gray-light);" data-i18n="a1.summary.p1">
             Opération d'extraction et de sécurisation d'un convoi de <span class="strikethrough">matériel sensible</span> ressources standard dans le système Nyx. Le convoi a transité par des zones non-patrouillées, nécessitant une escorte discrète et un plan de contingence multi-couches.
           </p>
-          <p style="color: var(--gray-light);">
+          <p style="color: var(--gray-light);" data-i18n="a1.summary.p2">
             Le transit a été complété sans incident. Trois contacts hostiles potentiels ont été identifiés et <span class="strikethrough">neutralisés</span> dissuadés par positionnement tactique. Le client a confirmé la réception du <span class="redacted">EXPURGÉ</span> dans les délais contractuels.
           </p>
         </div>
 
         <div class="document-section">
-          <div class="document-section-title">Données Tactiques</div>
+          <div class="document-section-title" data-i18n="a1.tactical.title">Données Tactiques</div>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
             <div>
               <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray); line-height: 2;">
@@ -141,35 +144,35 @@
         <div class="document-header">
           <div class="document-classification">CLASSIFICATION : RESTREINT — DIFFUSION CONTRÔLÉE</div>
           <div class="document-id">Réf: FX/OPS/2953-089</div>
-          <h2 class="document-title">Analyse de Secteur — Zone « CENDRES GRISES »</h2>
+          <h2 class="document-title" data-i18n="a2.title">Analyse de Secteur — Zone « CENDRES GRISES »</h2>
           <div class="document-meta">
             <dl>
-              <dt>Période d'analyse</dt>
+              <dt data-i18n="a2.meta.period.label">Période d'analyse</dt>
               <dd>2953.Q3 — 2953.Q4</dd>
             </dl>
             <dl>
-              <dt>Zone concernée</dt>
+              <dt data-i18n="a2.meta.zone.label">Zone concernée</dt>
               <dd>Corridor Pyro-Stanton (segments 4-9)</dd>
             </dl>
             <dl>
-              <dt>Analyste</dt>
-              <dd>Bureau Stratégique — <span class="redacted">Nom</span></dd>
+              <dt data-i18n="a2.meta.analyst.label">Analyste</dt>
+              <dd data-i18n="a2.meta.analyst.value">Bureau Stratégique — <span class="redacted">Nom</span></dd>
             </dl>
           </div>
         </div>
 
         <div class="document-section">
-          <div class="document-section-title">Évaluation du Théâtre</div>
-          <p style="color: var(--gray-light);">
+          <div class="document-section-title" data-i18n="a2.theater.title">Évaluation du Théâtre</div>
+          <p style="color: var(--gray-light);" data-i18n="a2.theater.p1">
             Le corridor Pyro-Stanton constitue un axe stratégique à haut potentiel. La faiblesse de la présence UEE dans les segments 6 à 9, combinée à l'activité décroissante des groupes pirates traditionnels, crée un <em>espace opérationnel favorable</em>.
           </p>
-          <p style="color: var(--gray-light);">
+          <p style="color: var(--gray-light);" data-i18n="a2.theater.p2">
             L'analyse suggère que la réduction de l'activité pirate n'est pas organique mais le résultat d'une <span class="strikethrough">campagne systématique de</span> évolution naturelle du marché. Les groupes restants opèrent avec une prudence accrue, évitant spécifiquement certaines routes et certains horaires — un comportement compatible avec <span class="redacted">une dissuasion active</span>.
           </p>
         </div>
 
         <div class="document-section">
-          <div class="document-section-title">Points d'Intérêt Identifiés</div>
+          <div class="document-section-title" data-i18n="a2.poi.title">Points d'Intérêt Identifiés</div>
           <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray-light); line-height: 2;">
             <div style="border-bottom: 1px solid var(--gray-dark); padding: 0.5rem 0;">
               <span class="text-red">POI-A:</span> Station abandonnée — Segment 7 — <span class="coordinates">PYR-3341 // 12.4°S 88.7°E</span> — <span class="text-dim">Usage potentiel : point de ravitaillement clandestin</span>
@@ -187,8 +190,8 @@
         </div>
 
         <div class="document-section">
-          <div class="document-section-title">Recommandations</div>
-          <p style="color: var(--gray-light);">
+          <div class="document-section-title" data-i18n="a2.rec.title">Recommandations</div>
+          <p style="color: var(--gray-light);" data-i18n="a2.rec.text">
             <span class="text-red">REC-1 :</span> Établir une présence rotative dans les segments 7-8. Discrétion maximale.<br>
             <span class="text-red">REC-2 :</span> Sécuriser les POI-A et POI-B pour usage logistique.<br>
             <span class="text-red">REC-3 :</span> <span class="strikethrough">Activer le protocole UMBRA pour nettoyage du segment 9</span> <span class="text-dim">[RECOMMANDATION RETIRÉE]</span><br>
@@ -204,8 +207,8 @@
   <section class="section">
     <div class="container">
       <div class="fade-in" style="margin-bottom: 2rem;">
-        <h2 style="margin-bottom: 0.5rem;">Anomalies & Fragments</h2>
-        <div class="document-classification">Éléments non classifiés extraits de communications internes</div>
+        <h2 style="margin-bottom: 0.5rem;" data-i18n="anomalies.title">Anomalies & Fragments</h2>
+        <div class="document-classification" data-i18n="anomalies.classification">Éléments non classifiés extraits de communications internes</div>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
@@ -264,8 +267,8 @@
   <section class="section" style="text-align: center;">
     <div class="container">
       <div class="fade-in">
-        <h3 style="margin-bottom: 0.5rem; color: var(--gray-light);">Terminal d'Accès</h3>
-        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray); margin-bottom: 2rem; letter-spacing: 0.1em;">
+        <h3 style="margin-bottom: 0.5rem; color: var(--gray-light);" data-i18n="terminal.title">Terminal d'Accès</h3>
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray); margin-bottom: 2rem; letter-spacing: 0.1em;" data-i18n="terminal.desc">
           Certains documents requièrent un niveau d'autorisation supérieur.
         </p>
         <div class="access-terminal">
@@ -275,7 +278,7 @@
             > ENTREZ LE CODE D'ACCÈS :
           </div>
           <input type="text" placeholder="ENTER ACCESS CODE..." autocomplete="off" spellcheck="false">
-          <p style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--gray-dark); margin-top: 1rem; text-align: left;">
+          <p style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--gray-dark); margin-top: 1rem; text-align: left;" data-i18n="terminal.hint">
             INDICE : Les réponses sont dans les données. Cherchez le nom qui revient dans l'ombre.
           </p>
         </div>
@@ -287,7 +290,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-symbol">◆</div>
-      <div class="footer-content">
+      <div class="footer-content" data-i18n="footer.archives">
         FLUXX PRIVATE MILITARY CONTRACTOR — ARCHIVES OPÉRATIONNELLES<br>
         DONNÉES PARTIELLES — NIVEAU D'ACCÈS : STANDARD<br>
         <span class="secret-symbol">UMBRA:SIGMA-7:FL-7742:ACCESS:PENDING</span>
@@ -295,6 +298,7 @@
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/core.js"></script>
 </body>
 </html>

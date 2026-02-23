@@ -7,6 +7,9 @@
   <meta name="description" content="Fluxx PMC — Précision. Discipline. Efficacité.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="alternate" hreflang="fr" href="index.html">
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="x-default" href="index.html">
 </head>
 <body>
 
@@ -34,11 +37,11 @@
         <span></span><span></span><span></span>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="charter.html">Charte</a></li>
-        <li><a href="members.html">Membres</a></li>
-        <li><a href="dossiers.html">Dossiers</a></li>
-        <li><a href="archives.html">Archives</a></li>
+        <li><a href="index.html" class="active" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="charter.html" data-i18n="nav.charter">Charte</a></li>
+        <li><a href="members.html" data-i18n="nav.members">Membres</a></li>
+        <li><a href="dossiers.html" data-i18n="nav.dossiers">Dossiers</a></li>
+        <li><a href="archives.html" data-i18n="nav.archives">Archives</a></li>
       </ul>
     </div>
   </nav>
@@ -50,16 +53,16 @@
     <div class="hero-content">
       <div class="status-bar fade-in">
         <div class="indicator"></div>
-        <span>SYSTÈME OPÉRATIONNEL — NOEUD SÉCURISÉ ACTIF</span>
+        <span data-i18n="hero.status">SYSTÈME OPÉRATIONNEL — NOEUD SÉCURISÉ ACTIF</span>
       </div>
       <h1 class="hero-title glitch" data-text="FLUXX">FLUXX</h1>
-      <p class="hero-subtitle">PRIVATE MILITARY CONTRACTOR — EST. 2947</p>
-      <p class="hero-slogan">
+      <p class="hero-subtitle" data-i18n="hero.subtitle">PRIVATE MILITARY CONTRACTOR — EST. 2947</p>
+      <p class="hero-slogan" data-i18n="hero.slogan">
         Là où les juridictions s'arrêtent, <em>l'instrument</em> commence.<br>
         Nous ne choisissons pas de camp. Nous exécutons le contrat.
       </p>
-      <a href="charter.html" class="btn btn-primary">Consulter la Charte</a>
-      <a href="members.html" class="btn" style="margin-left: 1rem;">Personnel</a>
+      <a href="charter.html" class="btn btn-primary" data-i18n="hero.btn.charter">Consulter la Charte</a>
+      <a href="members.html" class="btn" style="margin-left: 1rem;" data-i18n="hero.btn.members">Personnel</a>
     </div>
   </section>
 
@@ -68,52 +71,52 @@
   <section class="section">
     <div class="container">
       <div class="fade-in">
-        <h2 style="margin-bottom: 0.5rem;">Manifeste</h2>
-        <div class="document-classification">Document public — Diffusion autorisée</div>
+        <h2 style="margin-bottom: 0.5rem;" data-i18n="manifeste.title">Manifeste</h2>
+        <div class="document-classification" data-i18n="manifeste.classification">Document public — Diffusion autorisée</div>
       </div>
 
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem;">
         <div class="fade-in">
-          <p style="font-size: 1.15rem; color: var(--gray-light); line-height: 1.9;">
+          <p style="font-size: 1.15rem; color: var(--gray-light); line-height: 1.9;" data-i18n="manifeste.p1">
             Nous ne cherchons pas la guerre — nous l'exécutons.
           </p>
-          <p style="font-size: 1.05rem; color: var(--gray-light); line-height: 1.9;">
+          <p style="font-size: 1.05rem; color: var(--gray-light); line-height: 1.9;" data-i18n="manifeste.p2">
             Dans les interstices de l'espace civilisé, là où les lois peinent à s'appliquer et où le dialogue échoue, Fluxx apparaît. Pas comme un sauveur. <em style="color: var(--red-primary);">Comme une solution.</em>
           </p>
-          <p style="font-size: 1.05rem; color: var(--gray-light); line-height: 1.9;">
+          <p style="font-size: 1.05rem; color: var(--gray-light); line-height: 1.9;" data-i18n="manifeste.p3">
             Nous ne portons ni cause, ni drapeau. Nous ne luttons ni pour la gloire, ni pour l'honneur. Nous agissons là où le chaos exige une réponse rationnelle.
           </p>
-          <p style="font-size: 1.05rem; color: var(--gray-light); line-height: 1.9;">
+          <p style="font-size: 1.05rem; color: var(--gray-light); line-height: 1.9;" data-i18n="manifeste.p4">
             Chaque intervention est chirurgicale. Chaque opération est conçue avec précision, exécutée sans passion ni hésitation. Le conflit n'est pas un but — c'est une variable. Et nous sommes l'équation qui le résout.
           </p>
-          <p style="font-size: 1rem; color: var(--gray); line-height: 1.9; margin-top: 2rem;">
+          <p style="font-size: 1rem; color: var(--gray); line-height: 1.9; margin-top: 2rem;" data-i18n="manifeste.p5">
             Fluxx n'est pas une armée. Pas un gang. Pas un groupe de tueurs à gages. C'est une structure rigoureuse. Un outil aux mains fermes. Un engrenage silencieux dans la grande mécanique de la survie.
           </p>
         </div>
         <div class="fade-in" style="animation-delay: 0.2s;">
           <div class="card" style="margin-bottom: 1.5rem;">
-            <div class="card-header">Principes Fondamentaux</div>
+            <div class="card-header" data-i18n="principes.title">Principes Fondamentaux</div>
             <ul style="list-style: none; padding: 0;">
               <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-dark); font-family: var(--font-mono); font-size: 0.85rem; color: var(--gray-light);">
-                <span class="text-red">01</span> — L'efficacité prime sur l'émotion
+                <span class="text-red">01</span> — <span data-i18n="principe.1">L'efficacité prime sur l'émotion</span>
               </li>
               <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-dark); font-family: var(--font-mono); font-size: 0.85rem; color: var(--gray-light);">
-                <span class="text-red">02</span> — La discipline remplace le chaos
+                <span class="text-red">02</span> — <span data-i18n="principe.2">La discipline remplace le chaos</span>
               </li>
               <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-dark); font-family: var(--font-mono); font-size: 0.85rem; color: var(--gray-light);">
-                <span class="text-red">03</span> — La mission prime sur l'individu
+                <span class="text-red">03</span> — <span data-i18n="principe.3">La mission prime sur l'individu</span>
               </li>
               <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--gray-dark); font-family: var(--font-mono); font-size: 0.85rem; color: var(--gray-light);">
-                <span class="text-red">04</span> — La discrétion est non-négociable
+                <span class="text-red">04</span> — <span data-i18n="principe.4">La discrétion est non-négociable</span>
               </li>
               <li style="padding: 0.5rem 0; font-family: var(--font-mono); font-size: 0.85rem; color: var(--gray-light);">
-                <span class="text-red">05</span> — L'instrument n'a pas d'allégeance
+                <span class="text-red">05</span> — <span data-i18n="principe.5">L'instrument n'a pas d'allégeance</span>
               </li>
             </ul>
           </div>
           <div class="card">
-            <div class="card-header">Qui Nous Recrutons</div>
-            <p style="font-size: 0.9rem; color: var(--gray-light); line-height: 1.8;">
+            <div class="card-header" data-i18n="recrute.title">Qui Nous Recrutons</div>
+            <p style="font-size: 0.9rem; color: var(--gray-light); line-height: 1.8;" data-i18n="recrute.p">
               Nous n'avons pas besoin de <em>croyants</em>.<br><br>
               Nous avons besoin d'<em style="color: var(--red-primary);">opérateurs</em>.<br><br>
               <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray);">Professionnels. Fiables. Silencieux. Prêts à renoncer à l'improvisation pour l'efficacité absolue.</span>
@@ -129,61 +132,61 @@
   <section class="section">
     <div class="container">
       <div class="fade-in">
-        <h2 style="margin-bottom: 0.5rem;">Contexte Opérationnel</h2>
-        <div class="document-classification">Résumé historique — Version publique</div>
+        <h2 style="margin-bottom: 0.5rem;" data-i18n="contexte.title">Contexte Opérationnel</h2>
+        <div class="document-classification" data-i18n="contexte.classification">Résumé historique — Version publique</div>
       </div>
 
       <div class="document fade-in" style="margin-top: 2rem;">
         <div class="document-header">
-          <div class="document-classification">FLUXX-DOC-001 — PUBLIC</div>
-          <div class="document-id">Réf: FX/HIST/2948-GENESIS</div>
+          <div class="document-classification" data-i18n="contexte.doc.classification">FLUXX-DOC-001 — PUBLIC</div>
+          <div class="document-id" data-i18n="contexte.doc.ref">Réf: FX/HIST/2948-GENESIS</div>
         </div>
 
         <div class="document-section">
-          <div class="document-section-title">Genèse — Réponse au Chaos</div>
-          <p style="color: var(--gray-light);">
+          <div class="document-section-title" data-i18n="genese.title">Genèse — Réponse au Chaos</div>
+          <p style="color: var(--gray-light);" data-i18n="genese.p1">
             Fluxx n'est pas née d'une soif de combat. Fluxx est née d'un constat brutal : l'univers est chaotique, instable, et la guerre, inévitable.
           </p>
-          <p style="color: var(--gray-light);">
+          <p style="color: var(--gray-light);" data-i18n="genese.p2">
             En 2948, des officiers de la Marine de l'UEE — usés, désabusés par les ordres absurdes et les pertes inutiles — ont quitté les rangs officiels. Non pour déserter. Pour bâtir réponse. Froidement calculée. Chirurgicale. Sans états d'âme.
           </p>
-          <p style="color: var(--gray-light);">
+          <p style="color: var(--gray-light);" data-i18n="genese.p3">
             Là où d'autres tergiversent, Fluxx entre en action. Où les bureaucraties stagnent, Fluxx frappe. Sans haine. Sans passion. Seulement une précision méthodique et une efficacité totale.
           </p>
         </div>
 
         <div class="document-section">
-          <div class="document-section-title">Nature Opérationnelle</div>
-          <p style="color: var(--gray-light);">
+          <div class="document-section-title" data-i18n="nature.title">Nature Opérationnelle</div>
+          <p style="color: var(--gray-light);" data-i18n="nature.p1">
             Nous ne sommes ni une armée, ni un gang, ni un groupe de mercenaires en quête de crédits. <span class="text-red">Nous sommes un outil.</span> Un instrument de guerre rationnel. Un spectre. Une lame invisible qui frappe là où le désordre menace ce qui doit être protégé.
           </p>
-          <p style="color: var(--gray-light);">
+          <p style="color: var(--gray-light);" data-i18n="nature.p2">
             Dénouer les prises d'otages. Éliminer une cible. Sécuriser une zone. Intervenir là où la diplomatie a échoué. Fluxx frappe vite, fort, et disparaît avant que les débris ne retombent.
           </p>
-          <p style="color: var(--gray-light);">
+          <p style="color: var(--gray-light);" data-i18n="nature.p3">
             Nos membres ne cherchent pas la gloire. Ils exécutent. Froids, coordonnés, fiables. Chaque tir, chaque mouvement, chaque décision est le fruit d'un système parfaitement huilé, d'une mécanique de guerre bien rodée.
           </p>
         </div>
 
         <div class="document-section">
-          <div class="document-section-title">Doctrine Fondamentale</div>
-          <p style="color: var(--gray-light);">
+          <div class="document-section-title" data-i18n="doctrine.title">Doctrine Fondamentale</div>
+          <p style="color: var(--gray-light);" data-i18n="doctrine.p1">
             Nous ne cherchons pas la guerre. <em style="color: var(--red-primary); font-weight: 500;">Nous sommes la fin logique de ceux qui la provoquent.</em>
           </p>
-          <p style="color: var(--gray-light);">
+          <p style="color: var(--gray-light);" data-i18n="doctrine.p2">
             Là où les juridictions s'arrêtent, notre mandat commence. Fluxx ne répond à aucune gouvernance externe — seulement à l'efficacité opérationnelle. Chaque décision repose sur un calcul unique : <em>« Si la mission sert Fluxx, elle est légitime. »</em>
           </p>
-          <p style="color: var(--gray); font-family: var(--font-mono); font-size: 0.8rem;">
+          <p style="color: var(--gray); font-family: var(--font-mono); font-size: 0.8rem;" data-i18n="doctrine.note">
             Note : Nous ne promeut pas l'anarchie. Nous promeut la <span class="text-red">discipline absolue</span> et la <span class="text-red">précision sans compromis</span>.
           </p>
         </div>
 
         <div class="document-section">
-          <div class="document-section-title">Présence Actuelle</div>
-          <p style="color: var(--gray-light);">
+          <div class="document-section-title" data-i18n="presence.title">Présence Actuelle</div>
+          <p style="color: var(--gray-light);" data-i18n="presence.p1">
             Opérations distribuées à travers les systèmes connus et au-delà des juridictions UEE. Concentration observée dans les zones frontalières, corridors commerciaux à haut risque, et secteurs où l'ordre institutionnel est limité ou contesté.
           </p>
-          <p style="color: var(--gray-light);">
+          <p style="color: var(--gray-light);" data-i18n="presence.p2">
             Effectif total : <span class="text-dim">[DONNÉE CLASSIFIÉE]</span>. Taux d'opérabilité : perpétuel. Engagement : absolu.
           </p>
           <div class="coordinates" style="margin-top: 1rem;">47.2°N // 8.5°E // NOEUD-7 // ACTIF EN CE MOMENT</div>
@@ -197,16 +200,16 @@
   <section class="section" style="text-align: center;">
     <div class="container">
       <div class="fade-in">
-        <p style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--gray); letter-spacing: 0.2em; line-height: 2.5;">
+        <p style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--gray); letter-spacing: 0.2em; line-height: 2.5;" data-i18n="signature.quote">
           « Nous ne cherchons pas la guerre.<br>
           Nous sommes la fin logique de ceux qui la provoquent.<br>
           <span class="text-red">Précision. Discipline. Efficacité.</span> »
         </p>
         <div style="margin-top: 2rem;">
-          <span class="secret-symbol" data-hidden-info="SIGMA-7">◆ INSTRUMENT OPÉRATIONNEL ◆</span>
+          <span class="secret-symbol" data-hidden-info="SIGMA-7" data-i18n="signature.instrument">◆ INSTRUMENT OPÉRATIONNEL ◆</span>
         </div>
         <div style="margin-top: 3rem;">
-          <a href="charter.html" class="btn btn-primary">Lire la Charte Complète</a>
+          <a href="charter.html" class="btn btn-primary" data-i18n="signature.btn">Lire la Charte Complète</a>
         </div>
       </div>
     </div>
@@ -216,7 +219,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-symbol">◆</div>
-      <div class="footer-content">
+      <div class="footer-content" data-i18n="footer.index">
         FLUXX PRIVATE MILITARY CONTRACTOR — TOUS DROITS PROTOCOLS RÉSERVÉS<br>
         SYSTÈME SÉCURISÉ — NOEUD CHIFFRÉ — <span class="coordinates">REF:47.2N-8.5E</span><br>
         <span class="secret-symbol">U-4D-42-52-41</span>
@@ -224,6 +227,7 @@
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/core.js"></script>
 </body>
 </html>

@@ -1026,6 +1026,32 @@ a:hover {
   opacity: 0.4;
 }
 
+/* ---- LANGUAGE TOGGLE ---- */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--gray-light);
+  background: transparent;
+  border: 1px solid var(--gray-dark);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.lang-toggle:hover {
+  color: var(--red-primary);
+  border-color: var(--red-primary);
+  box-shadow: 0 0 12px rgba(196, 30, 58, 0.15);
+}
+
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
   h1 { font-size: 2rem; }

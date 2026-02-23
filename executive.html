@@ -6,6 +6,9 @@
   <title>████████████ — EXÉCUTIF</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="alternate" hreflang="fr" href="executive.html">
+  <link rel="alternate" hreflang="en" href="executive.html">
+  <link rel="alternate" hreflang="x-default" href="executive.html">
   <style>
     /* Page-specific overrides for executive page */
     body {
@@ -125,7 +128,7 @@
 </head>
 <body class="executive-page">
 
-  <div class="executive-watermark">EXÉCUTIF</div>
+  <div class="executive-watermark" data-i18n="watermark">EXÉCUTIF</div>
 
   <!-- NAVIGATION (minimal) -->
   <nav class="nav" style="border-bottom-color: var(--red-accent);">
@@ -133,15 +136,15 @@
       <a href="index.html" class="nav-logo">
         <div>
           <div class="nav-logo-text" style="color: var(--red-accent);">Fluxx</div>
-          <div class="nav-logo-sub" style="color: var(--red-accent);">ACCÈS EXÉCUTIF — NIVEAU ZÉRO</div>
+          <div class="nav-logo-sub" style="color: var(--red-accent);" data-i18n="nav.sub">ACCÈS EXÉCUTIF — NIVEAU ZÉRO</div>
         </div>
       </a>
       <div class="nav-toggle">
         <span></span><span></span><span></span>
       </div>
       <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="classified.html">Dossiers</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="classified.html" data-i18n="nav.dossiers">Dossiers</a></li>
       </ul>
     </div>
   </nav>
@@ -150,11 +153,11 @@
   <section class="executive-header">
     <div class="container">
       <div class="fade-in">
-        <div class="threat-indicator">
+        <div class="threat-indicator" data-i18n="header.badge">
           NIVEAU D'ACCÈS : DIRECTEURS UNIQUEMENT — REDLINE PROTOCOL
         </div>
         <h1 style="font-size: 2.5rem; color: var(--red-accent); margin: 1.5rem 0 0.5rem;" class="glitch" data-text="SITUATION OPÉRATIONNELLE">SITUATION OPÉRATIONNELLE</h1>
-        <p style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray); letter-spacing: 0.2em;">
+        <p style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray); letter-spacing: 0.2em;" data-i18n="header.subtitle">
           RAPPORTS CONFIDENTIELS — DIRECTEURS JUS██SQ & DA██OO UNIQUEMENT
         </p>
       </div>
@@ -386,13 +389,15 @@
   <footer class="footer" style="border-top: 2px solid var(--red-accent);">
     <div class="container">
       <div class="footer-symbol" style="color: var(--red-accent);">◆</div>
-      <div class="footer-content" style="color: var(--red-accent);">
+      <div class="footer-content" style="color: var(--red-accent);" data-i18n="footer.executive">
         FLUXX EXECUTIVE RECORDS — REDLINE PROTOCOL<br>
         DERNIER ACCÈS ENREGISTRÉ : <span id="footerTime"></span><br>
         <span class="secret-symbol">REDLINE:EXEC:ACTIVE:DIRECTORS-ONLY</span>
       </div>
     </div>
   </footer>
+
+  <script src="js/i18n.js"></script>
 
   <script>
     // Generate session ID and timestamps
