@@ -147,6 +147,15 @@ export default function HeroSection() {
       <div className="absolute bottom-[8%] left-1/2 h-[2px] w-[800px] -translate-x-1/2 bg-gradient-to-r from-transparent via-[var(--color-accent)]/15 to-transparent blur-[2px]" />
       <div className="absolute bottom-[7%] left-1/2 h-[60px] w-[600px] -translate-x-1/2 bg-[var(--color-accent)]/[0.02] blur-[40px]" />
 
+      {/* Ship silhouette layer */}
+      <div className="pointer-events-none absolute bottom-[12%] right-[8%] hidden opacity-[0.04] lg:block" style={{ filter: 'blur(0.5px)' }}>
+        <svg width="320" height="80" viewBox="0 0 320 80" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 50 L30 45 L60 42 L100 38 L130 30 L160 20 L180 18 L200 20 L220 25 L240 30 L260 28 L280 30 L300 35 L310 40 L320 45 L310 48 L300 52 L280 54 L260 52 L240 50 L220 48 L200 45 L180 42 L160 40 L140 42 L120 45 L100 48 L80 50 L60 52 L30 53 L0 52 Z" />
+          <path d="M130 30 L140 20 L160 12 L180 10 L200 12 L220 18 L240 25 L220 22 L200 18 L180 16 L160 18 L140 24 Z" opacity="0.6" />
+          <path d="M80 50 L100 55 L130 58 L160 60 L200 58 L240 55 L260 52 L240 56 L200 60 L160 62 L120 60 L90 56 Z" opacity="0.4" />
+        </svg>
+      </div>
+
       {/* Star grid pattern */}
       <div className="grid-bg absolute inset-0 opacity-20" />
 

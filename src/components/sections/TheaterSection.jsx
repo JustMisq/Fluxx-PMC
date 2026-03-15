@@ -131,6 +131,7 @@ export default function TheaterSection() {
                   key={sys.name}
                   className="absolute z-10 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
                   style={{ left: `${sys.x}%`, top: `${sys.y}%` }}
+                  onClick={() => setActive(active === sys.name ? null : sys.name)}
                   onMouseEnter={() => setActive(sys.name)}
                   onMouseLeave={() => setActive(null)}
                 >
