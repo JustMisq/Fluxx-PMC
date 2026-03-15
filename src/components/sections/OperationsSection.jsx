@@ -1,47 +1,60 @@
 import SectionHeading from "../ui/SectionHeading";
 import ScrollReveal from "../ui/ScrollReveal";
 
-const phases = [
+const missions = [
   {
-    step: "01",
-    title: "Contract Acquisition",
+    code: "OP-RCN",
+    title: "Recon Missions",
     description:
-      "Operations begin with contract intake. Leadership evaluates strategic value, risk assessment, and resource allocation before approval.",
-    accent: "border-[var(--color-primary)]",
+      "Long range surveillance and intel gathering. Scout teams deploy into hostile or uncharted territory to map threats, identify assets, and report enemy force composition before main operations begin.",
+    icon: "◎",
+    clearance: "STANDARD",
   },
   {
-    step: "02",
-    title: "Intelligence & Planning",
+    code: "OP-AST",
+    title: "Assault Contracts",
     description:
-      "Recon teams gather field intelligence. Command staff develops operational plans including objectives, timelines, and contingencies.",
-    accent: "border-[var(--color-primary)]",
+      "Direct combat operations and boarding actions. Full-scale offensive deployments against fortified targets, including ship-to-ship combat, ground assaults, and orbital strike coordination.",
+    icon: "⚔",
+    clearance: "CLASSIFIED",
   },
   {
-    step: "03",
-    title: "Force Assembly",
+    code: "OP-EXT",
+    title: "Extraction Operations",
     description:
-      "Division leads mobilize personnel and assets. Teams are briefed, equipped, and staged at the designated rally point.",
-    accent: "border-[var(--color-primary)]",
+      "Personnel or asset recovery in hostile environments. High-risk rescue missions behind enemy lines, including downed pilot recovery, VIP extraction, and sensitive cargo retrieval.",
+    icon: "△",
+    clearance: "RESTRICTED",
   },
   {
-    step: "04",
-    title: "Deployment & Execution",
+    code: "OP-LOG",
+    title: "Logistics Deployments",
     description:
-      "Operatives execute the mission plan with precision coordination. Real-time comms ensure adaptive response to changing conditions.",
-    accent: "border-[var(--color-accent)]",
+      "Transport, resupply, and operational support. Convoy protection, forward operating base establishment, fuel and munitions delivery across contested systems.",
+    icon: "⬡",
+    clearance: "STANDARD",
   },
   {
-    step: "05",
-    title: "Extraction & Debrief",
+    code: "OP-BLK",
+    title: "Black Operations",
     description:
-      "Post-operation extraction followed by thorough debriefing. After-action reports are filed and lessons integrated into doctrine.",
-    accent: "border-[var(--color-primary)]",
+      "Covert missions with no official record. Targets, methods, and outcomes are classified at the highest level. Only Onyx-cleared operatives are briefed.",
+    icon: "◆",
+    clearance: "ONYX",
   },
 ];
+
+const clearanceColor = {
+  STANDARD: "text-green-500/60 border-green-500/20",
+  CLASSIFIED: "text-yellow-500/60 border-yellow-500/20",
+  RESTRICTED: "text-orange-500/60 border-orange-500/20",
+  ONYX: "text-red-500/60 border-red-500/20",
+};
 
 export default function OperationsSection() {
   return (
     <section className="relative overflow-hidden bg-[var(--color-surface)] py-32">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#0c0c18_0%,_#0a0a10_100%)]" />
       <div className="grid-bg absolute inset-0 opacity-15" />
 
       {/* Decorative side label */}
@@ -54,23 +67,23 @@ export default function OperationsSection() {
       <div className="relative mx-auto max-w-5xl px-6">
         <ScrollReveal>
           <SectionHeading
-            tag="Operational Doctrine"
-            title="How We Operate"
-            description="Every FLUXX PMC deployment follows a structured operational framework designed for maximum efficiency and mission success."
+            tag="Mission Doctrine"
+            title="Operations"
+            description="FLUXX PMC conducts specialized mission types across all theaters. Each operation follows strict doctrinal protocols and clearance requirements."
           />
         </ScrollReveal>
 
         <div className="relative">
-          {/* Vertical timeline line — pulsing gradient */}
+          {/* Vertical timeline line */}
           <div className="absolute left-8 top-0 bottom-0 w-[1px] md:left-1/2">
-            <div className="h-full w-full bg-gradient-to-b from-[var(--color-primary)]/50 via-[var(--color-primary)]/20 to-[var(--color-primary)]/5" />
+            <div className="h-full w-full bg-gradient-to-b from-[var(--color-primary)]/50 via-[var(--color-primary)]/15 to-[var(--color-primary)]/5" />
           </div>
 
-          <div className="space-y-16">
-            {phases.map((phase, i) => (
-              <ScrollReveal key={phase.step} delay={i * 100} direction={i % 2 === 0 ? "up" : "up"}>
+          <div className="space-y-20">
+            {missions.map((mission, i) => (
+              <ScrollReveal key={mission.code} delay={i * 100}>
                 <div
-                  className={`relative flex flex-col gap-6 md:flex-row md:items-center ${
+                  className={`relative flex flex-col gap-6 md:flex-row md:items-start ${
                     i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
                 >
@@ -80,28 +93,44 @@ export default function OperationsSection() {
                       i % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"
                     }`}
                   >
-                    <div className="card-lift group relative border border-[var(--color-surface-border)] bg-[var(--color-background)] p-7 transition-all duration-500 hover:border-[var(--color-primary)]/30">
-                      {/* Top accent line */}
+                    <div className="card-lift group relative border border-[var(--color-surface-border)] bg-[var(--color-background)] p-8 transition-all duration-500 hover:border-[var(--color-primary)]/30">
+                      {/* Animated top accent */}
                       <div className="absolute left-0 top-0 h-[2px] w-0 bg-[var(--color-primary)]/60 transition-all duration-700 group-hover:w-full" />
+                      {/* Corner brackets */}
+                      <div className="absolute top-0 left-0 h-4 w-4 border-t border-l border-[var(--color-primary)]/15 transition-all duration-500 group-hover:border-[var(--color-primary)]/50" />
+                      <div className="absolute bottom-0 right-0 h-4 w-4 border-b border-r border-[var(--color-primary)]/15 transition-all duration-500 group-hover:border-[var(--color-primary)]/50" />
+                      {/* Hover glow */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-primary)]/[0.04] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                      <div className="mb-2 flex items-center gap-3" style={{ justifyContent: i % 2 === 0 ? "flex-end" : "flex-start" }}>
-                        <span className="font-[family-name:var(--font-mono)] text-[10px] tracking-[0.2em] text-[var(--color-primary)]/60">
-                          PHASE {phase.step}
-                        </span>
-                        <span className="h-[1px] w-6 bg-[var(--color-primary)]/30" />
+                      <div className="relative">
+                        {/* Header */}
+                        <div className="mb-4 flex items-center gap-3" style={{ justifyContent: i % 2 === 0 ? "flex-end" : "flex-start" }}>
+                          <span className="font-[family-name:var(--font-mono)] text-[10px] tracking-[0.2em] text-[var(--color-primary)]/60">
+                            {mission.code}
+                          </span>
+                          <span className="h-[1px] w-6 bg-[var(--color-primary)]/30" />
+                          <span className={`border px-2 py-0.5 font-[family-name:var(--font-mono)] text-[8px] tracking-[0.15em] ${clearanceColor[mission.clearance]}`}>
+                            {mission.clearance}
+                          </span>
+                        </div>
+
+                        {/* Icon + Title */}
+                        <div className="mb-1 text-xl text-[var(--color-primary)]/40 transition-colors duration-300 group-hover:text-[var(--color-primary)]/70" style={{ textAlign: i % 2 === 0 ? "right" : "left" }}>
+                          {mission.icon}
+                        </div>
+                        <h3 className="mb-3 font-[family-name:var(--font-orbitron)] text-sm font-bold tracking-wider text-white">
+                          {mission.title}
+                        </h3>
+                        <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+                          {mission.description}
+                        </p>
                       </div>
-                      <h3 className="mb-3 font-[family-name:var(--font-orbitron)] text-sm font-bold tracking-wider text-white">
-                        {phase.title}
-                      </h3>
-                      <p className="text-sm leading-relaxed text-[var(--color-muted)]">
-                        {phase.description}
-                      </p>
                     </div>
                   </div>
 
                   {/* Timeline node */}
-                  <div className="absolute left-8 top-7 flex h-7 w-7 -translate-x-1/2 items-center justify-center border border-[var(--color-primary)]/60 bg-[var(--color-background)] transition-all duration-300 md:left-1/2">
-                    <span className="h-2.5 w-2.5 bg-[var(--color-primary)] shadow-[0_0_12px_var(--color-primary-glow)]" />
+                  <div className="absolute left-8 top-8 flex h-8 w-8 -translate-x-1/2 items-center justify-center border border-[var(--color-primary)]/50 bg-[var(--color-background)] transition-all duration-300 md:left-1/2">
+                    <span className="h-3 w-3 bg-[var(--color-primary)] shadow-[0_0_14px_var(--color-primary-glow)]" />
                   </div>
 
                   {/* Spacer */}
@@ -111,15 +140,15 @@ export default function OperationsSection() {
             ))}
           </div>
 
-          {/* Terminal node at bottom */}
-          <div className="mt-8 flex justify-center md:justify-center">
+          {/* Terminal node */}
+          <div className="mt-10 flex justify-center">
             <div className="flex flex-col items-center gap-2">
-              <div className="h-4 w-[1px] bg-[var(--color-primary)]/20" />
-              <div className="flex h-4 w-4 items-center justify-center">
-                <div className="h-2 w-2 rotate-45 border border-[var(--color-primary)]/40 bg-[var(--color-primary)]/20" />
+              <div className="h-6 w-[1px] bg-[var(--color-primary)]/20" />
+              <div className="flex h-5 w-5 items-center justify-center">
+                <div className="h-2.5 w-2.5 rotate-45 border border-[var(--color-primary)]/40 bg-[var(--color-primary)]/20" />
               </div>
               <span className="font-[family-name:var(--font-mono)] text-[8px] tracking-[0.2em] text-[var(--color-muted)]/30">
-                CYCLE COMPLETE
+                END OF DOCTRINE
               </span>
             </div>
           </div>

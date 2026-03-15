@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
         className={`${orbitron.variable} ${rajdhani.variable} ${shareTechMono.variable} font-[family-name:var(--font-rajdhani)] antialiased`}
       >
         <Navbar />
+        <div className="ambient-particles" aria-hidden="true" />
         <main>{children}</main>
         <Footer />
       </body>
