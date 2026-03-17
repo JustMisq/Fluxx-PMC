@@ -165,6 +165,103 @@ export default function ContractsPage() {
         </div>
       </Section>
 
+      {/* ─── CONTRACT APPROVAL ─── */}
+      <Section className="bg-brand-red/5 border-y-2 border-brand-red/30">
+        <SectionLabel label="Validation" />
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+          Contract Approval
+        </h2>
+
+        <div className="max-w-3xl">
+          <p className="text-brand-text-muted leading-relaxed mb-4">
+            All contracts are reviewed by FLUXX Command.
+          </p>
+          <p className="text-brand-text-muted leading-relaxed">
+            Deployment is subject to operational availability and threat evaluation.
+          </p>
+        </div>
+      </Section>
+
+      {/* ─── OPERATIONAL CONDITIONS ─── */}
+      <Section>
+        <SectionLabel label="Requirements" />
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
+          Operational Conditions
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            "Client must provide mission details",
+            "Payment terms defined before deployment",
+            "Extraction not guaranteed in extreme conditions",
+          ].map((condition, i) => (
+            <motion.div
+              key={condition}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="flex items-start gap-3 p-6 border-l-2 border-brand-red bg-brand-gray/30"
+            >
+              <span className="text-brand-red font-bold text-xl mt-1">•</span>
+              <span className="text-brand-text-muted">{condition}</span>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      {/* ─── OPERATIONAL COMMITMENT ─── */}
+      <Section className="bg-brand-gray/30">
+        <SectionLabel label="Pledge" />
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8">
+          Operational Commitment
+        </h2>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="border-l-4 border-brand-red pl-8 py-4"
+        >
+          <p className="text-lg text-brand-text-muted leading-relaxed">
+            FLUXX PMC ensures mission execution with maximum efficiency, adaptability and tactical superiority.
+          </p>
+        </motion.div>
+      </Section>
+
+      {/* ─── CONTRACT PROCESS ─── */}
+      <Section>
+        <SectionLabel label="Workflow" />
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
+          Contract Process
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          {[
+            { num: "1", title: "Request Submission", desc: "Submit operational requirements" },
+            { num: "2", title: "Operational Assessment", desc: "Command evaluates feasibility" },
+            { num: "3", title: "Resource Allocation", desc: "Units assigned to contract" },
+            { num: "4", title: "Deployment", desc: "Mission execution begins" },
+          ].map((step, i) => (
+            <motion.div
+              key={step.num}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="relative"
+            >
+              <div className="flex items-center justify-center h-16 bg-brand-red/10 border-2 border-brand-red/30 rounded-full mb-4">
+                <span className="text-3xl font-black text-brand-red">{step.num}</span>
+              </div>
+              <h3 className="font-semibold text-white mb-2">{step.title}</h3>
+              <p className="text-xs text-brand-text-muted">{step.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
       {/* ─── CONTRACT TYPES OVERVIEW ─── */}
       <Section className="bg-brand-gray/30">
         <SectionLabel label="Quick Reference" />
@@ -280,26 +377,48 @@ export default function ContractsPage() {
               id: key,
               label: contract.title,
               content: (
-                <div className="space-y-6">
+                <div className="space-y-8">
+                  {/* QUICK OVERVIEW */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 p-6 bg-brand-red/5 border-2 border-brand-red/30">
+                    <div>
+                      <p className="text-xs text-brand-red/70 tracking-widest uppercase font-semibold mb-2">Type</p>
+                      <p className="text-sm font-bold text-white">{contract.title}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-brand-red/70 tracking-widest uppercase font-semibold mb-2">Operators</p>
+                      <p className="text-sm font-bold text-white">{contract.team_size?.split(/\d+-/)[1]?.split(" ")[0] || "Variable"}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-brand-red/70 tracking-widest uppercase font-semibold mb-2">Response</p>
+                      <p className="text-sm font-bold text-white">&lt;15 min</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-brand-red/70 tracking-widest uppercase font-semibold mb-2">Threat Level</p>
+                      <p className="text-sm font-bold text-white">{threatRating?.split("(")[0]?.trim() || "Variable"}</p>
+                    </div>
+                  </div>
+
+                  {/* MAIN DESCRIPTION */}
                   <div>
-                    <p className="text-xs text-brand-red/70 tracking-[0.15em] uppercase font-medium mb-2">
+                    <p className="text-xs text-brand-red/70 tracking-[0.15em] uppercase font-medium mb-3">
                       {contract.description}
                     </p>
-                    <p className="text-brand-text-muted leading-relaxed">
+                    <p className="text-base text-brand-text-muted leading-relaxed">
                       {contract.text}
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-brand-gray/30 p-4 border border-white/5">
+                  {/* PRIMARY INFO - SCOPE & DURATION */}
+                  <div className="border-l-4 border-brand-red pl-6 py-4 space-y-4">
+                    <div>
                       <p className="text-xs text-brand-red/70 tracking-[0.1em] uppercase font-medium mb-2">
-                        Scope
+                        Scope of Operations
                       </p>
-                      <p className="text-sm text-brand-text-muted">
+                      <p className="text-sm text-brand-text-muted leading-relaxed">
                         {contract.scope}
                       </p>
                     </div>
-                    <div className="bg-brand-gray/30 p-4 border border-white/5">
+                    <div>
                       <p className="text-xs text-brand-red/70 tracking-[0.1em] uppercase font-medium mb-2">
                         Duration
                       </p>
@@ -307,6 +426,10 @@ export default function ContractsPage() {
                         {contract.duration}
                       </p>
                     </div>
+                  </div>
+
+                  {/* SECONDARY INFO GRID */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-brand-gray/30 p-4 border border-white/5">
                       <p className="text-xs text-brand-red/70 tracking-[0.1em] uppercase font-medium mb-2">
                         Team Size
@@ -317,7 +440,7 @@ export default function ContractsPage() {
                     </div>
                     <div className="bg-brand-gray/30 p-4 border border-white/5">
                       <p className="text-xs text-brand-red/70 tracking-[0.1em] uppercase font-medium mb-2">
-                        SLA
+                        Service Level Agreement
                       </p>
                       <p className="text-sm text-brand-text-muted">
                         {contract.sla}
@@ -619,10 +742,10 @@ export default function ContractsPage() {
             Ready to Deploy
           </p>
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
-            Request a Contract
+            Submit Operational Request
           </h2>
           <p className="text-lg text-brand-text-muted mb-8 leading-relaxed">
-            Submit your mission parameters and our command staff will evaluate and deploy the appropriate units.
+            Send your mission parameters and our command staff will evaluate and deploy the appropriate units.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -630,7 +753,7 @@ export default function ContractsPage() {
             onClick={() => document.getElementById("contract-form")?.scrollIntoView({ behavior: "smooth" })}
             className="inline-flex items-center justify-center px-12 py-4 text-sm font-semibold tracking-[0.2em] uppercase bg-brand-red text-white border border-brand-red hover:bg-transparent hover:text-brand-red transition-all duration-300"
           >
-            Request Contract
+            Submit Request
           </motion.button>
         </motion.div>
       </Section>

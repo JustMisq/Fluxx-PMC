@@ -608,9 +608,9 @@
   "recruitment": {
     "hero_label": "Recruitment",
     "hero_title": "Join FLUXX PMC",
-    "hero_text": "FLUXX PMC is actively recruiting disciplined operators who can perform under pressure. We organize around three divisions: Pilots & Logistics, Assault, and Reconnaissance. If you have the skills, the resolve, and the commitment to excellence — we want to hear from you.",
+    "hero_text": "Elite operators only. High-risk missions. Zero margin for error.",
     "divisions_label": "Operational Divisions",
-    "divisions_title": "Find Your Role",
+    "divisions_title": "Operational Roles",
     "divisions": {
       "pilots_logistics": {
         "title": "Pilots & Logistics",
@@ -674,19 +674,19 @@
         ]
       }
     },
-    "requirements_label": "General Requirements",
-    "requirements_title": "What We Expect",
+    "requirements_label": "Mandatory Requirements",
+    "requirements_title": "Baseline Standards",
     "requirements_list": {
       "r1": "Active Star Citizen account in good standing",
-      "r2": "Willingness to participate in organized operations and training",
-      "r3": "Professional conduct and respect for chain of command",
-      "r4": "Availability for scheduled operations (flexibility accommodated)",
-      "r5": "Working microphone and willingness to communicate",
-      "r6": "Commitment to improvement and operational readiness"
+      "r2": "Disciplined approach to organized military operations",
+      "r3": "Strict adherence to chain of command",
+      "r4": "Commitment to scheduled operational deployments",
+      "r5": "Professional communication and situational awareness",
+      "r6": "Zero tolerance for internal conflict or insubordination"
     },
-    "apply_label": "How to Apply",
-    "apply_title": "Enlistment Process",
-    "apply_text": "Ready to join FLUXX PMC? The application process is straightforward. Join our Discord server and submit an application through our recruitment channel. A recruiter will conduct a brief interview to assess fit and assign you to the appropriate division.",
+    "apply_label": "Get Started",
+    "apply_title": "How to Apply",
+    "apply_text": "Submit your application through our official channels. All applicants undergo background evaluation and tactical assessment.",
     "apply_discord": "Join Discord",
     "apply_org": "View Star Citizen Org",
     "apply_step1": "Join the FLUXX Discord server",
