@@ -1,12 +1,157 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Section from "@/components/ui/Section";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Card from "@/components/ui/Card";
 import DivisionCard from "@/components/ui/DivisionCard";
 import Button from "@/components/ui/Button";
+
+/* ─── Contract Types Section ─── */
+function ContractTypesSection({ t, contractTypes }: any) {
+  const [selectedType, setSelectedType] = useState<string | null>(null);
+
+  const selectedData = selectedType 
+    ? t.raw(`contract_preview_types.${selectedType}`) as any
+    : null;
+
+  return (
+    <>
+      <Section>
+        <SectionLabel label={t("contract_preview_label")} />
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
+          {t("contract_preview_title")}
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+          {contractTypes.map((key: string, i: number) => {
+            const typeData = t.raw(`contract_preview_types.${key}`) as any;
+
+            return (
+              <motion.div
+                key={key}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                onClick={() => setSelectedType(key)}
+                className="relative bg-brand-gray border border-white/5 hover:border-brand-red/30 transition-colors duration-300 p-6 lg:p-8 cursor-pointer group"
+              >
+                <div className="absolute top-0 right-0 w-1 h-12 bg-gradient-to-b from-brand-red to-transparent group-hover:h-16 transition-all duration-300" />
+
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {typeData?.title}
+                </h3>
+                <p className="text-xs text-brand-red/70 tracking-wider mb-4 font-medium">
+                  {typeData?.description}
+                </p>
+
+                <div className="pt-4 border-t border-white/5">
+                  <p className="text-[10px] text-brand-text-muted tracking-widest uppercase">
+                    Threat Level: <span className="text-brand-red font-semibold ml-1">{typeData?.threat}</span>
+                  </p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Button href="/contracts">View All Contract Types</Button>
+        </div>
+      </Section>
+
+      {/* Contract Details Modal */}
+      <AnimatePresence>
+        {selectedType && selectedData && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedType(null)}
+            className="fixed inset-0 bg-black/80 z-40 flex items-center justify-center p-4 backdrop-blur-sm"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-brand-gray border border-brand-red/30 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            >
+              <div className="p-8 lg:p-12">
+                {/* Header */}
+                <div className="flex items-start justify-between mb-6">
+                  <div>
+                    <h2 className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                      {selectedData.title}
+                    </h2>
+                    <p className="text-sm text-brand-red/70">{selectedData.description}</p>
+                  </div>
+                  <button
+                    onClick={() => setSelectedType(null)}
+                    className="text-brand-text-muted hover:text-white transition-colors text-2xl leading-none"
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                <div className="border-t border-white/10 pt-6 mb-6">
+                  <p className="text-sm text-brand-text-muted leading-relaxed mb-6">
+                    {selectedData.fullDescription}
+                  </p>
+
+                  {/* Key Details Grid */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-brand-dark/50 p-4 border border-white/5">
+                      <p className="text-[10px] text-brand-red/60 tracking-widest uppercase font-semibold mb-2">Duration</p>
+                      <p className="text-sm text-brand-text-muted">{selectedData.duration}</p>
+                    </div>
+                    <div className="bg-brand-dark/50 p-4 border border-white/5">
+                      <p className="text-[10px] text-brand-red/60 tracking-widest uppercase font-semibold mb-2">Team Size</p>
+                      <p className="text-sm text-brand-text-muted">{selectedData.team_size}</p>
+                    </div>
+                    <div className="bg-brand-dark/50 p-4 border border-white/5">
+                      <p className="text-[10px] text-brand-red/60 tracking-widest uppercase font-semibold mb-2">Deployment</p>
+                      <p className="text-sm text-brand-text-muted">{selectedData.deployment_time}</p>
+                    </div>
+                    <div className="bg-brand-dark/50 p-4 border border-white/5">
+                      <p className="text-[10px] text-brand-red/60 tracking-widest uppercase font-semibold mb-2">Threat Level</p>
+                      <p className="text-sm text-brand-red font-semibold">{selectedData.threat}</p>
+                    </div>
+                  </div>
+
+                  {/* Capabilities */}
+                  {selectedData.capabilities && (
+                    <div>
+                      <p className="text-[10px] text-brand-red/60 tracking-widest uppercase font-semibold mb-3">Key Capabilities</p>
+                      <ul className="space-y-2">
+                        {selectedData.capabilities.map((cap: string, idx: number) => (
+                          <li key={idx} className="text-sm text-brand-text-muted flex items-start gap-3">
+                            <span className="text-brand-red mt-1 flex-shrink-0">▪</span>
+                            <span>{cap}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+
+                {/* CTA */}
+                <div className="border-t border-white/10 pt-6">
+                  <Button href="/contracts" className="w-full">
+                    Request This Contract Type
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
 
 /* ─── Icon components ─── */
 function ShieldIcon() {
@@ -50,7 +195,6 @@ export default function HomePage() {
   const t = useTranslations("home");
   const hero = useTranslations("hero");
 
-  const overviewCards = ["security", "tactical", "escort", "recon"] as const;
   const divisionKeys = ["assault", "recon", "logistics", "medical"] as const;
   const divisionIcons = [
     <CrosshairIcon key="assault" />,
@@ -58,6 +202,9 @@ export default function HomePage() {
     <TruckIcon key="logistics" />,
     <HeartIcon key="medical" />,
   ];
+  const contractTypes = ["security", "combat", "escort", "recon"] as const;
+  const trustStats = t.raw("trust_stats") as Array<{ number: string; label: string }>;
+  const differentiators = t.raw("differentiators") as Array<{ title: string; text: string }>;
 
   return (
     <>
@@ -128,6 +275,71 @@ export default function HomePage() {
         </motion.div>
       </section>
 
+      {/* ─── TRUST/TRACK RECORD ─── */}
+      <Section className="bg-brand-gray/30">
+        <SectionLabel label={t("trust_label")} />
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+          {t("trust_title")}
+        </h2>
+        <p className="text-brand-text-muted max-w-3xl mb-12 leading-relaxed">
+          {t("trust_text")}
+        </p>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+          {trustStats.map((stat, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="bg-brand-gray border border-white/5 p-6 text-center hover:border-brand-red/20 transition-colors"
+            >
+              <p className="text-3xl lg:text-4xl font-black text-brand-red mb-2">
+                {stat.number}
+              </p>
+              <p className="text-xs text-brand-text-muted tracking-wider uppercase">
+                {stat.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      {/* ─── CONTRACT TYPES PREVIEW ─── */}
+      <ContractTypesSection t={t} contractTypes={contractTypes} />
+
+
+      {/* ─── WHY CHOOSE FLUXX ─── */}
+      <Section className="bg-brand-gray/30">
+        <SectionLabel label={t("differentiators_label")} />
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
+          {t("differentiators_title")}
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+          {differentiators.map((item, i) => (
+            <Card key={i} delay={i * 0.1}>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 border border-brand-red/30 flex items-center justify-center shrink-0 group-hover:border-brand-red transition-colors">
+                  <span className="text-brand-red font-bold text-xs">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-brand-text-muted leading-relaxed">
+                    {item.text}
+                  </p>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
       {/* ─── OPERATIONAL OVERVIEW ─── */}
       <Section>
         <SectionLabel label={t("overview_label")} />
@@ -139,14 +351,19 @@ export default function HomePage() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-          {overviewCards.map((key, i) => (
+          {["security", "tactical", "escort", "recon"].map((key, i) => (
             <Card key={key} delay={i * 0.1}>
               <h3 className="text-lg font-semibold text-white mb-3">
                 {t(`overview_cards.${key}.title`)}
               </h3>
-              <p className="text-sm text-brand-text-muted leading-relaxed">
+              <p className="text-sm text-brand-text-muted leading-relaxed mb-4">
                 {t(`overview_cards.${key}.text`)}
               </p>
+              <div className="pt-4 border-t border-white/5">
+                <p className="text-xs text-brand-red/70 font-medium tracking-wide">
+                  {t(`overview_cards.${key}.highlight`)}
+                </p>
+              </div>
             </Card>
           ))}
         </div>
@@ -166,6 +383,8 @@ export default function HomePage() {
               icon={divisionIcons[i]}
               title={t(`divisions.${key}.title`)}
               text={t(`divisions.${key}.text`)}
+              specialties={t(`divisions.${key}.specialties`)}
+              strength={t(`divisions.${key}.strength`)}
               status={t(`divisions.${key}.status`)}
               delay={i * 0.1}
             />
@@ -173,50 +392,8 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* ─── FLEET OVERVIEW ─── */}
-      <Section>
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
-          <div className="max-w-2xl">
-            <SectionLabel label={t("fleet_label")} />
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              {t("fleet_title")}
-            </h2>
-            <p className="text-brand-text-muted leading-relaxed">
-              {t("fleet_text")}
-            </p>
-          </div>
-          <Button href="/fleet" variant="secondary">
-            {t("fleet_cta")}
-          </Button>
-        </div>
-
-        {/* Fleet stat blocks */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
-          {[
-            { label: "Dropships", value: "Rapid Insertion" },
-            { label: "Heavy Fighters", value: "Air Superiority" },
-            { label: "Medical Ships", value: "Combat Support" },
-            { label: "Logistics", value: "Force Sustainment" },
-          ].map((item, i) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="bg-brand-gray border border-white/5 p-6 text-center hover:border-brand-red/20 transition-colors"
-            >
-              <p className="text-xs text-brand-red tracking-[0.2em] uppercase mb-2">
-                {item.label}
-              </p>
-              <p className="text-sm text-brand-text-muted">{item.value}</p>
-            </motion.div>
-          ))}
-        </div>
-      </Section>
-
       {/* ─── JOIN CTA ─── */}
-      <Section className="bg-brand-gray/30">
+      <Section>
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             {t("join_title")}

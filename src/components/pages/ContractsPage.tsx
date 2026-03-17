@@ -81,19 +81,125 @@ export default function ContractsPage() {
         text={t("hero_text")}
       />
 
-      {/* Why Hire FLUXX */}
+      {/* ─── INTRODUCTION SECTION ─── */}
       <Section>
-        <SectionLabel label={t("why_label")} />
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-          {t("why_title")}
+        <div className="max-w-3xl">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            Contract Services
+          </h2>
+          <p className="text-lg text-brand-text-muted leading-relaxed mb-6">
+            FLUXX PMC provides tactical security, combat deployment and reconnaissance services for corporations operating in high-risk environments.
+          </p>
+          <p className="text-brand-text-muted leading-relaxed">
+            Submit a contract request to deploy operational units across the Stanton system.
+          </p>
+        </div>
+      </Section>
+
+      {/* ─── OPERATIONAL STATUS (LIVE DASHBOARD) ─── */}
+      <Section className="bg-brand-gray/30">
+        <SectionLabel label="Real-Time" />
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
+          Operational Status
         </h2>
-        <p className="text-brand-text-muted max-w-3xl leading-relaxed">
-          {t("why_text")}
-        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { label: "Status", value: "ACTIVE", highlight: true },
+            { label: "Active Contracts", value: "3", highlight: true },
+            { label: "Deployment Zone", value: "Stanton System", highlight: false },
+            { label: "Response Time", value: "< 15 min", highlight: false },
+          ].map((stat, i) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05, duration: 0.4 }}
+              className={`relative border p-6 ${
+                stat.highlight
+                  ? "border-brand-red/50 bg-brand-red/5"
+                  : "border-white/5 bg-brand-gray/50"
+              } hover:border-brand-red/70 transition-all duration-300`}
+            >
+              <p className="text-[10px] text-brand-text-muted tracking-widest uppercase font-semibold mb-3">
+                {stat.label}
+              </p>
+              <p className={`text-2xl font-black ${stat.highlight ? "text-brand-red" : "text-white"}`}>
+                {stat.value}
+              </p>
+              {stat.highlight && (
+                <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-brand-red to-transparent" />
+              )}
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      {/* ─── WHY HIRE FLUXX ─── */}
+      <Section>
+        <SectionLabel label="Advantages" />
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
+          Why Hire FLUXX
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {[
+            "Rapid deployment units",
+            "Experienced operators",
+            "Multi-role fleet capability",
+            "Mission-first doctrine"
+          ].map((reason, i) => (
+            <motion.div
+              key={reason}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="flex items-start gap-3 p-6 border-l-2 border-brand-red"
+            >
+              <span className="text-brand-red font-bold text-lg">•</span>
+              <span className="text-brand-text-muted leading-relaxed">{reason}</span>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      {/* ─── CONTRACT TYPES OVERVIEW ─── */}
+      <Section className="bg-brand-gray/30">
+        <SectionLabel label="Quick Reference" />
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
+          Contract Types
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { name: "Security Contracts", desc: "Static & mobile site protection" },
+            { name: "Escort Operations", desc: "Convoy & asset protection" },
+            { name: "Combat Deployment", desc: "Offensive tactical operations" },
+            { name: "Strategic Recon", desc: "Intelligence & surveillance" }
+          ].map((type, i) => (
+            <motion.div
+              key={type.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08, duration: 0.5 }}
+              className="border border-white/5 hover:border-brand-red/30 transition-colors p-5 group cursor-default"
+            >
+              <h3 className="text-sm font-semibold text-white mb-2">
+                {type.name}
+              </h3>
+              <p className="text-xs text-brand-text-muted">
+                {type.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </Section>
 
       {/* Contract Types - Detailed + Pricing */}
-      <Section className="bg-brand-gray/30">
+      <Section>
         <SectionLabel label={t("types_label")} />
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
           {t("types_title")}
@@ -497,8 +603,40 @@ export default function ContractsPage() {
         </div>
       </Section>
 
+      {/* ─── CTA SECTION ─── */}
+      <Section className="relative overflow-hidden">
+        {/* Background accent */}
+        <div className="absolute -right-32 -top-32 w-96 h-96 bg-brand-red/5 rounded-full blur-3xl" />
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative z-10 text-center max-w-2xl mx-auto"
+        >
+          <p className="text-xs text-brand-red/70 tracking-[0.2em] uppercase font-semibold mb-4">
+            Ready to Deploy
+          </p>
+          <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
+            Request a Contract
+          </h2>
+          <p className="text-lg text-brand-text-muted mb-8 leading-relaxed">
+            Submit your mission parameters and our command staff will evaluate and deploy the appropriate units.
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            onClick={() => document.getElementById("contract-form")?.scrollIntoView({ behavior: "smooth" })}
+            className="inline-flex items-center justify-center px-12 py-4 text-sm font-semibold tracking-[0.2em] uppercase bg-brand-red text-white border border-brand-red hover:bg-transparent hover:text-brand-red transition-all duration-300"
+          >
+            Request Contract
+          </motion.button>
+        </motion.div>
+      </Section>
+
       {/* Contract Request Form */}
-      <Section className="bg-brand-gray/30">
+      <Section className="bg-brand-gray/30" id="contract-form">
         <SectionLabel label={t("form_label")} />
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
           {t("form_title")}
