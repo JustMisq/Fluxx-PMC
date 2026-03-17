@@ -5,6 +5,7 @@ import PageHero from "@/components/ui/PageHero";
 import Section from "@/components/ui/Section";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Card from "@/components/ui/Card";
+import StatusBadge from "@/components/ui/StatusBadge";
 
 export default function AboutPage() {
   const t = useTranslations("about");
@@ -19,6 +20,8 @@ export default function AboutPage() {
         label={t("hero_label")}
         title={t("hero_title")}
         text={t("hero_text")}
+        classification="restricted"
+        status={{ label: "DECLASSIFIED", variant: "amber" }}
       />
 
       {/* Company Overview */}
@@ -112,10 +115,13 @@ export default function AboutPage() {
       {/* History */}
       <Section>
         <SectionLabel label={t("history_label")} />
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-          {t("history_title")}
-        </h2>
-        <div className="max-w-3xl">
+        <div className="flex items-center gap-3 mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white">
+            {t("history_title")}
+          </h2>
+          <StatusBadge label="DECLASSIFIED" variant="amber" />
+        </div>
+        <div className="max-w-3xl border-l-2 border-brand-red/30 pl-6">
           {t("history_text")
             .split("\n\n")
             .map((para, i) => (

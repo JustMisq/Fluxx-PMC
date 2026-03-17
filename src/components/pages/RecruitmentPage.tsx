@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import PageHero from "@/components/ui/PageHero";
 import Section from "@/components/ui/Section";
 import SectionLabel from "@/components/ui/SectionLabel";
+import StatusBadge from "@/components/ui/StatusBadge";
 import Tabs from "@/components/ui/Tabs";
 import { EXTERNAL_LINKS } from "@/config/external-links";
 
@@ -21,23 +22,37 @@ export default function RecruitmentPage() {
         label={t("hero_label")}
         title={t("hero_title")}
         text={t("hero_text")}
+        classification="restricted"
+        status={{ label: "RECRUITING", variant: "green" }}
       />
 
       {/* ─── SELECTION POLICY (ELITE FILTER) ─── */}
       <Section className="bg-brand-red/5 border-y-2 border-brand-red/30">
         <div className="max-w-3xl">
-          <p className="text-xs text-brand-red/70 tracking-[0.2em] uppercase font-semibold mb-4">
-            Selection Criteria
-          </p>
+          <div className="flex items-center gap-3 mb-6">
+            <StatusBadge label="WARNING" variant="amber" />
+            <span className="text-[10px] text-brand-text-muted/50 tracking-wider">
+              FLUXX-HR-PROTOCOL-7
+            </span>
+          </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Selection Policy
           </h2>
           <p className="text-brand-text-muted leading-relaxed mb-4">
-            FLUXX PMC does not accept all applicants.
+            FLUXX PMC does not accept all applicants. We are not a casual gaming group. We are a structured military organization operating under strict operational doctrine.
           </p>
-          <p className="text-brand-text-muted leading-relaxed">
-            Each candidate is evaluated before deployment. Only reliable and disciplined operators are accepted.
+          <p className="text-brand-text-muted leading-relaxed mb-6">
+            Each candidate undergoes a multi-phase evaluation. Only operators who demonstrate discipline, reliability, and tactical competence are granted clearance for deployment.
           </p>
+          <div className="bg-brand-dark/50 border border-brand-red/20 p-4 mt-4">
+            <p className="text-[10px] text-brand-red/70 tracking-[0.2em] uppercase font-bold mb-2">
+              CURRENT ACCEPTANCE RATE
+            </p>
+            <div className="flex items-baseline gap-3">
+              <span className="text-3xl font-black text-brand-red">72%</span>
+              <span className="text-xs text-brand-text-muted">of applicants cleared for service</span>
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -45,16 +60,16 @@ export default function RecruitmentPage() {
       <Section>
         <SectionLabel label="Workflow" />
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          Recruitment Process
+          Recruitment Pipeline
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
           {[
-            { num: "1", title: "Application", desc: "Submit your profile & documents" },
-            { num: "2", title: "Screening", desc: "Initial resume & background review" },
-            { num: "3", title: "Evaluation", desc: "Interview & tactical assessment" },
-            { num: "4", title: "Training", desc: "Specialized operator training" },
-            { num: "5", title: "Deployment", desc: "Active duty assignment" },
+            { num: "01", title: "Application", desc: "Submit RSI handle via Discord recruitment channel" },
+            { num: "02", title: "Screening", desc: "Background check & profile verification" },
+            { num: "03", title: "Assessment", desc: "Live tactical evaluation with command staff" },
+            { num: "04", title: "Probation", desc: "30-day operational trial period" },
+            { num: "05", title: "Deployment", desc: "Full clearance & division assignment" },
           ].map((step, i) => (
             <motion.div
               key={step.num}
@@ -62,13 +77,12 @@ export default function RecruitmentPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="relative"
+              className="relative bg-brand-gray/30 border border-white/5 hover:border-brand-red/20 transition-colors p-5"
             >
-              <div className="flex items-center justify-center h-14 bg-brand-red/10 border-2 border-brand-red/30 rounded-full mb-4">
-                <span className="text-2xl font-black text-brand-red">{step.num}</span>
-              </div>
-              <h3 className="text-sm font-semibold text-white mb-1 text-center">{step.title}</h3>
-              <p className="text-xs text-brand-text-muted text-center">{step.desc}</p>
+              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-brand-red to-transparent" />
+              <span className="text-4xl font-black text-brand-red/20 absolute top-2 right-3">{step.num}</span>
+              <h3 className="text-sm font-bold text-white mb-2 mt-6">{step.title}</h3>
+              <p className="text-xs text-brand-text-muted leading-relaxed">{step.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -76,32 +90,40 @@ export default function RecruitmentPage() {
 
       {/* ─── CAREER PATH ─── */}
       <Section className="bg-brand-gray/30">
-        <SectionLabel label="Progression" />
+        <SectionLabel label="Rank Structure" />
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          Career Path
+          Operator Progression
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {[
             {
               rank: "Recruit",
-              desc: "Initial deployment, basic operator role, learning curve phase",
-              level: "Entry"
+              code: "RCT",
+              desc: "Probationary deployment. Basic operational clearance. Assigned to training cadre under direct supervision.",
+              level: "TIER 1 — ENTRY",
+              clearance: "RESTRICTED",
             },
             {
               rank: "Operator",
-              desc: "Full deployment capabilities, mission-ready, full access to operations",
-              level: "Active"
+              code: "OPR",
+              desc: "Mission-ready status. Full deployment authorization. Access to all standard operations and division assignments.",
+              level: "TIER 2 — ACTIVE",
+              clearance: "CONFIDENTIAL",
             },
             {
               rank: "Specialist",
-              desc: "Advanced expertise, leadership responsibilities, mentoring role",
-              level: "Senior"
+              code: "SPC",
+              desc: "Advanced operational authority. Mentoring responsibilities. Eligible for squad lead and specialized mission roles.",
+              level: "TIER 3 — SENIOR",
+              clearance: "SECRET",
             },
             {
               rank: "Officer",
-              desc: "Command authority, strategic decision-making, full command authority",
-              level: "Leadership"
+              code: "OFF",
+              desc: "Full command authority. Strategic planning access. Division leadership and contract oversight responsibilities.",
+              level: "TIER 4 — COMMAND",
+              clearance: "TOP SECRET",
             },
           ].map((path, i) => (
             <motion.div
@@ -110,42 +132,56 @@ export default function RecruitmentPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="border-t-2 border-brand-red pt-6"
+              className="relative bg-brand-gray border border-white/5 hover:border-brand-red/20 transition-colors p-6 corner-brackets"
             >
-              <p className="text-xs text-brand-red/70 tracking-widest uppercase font-semibold mb-2">
-                {path.level}
-              </p>
-              <h3 className="text-lg font-bold text-white mb-3">{path.rank}</h3>
-              <p className="text-xs text-brand-text-muted leading-relaxed">{path.desc}</p>
+              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-brand-red to-transparent" />
+              <div className="flex items-center justify-between mb-4">
+                <p className="text-[9px] text-brand-red/70 tracking-[0.2em] uppercase font-bold">
+                  {path.level}
+                </p>
+                <span className="text-[10px] font-mono font-bold text-brand-red/50 bg-brand-red/5 px-2 py-0.5 border border-brand-red/20">
+                  {path.code}
+                </span>
+              </div>
+              <h3 className="text-xl font-black text-white mb-3">{path.rank}</h3>
+              <p className="text-xs text-brand-text-muted leading-relaxed mb-4">{path.desc}</p>
+              <div className="pt-3 border-t border-white/5">
+                <p className="text-[9px] text-brand-text-muted/50 tracking-wider">
+                  CLEARANCE: <span className="text-brand-red/70 font-semibold">{path.clearance}</span>
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
       </Section>
 
-      {/* ─── WHAT YOU GAIN ─── */}
+      {/* ─── OPERATIONAL BENEFITS ─── */}
       <Section>
-        <SectionLabel label="Benefits" />
+        <SectionLabel label="Operational Advantages" />
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          What You Gain
+          What Deployment Offers
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
-            "Structured operations",
-            "Organized teamplay",
-            "Tactical missions",
-            "Progression system"
+            { title: "Structured Command Operations", desc: "Every mission runs through established protocols with clear objectives, chain of command, and rules of engagement." },
+            { title: "Coordinated Multi-Unit Teamplay", desc: "Operate alongside trained squads with defined roles, callsigns, and real-time tactical coordination." },
+            { title: "High-Stakes Tactical Missions", desc: "From escort operations to full-scale assaults — experience organized military gameplay at its peak." },
+            { title: "Merit-Based Rank Progression", desc: "Advance through proven performance. Earn your rank, your clearance, and your place in command structure." },
           ].map((benefit, i) => (
             <motion.div
-              key={benefit}
+              key={benefit.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="flex items-start gap-3 p-6 border-l-2 border-brand-red bg-brand-gray/30"
+              className="flex items-start gap-4 p-6 border-l-2 border-brand-red bg-brand-gray/30"
             >
-              <span className="text-brand-red font-bold text-xl">•</span>
-              <span className="text-brand-text-muted text-sm">{benefit}</span>
+              <span className="text-brand-red font-bold text-lg mt-0.5">▪</span>
+              <div>
+                <h4 className="text-sm font-bold text-white mb-1">{benefit.title}</h4>
+                <p className="text-xs text-brand-text-muted leading-relaxed">{benefit.desc}</p>
+              </div>
             </motion.div>
           ))}
         </div>

@@ -7,6 +7,7 @@
     "home": "Home",
     "about": "About",
     "operations": "Operations",
+    "fleet": "Fleet",
     "contracts": "Contracts",
     "recruitment": "Recruitment",
     "contact": "Contact",
@@ -190,14 +191,14 @@
     "fleet_title": "Operational Assets",
     "fleet_text": "FLUXX PMC maintains a diversified fleet of combat, support, and reconnaissance vessels. Our assets range from heavy assault fighters to dedicated medical frigates — ensuring full-spectrum operational capability across any theater.",
     "fleet_cta": "View Full Fleet",
-    "join_title": "Ready to Serve?",
-    "join_text": "FLUXX PMC is actively recruiting experienced pilots, ground operators, and support specialists. If you have the discipline, the skill, and the resolve — there is a place for you in our ranks.",
-    "join_cta": "Apply Now"
+    "join_title": "Report for Duty",
+    "join_text": "FLUXX PMC is actively recruiting combat-ready pilots, ground operators, and support specialists. Discipline. Proficiency. Commitment. If you meet the standard — your position is waiting.",
+    "join_cta": "Begin Application"
   },
   "about": {
-    "hero_label": "About FLUXX PMC",
+    "hero_label": "Organization Dossier",
     "hero_title": "Forged in the Void",
-    "hero_text": "FLUXX PMC was founded on a singular principle: that precision, discipline, and unwavering commitment to the mission are the only metrics that matter. We are not mercenaries — we are a professional military corporation held to the highest standards of operational excellence.",
+    "hero_text": "FLUXX PMC was established on a singular doctrine: precision, discipline, and an uncompromising commitment to the mission are the only standards that matter. We are not mercenaries — we are a professional military corporation built on operational excellence and accountable command.",
     "overview_label": "Company Overview",
     "overview_title": "Who We Are",
     "overview_text": "FLUXX Private Military Corporation is an independent defense contractor operating primarily within the Stanton system. We provide full-spectrum military services to corporations, logistics operators, mining outfits, and private entities who require professional armed support.\n\nOur personnel are drawn from experienced combat veterans, former military aviators, and specialized operators who have proven themselves in live-fire environments. Every member of FLUXX has earned their position through merit, performance, and an uncompromising dedication to the mission.",
@@ -265,7 +266,7 @@
   "operations": {
     "hero_label": "Operational Command",
     "hero_title": "Operational Command",
-    "hero_text": "Execution of tactical missions across the Stanton system.",
+    "hero_text": "FLUXX Operational Command coordinates all active deployments, mission planning, and force projection across the Stanton system. Every engagement is doctrine-driven, command-authorized, and executed with zero tolerance for deviation.",
     "missions_label": "Mission Types",
     "missions_title": "Operational Capabilities",
     "missions": {
@@ -365,9 +366,9 @@
     }
   },
   "contracts": {
-    "hero_label": "Contracts",
+    "hero_label": "Contract Bureau",
     "hero_title": "Engage Our Services",
-    "hero_text": "FLUXX PMC provides professional military services on a contract basis. Whether you need a single escort or a full combat deployment, our command staff will develop a solution tailored to your operational requirements.",
+    "hero_text": "FLUXX PMC delivers professional military services on a contract basis. From single-ship escort to full division deployments — every contract is command-reviewed, threat-assessed, and operationally planned before a single asset leaves the hangar.",
     "why_label": "Why Hire FLUXX",
     "why_title": "Professional Military Partnership",
     "why_text": "When you contract FLUXX PMC, you are not hiring freelancers — you are engaging a professional military organization with established doctrine, trained operators, and a proven track record. Every contract receives dedicated command oversight, structured communication, and accountability at every level.",
@@ -606,9 +607,9 @@
     ]
   },
   "recruitment": {
-    "hero_label": "Recruitment",
+    "hero_label": "Personnel Division",
     "hero_title": "Join FLUXX PMC",
-    "hero_text": "Elite operators only. High-risk missions. Zero margin for error.",
+    "hero_text": "FLUXX PMC selectively recruits operators who meet our standards of discipline, tactical proficiency, and commitment. If you can perform under pressure and follow command — there may be a position for you.",
     "divisions_label": "Operational Divisions",
     "divisions_title": "Operational Roles",
     "divisions": {
@@ -696,9 +697,9 @@
     "apply_step5": "Receive division assignment and onboarding"
   },
   "contact": {
-    "hero_label": "Contact",
+    "hero_label": "Communications",
     "hero_title": "Reach Command",
-    "hero_text": "For contract inquiries, recruitment questions, or general communication — reach out through our Discord server or Star Citizen organization page. FLUXX command monitors all incoming communications.",
+    "hero_text": "All inbound communications are processed through secure channels. Contract inquiries, recruitment applications, and partnership discussions are monitored and triaged by FLUXX Operations Command within 48 hours.",
     "inquiry_label": "What Can We Help With",
     "inquiry_title": "Choose Your Path",
     "inquiries": [

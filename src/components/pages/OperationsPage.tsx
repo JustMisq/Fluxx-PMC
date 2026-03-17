@@ -7,6 +7,7 @@ import Section from "@/components/ui/Section";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Card from "@/components/ui/Card";
 import StepCard from "@/components/ui/StepCard";
+import StatusBadge from "@/components/ui/StatusBadge";
 
 export default function OperationsPage() {
   const t = useTranslations("operations");
@@ -17,6 +18,8 @@ export default function OperationsPage() {
         label={t("hero_label")}
         title={t("hero_title")}
         text={t("hero_text")}
+        classification="operational"
+        status={{ label: "OPS ACTIVE", variant: "green" }}
       />
 
       {/* ─── MISSION PROFILES ─── */}
@@ -161,15 +164,18 @@ export default function OperationsPage() {
       {/* ─── OPERATIONAL STATUS DASHBOARD ─── */}
       <Section>
         <SectionLabel label="Real-Time" />
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          Operational Status
-        </h2>
+        <div className="flex items-center gap-3 mb-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white">
+            Operational Status
+          </h2>
+          <StatusBadge label="LIVE" variant="green" pulse />
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
           {[
             { label: "Current Status", value: "ACTIVE", highlight: true },
             { label: "Response Time", value: "< 15 min", highlight: false },
-            { label: "Deployment Zone", value: "Stanton System", highlight: false },
+            { label: "Theater", value: "Stanton", highlight: false },
             { label: "Units Ready", value: "18", highlight: true },
             { label: "Active Ops", value: "3", highlight: false },
             { label: "Mission Rate", value: "98%", highlight: true },
@@ -180,21 +186,18 @@ export default function OperationsPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, duration: 0.4 }}
-              className={`relative border p-6 ${
+              className={`relative border p-4 corner-brackets ${
                 stat.highlight
                   ? "border-brand-red/50 bg-brand-red/5"
                   : "border-white/5 bg-brand-gray/50"
-              } hover:border-brand-red/70 transition-all duration-300`}
+              }`}
             >
-              <p className="text-[10px] text-brand-text-muted tracking-widest uppercase font-semibold mb-3">
+              <p className="text-[9px] text-brand-text-muted tracking-widest uppercase font-semibold mb-2">
                 {stat.label}
               </p>
-              <p className={`text-2xl font-black ${stat.highlight ? "text-brand-red" : "text-white"}`}>
+              <p className={`text-lg font-black ${stat.highlight ? "text-brand-red" : "text-white"}`}>
                 {stat.value}
               </p>
-              {stat.highlight && (
-                <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-brand-red to-transparent" />
-              )}
             </motion.div>
           ))}
         </div>

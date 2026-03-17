@@ -9,6 +9,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import Card from "@/components/ui/Card";
 import StepCard from "@/components/ui/StepCard";
 import Tabs from "@/components/ui/Tabs";
+import StatusBadge from "@/components/ui/StatusBadge";
 import { EXTERNAL_LINKS } from "@/config/external-links";
 
 const contractTypes = ["security", "escort", "combat", "recon"] as const;
@@ -79,36 +80,28 @@ export default function ContractsPage() {
         label={t("hero_label")}
         title={t("hero_title")}
         text={t("hero_text")}
+        classification="confidential"
+        status={{ label: "ACCEPTING CONTRACTS", variant: "green" }}
       />
 
-      {/* ─── INTRODUCTION SECTION ─── */}
-      <Section>
-        <div className="max-w-3xl">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            Contract Services
-          </h2>
-          <p className="text-lg text-brand-text-muted leading-relaxed mb-6">
-            FLUXX PMC provides tactical security, combat deployment and reconnaissance services for corporations operating in high-risk environments.
-          </p>
-          <p className="text-brand-text-muted leading-relaxed">
-            Submit a contract request to deploy operational units across the Stanton system.
-          </p>
-        </div>
-      </Section>
-
       {/* ─── OPERATIONAL STATUS (LIVE DASHBOARD) ─── */}
-      <Section className="bg-brand-gray/30">
-        <SectionLabel label="Real-Time" />
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          Operational Status
-        </h2>
+      <Section>
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <SectionLabel label="Real-Time Status" />
+            <h2 className="text-3xl lg:text-4xl font-bold text-white">
+              Operational Readiness
+            </h2>
+          </div>
+          <StatusBadge label="SYSTEMS ACTIVE" variant="green" pulse />
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { label: "Status", value: "ACTIVE", highlight: true },
+            { label: "Force Status", value: "ACTIVE", highlight: true },
             { label: "Active Contracts", value: "3", highlight: true },
-            { label: "Deployment Zone", value: "Stanton System", highlight: false },
-            { label: "Response Time", value: "< 15 min", highlight: false },
+            { label: "Theater of Operations", value: "Stanton System", highlight: false },
+            { label: "Rapid Response", value: "< 15 min", highlight: false },
           ].map((stat, i) => (
             <motion.div
               key={stat.label}
@@ -116,7 +109,7 @@ export default function ContractsPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, duration: 0.4 }}
-              className={`relative border p-6 ${
+              className={`relative border p-6 corner-brackets ${
                 stat.highlight
                   ? "border-brand-red/50 bg-brand-red/5"
                   : "border-white/5 bg-brand-gray/50"
@@ -136,162 +129,35 @@ export default function ContractsPage() {
         </div>
       </Section>
 
-      {/* ─── WHY HIRE FLUXX ─── */}
-      <Section>
-        <SectionLabel label="Advantages" />
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          Why Hire FLUXX
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {[
-            "Rapid deployment units",
-            "Experienced operators",
-            "Multi-role fleet capability",
-            "Mission-first doctrine"
-          ].map((reason, i) => (
-            <motion.div
-              key={reason}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="flex items-start gap-3 p-6 border-l-2 border-brand-red"
-            >
-              <span className="text-brand-red font-bold text-lg">•</span>
-              <span className="text-brand-text-muted leading-relaxed">{reason}</span>
-            </motion.div>
-          ))}
-        </div>
-      </Section>
-
-      {/* ─── CONTRACT APPROVAL ─── */}
+      {/* ─── CONTRACT APPROVAL PROTOCOL ─── */}
       <Section className="bg-brand-red/5 border-y-2 border-brand-red/30">
-        <SectionLabel label="Validation" />
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-          Contract Approval
-        </h2>
-
         <div className="max-w-3xl">
+          <div className="flex items-center gap-3 mb-6">
+            <StatusBadge label="PROTOCOL" variant="amber" />
+            <span className="text-[10px] text-brand-text-muted/50 tracking-wider">
+              FLUXX-CTR-REVIEW
+            </span>
+          </div>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Contract Validation Protocol
+          </h2>
           <p className="text-brand-text-muted leading-relaxed mb-4">
-            All contracts are reviewed by FLUXX Command.
+            All contract requests are processed through FLUXX Operations Command. No deployment is authorized without threat assessment validation and resource allocation approval.
           </p>
-          <p className="text-brand-text-muted leading-relaxed">
-            Deployment is subject to operational availability and threat evaluation.
-          </p>
-        </div>
-      </Section>
-
-      {/* ─── OPERATIONAL CONDITIONS ─── */}
-      <Section>
-        <SectionLabel label="Requirements" />
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          Operational Conditions
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            "Client must provide mission details",
-            "Payment terms defined before deployment",
-            "Extraction not guaranteed in extreme conditions",
-          ].map((condition, i) => (
-            <motion.div
-              key={condition}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="flex items-start gap-3 p-6 border-l-2 border-brand-red bg-brand-gray/30"
-            >
-              <span className="text-brand-red font-bold text-xl mt-1">•</span>
-              <span className="text-brand-text-muted">{condition}</span>
-            </motion.div>
-          ))}
-        </div>
-      </Section>
-
-      {/* ─── OPERATIONAL COMMITMENT ─── */}
-      <Section className="bg-brand-gray/30">
-        <SectionLabel label="Pledge" />
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8">
-          Operational Commitment
-        </h2>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="border-l-4 border-brand-red pl-8 py-4"
-        >
-          <p className="text-lg text-brand-text-muted leading-relaxed">
-            FLUXX PMC ensures mission execution with maximum efficiency, adaptability and tactical superiority.
-          </p>
-        </motion.div>
-      </Section>
-
-      {/* ─── CONTRACT PROCESS ─── */}
-      <Section>
-        <SectionLabel label="Workflow" />
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          Contract Process
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          {[
-            { num: "1", title: "Request Submission", desc: "Submit operational requirements" },
-            { num: "2", title: "Operational Assessment", desc: "Command evaluates feasibility" },
-            { num: "3", title: "Resource Allocation", desc: "Units assigned to contract" },
-            { num: "4", title: "Deployment", desc: "Mission execution begins" },
-          ].map((step, i) => (
-            <motion.div
-              key={step.num}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="relative"
-            >
-              <div className="flex items-center justify-center h-16 bg-brand-red/10 border-2 border-brand-red/30 rounded-full mb-4">
-                <span className="text-3xl font-black text-brand-red">{step.num}</span>
-              </div>
-              <h3 className="font-semibold text-white mb-2">{step.title}</h3>
-              <p className="text-xs text-brand-text-muted">{step.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </Section>
-
-      {/* ─── CONTRACT TYPES OVERVIEW ─── */}
-      <Section className="bg-brand-gray/30">
-        <SectionLabel label="Quick Reference" />
-        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          Contract Types
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            { name: "Security Contracts", desc: "Static & mobile site protection" },
-            { name: "Escort Operations", desc: "Convoy & asset protection" },
-            { name: "Combat Deployment", desc: "Offensive tactical operations" },
-            { name: "Strategic Recon", desc: "Intelligence & surveillance" }
-          ].map((type, i) => (
-            <motion.div
-              key={type.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="border border-white/5 hover:border-brand-red/30 transition-colors p-5 group cursor-default"
-            >
-              <h3 className="text-sm font-semibold text-white mb-2">
-                {type.name}
-              </h3>
-              <p className="text-xs text-brand-text-muted">
-                {type.desc}
-              </p>
-            </motion.div>
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+            <div className="bg-brand-dark/50 border border-brand-red/20 p-4">
+              <p className="text-[9px] text-brand-red/70 tracking-[0.2em] uppercase font-bold mb-2">Condition 1</p>
+              <p className="text-xs text-brand-text-muted">Complete mission briefing required prior to deployment authorization</p>
+            </div>
+            <div className="bg-brand-dark/50 border border-brand-red/20 p-4">
+              <p className="text-[9px] text-brand-red/70 tracking-[0.2em] uppercase font-bold mb-2">Condition 2</p>
+              <p className="text-xs text-brand-text-muted">Payment terms and ROE must be established before force commitment</p>
+            </div>
+            <div className="bg-brand-dark/50 border border-brand-red/20 p-4">
+              <p className="text-[9px] text-brand-red/70 tracking-[0.2em] uppercase font-bold mb-2">Condition 3</p>
+              <p className="text-xs text-brand-text-muted">Extraction is not guaranteed under extreme hostile conditions</p>
+            </div>
+          </div>
         </div>
       </Section>
 

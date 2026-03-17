@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/", key: "home" },
   { href: "/about", key: "about" },
   { href: "/operations", key: "operations" },
+  { href: "/fleet", key: "fleet" },
   { href: "/contracts", key: "contracts" },
   { href: "/recruitment", key: "recruitment" },
   { href: "/contact", key: "contact" },
@@ -55,6 +56,10 @@ export default function Navbar() {
             />
             <span className="hidden sm:inline text-white font-bold tracking-[0.3em] text-sm">
               FLUXX<span className="text-brand-red ml-1">PMC</span>
+            </span>
+            <span className="hidden sm:flex items-center gap-1.5 ml-3 pl-3 border-l border-white/10">
+              <span className="pulse-dot" />
+              <span className="text-[9px] text-green-500/80 tracking-widest uppercase font-semibold">ONLINE</span>
             </span>
           </Link>
 

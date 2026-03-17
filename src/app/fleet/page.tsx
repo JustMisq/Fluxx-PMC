@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import FleetPage from "@/components/pages/FleetPage";
 
 export default function Page() {
-  redirect("/");
+  return <FleetPage />;
 }

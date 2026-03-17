@@ -8,6 +8,8 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import Card from "@/components/ui/Card";
 import DivisionCard from "@/components/ui/DivisionCard";
 import Button from "@/components/ui/Button";
+import StatusBadge from "@/components/ui/StatusBadge";
+import ThreatLevel from "@/components/ui/ThreatLevel";
 
 /* ─── Contract Types Section ─── */
 function ContractTypesSection({ t, contractTypes }: any) {
@@ -49,9 +51,10 @@ function ContractTypesSection({ t, contractTypes }: any) {
                 </p>
 
                 <div className="pt-4 border-t border-white/5">
-                  <p className="text-[10px] text-brand-text-muted tracking-widest uppercase">
-                    Threat Level: <span className="text-brand-red font-semibold ml-1">{typeData?.threat}</span>
+                  <p className="text-[10px] text-brand-text-muted tracking-widest uppercase mb-2">
+                    Threat Level
                   </p>
+                  <ThreatLevel level={key === "security" ? "low" : key === "escort" ? "medium" : key === "combat" ? "high" : "variable"} />
                 </div>
               </motion.div>
             );
@@ -218,9 +221,32 @@ export default function HomePage() {
         </div>
 
         {/* Scan line effect */}
-        <div className="absolute inset-0 pointer-events-none z-10">
+        <div className="absolute inset-0 pointer-events-none z-10 scan-line">
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-red/20 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-red/20 to-transparent" />
+        </div>
+
+        {/* Corner HUD elements */}
+        <div className="absolute top-24 left-6 w-12 h-12 border-t border-l border-brand-red/15 pointer-events-none z-10" />
+        <div className="absolute top-24 right-6 w-12 h-12 border-t border-r border-brand-red/15 pointer-events-none z-10" />
+        <div className="absolute bottom-16 left-6 w-12 h-12 border-b border-l border-brand-red/15 pointer-events-none z-10" />
+        <div className="absolute bottom-16 right-6 w-12 h-12 border-b border-r border-brand-red/15 pointer-events-none z-10" />
+
+        {/* Classification banner at top */}
+        <div className="absolute top-16 lg:top-20 left-0 right-0 z-20">
+          <div className="bg-brand-red/5 border-b border-brand-red/20 py-1.5">
+            <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
+              <span className="text-[9px] font-bold tracking-[0.3em] uppercase text-brand-red/60">
+                STANTON SYSTEM — OPERATIONAL SECTOR
+              </span>
+              <div className="hidden sm:flex items-center gap-4">
+                <StatusBadge label="SYSTEMS ONLINE" variant="green" pulse />
+                <span className="text-[9px] text-brand-text-muted/40 tracking-wider">
+                  FLUXX-CMD // ACTIVE
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="relative text-center px-4 max-w-4xl mx-auto z-20">
@@ -229,6 +255,20 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Classification tag above title */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="flex items-center justify-center gap-3 mb-6"
+            >
+              <div className="w-12 h-px bg-brand-red/30" />
+              <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-brand-red/60">
+                Private Military Corporation
+              </span>
+              <div className="w-12 h-px bg-brand-red/30" />
+            </motion.div>
+
             <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold text-white tracking-tight mb-4">
               {hero("title")}
             </h1>
@@ -275,6 +315,40 @@ export default function HomePage() {
         </motion.div>
       </section>
 
+      {/* ─── OPERATIONAL SITREP BAR ─── */}
+      <div className="bg-brand-dark border-y border-brand-red/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-6">
+              <div className="flex items-center gap-2">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-50" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+                </span>
+                <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-green-500">
+                  OPERATIONAL
+                </span>
+              </div>
+              <div className="hidden sm:block w-px h-4 bg-white/10" />
+              <span className="hidden sm:inline text-[10px] text-brand-text-muted/60 tracking-wider">
+                ACTIVE CONTRACTS: <span className="text-white font-semibold">3</span>
+              </span>
+              <div className="hidden md:block w-px h-4 bg-white/10" />
+              <span className="hidden md:inline text-[10px] text-brand-text-muted/60 tracking-wider">
+                RESPONSE TIME: <span className="text-white font-semibold">&lt;15 MIN</span>
+              </span>
+              <div className="hidden lg:block w-px h-4 bg-white/10" />
+              <span className="hidden lg:inline text-[10px] text-brand-text-muted/60 tracking-wider">
+                THEATER: <span className="text-white font-semibold">STANTON</span>
+              </span>
+            </div>
+            <span className="text-[9px] text-brand-text-muted/40 tracking-wider">
+              FLUXX-SITREP-{new Date().toISOString().slice(0, 10).replace(/-/g, "")}
+            </span>
+          </div>
+        </div>
+      </div>
+
       {/* ─── TRUST/TRACK RECORD ─── */}
       <Section className="bg-brand-gray/30">
         <SectionLabel label={t("trust_label")} />
@@ -293,7 +367,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="bg-brand-gray border border-white/5 p-6 text-center hover:border-brand-red/20 transition-colors"
+              className="bg-brand-gray border border-white/5 p-6 text-center hover:border-brand-red/20 transition-colors corner-brackets"
             >
               <p className="text-3xl lg:text-4xl font-black text-brand-red mb-2">
                 {stat.number}
@@ -393,15 +467,20 @@ export default function HomePage() {
       </Section>
 
       {/* ─── JOIN CTA ─── */}
-      <Section>
-        <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+      <Section className="relative overflow-hidden">
+        <div className="absolute -right-32 -top-32 w-96 h-96 bg-brand-red/5 rounded-full blur-3xl" />
+        <div className="relative z-10 text-center max-w-2xl mx-auto">
+          <StatusBadge label="RECRUITING" variant="green" pulse />
+          <h2 className="text-3xl lg:text-5xl font-black text-white mb-4 mt-6">
             {t("join_title")}
           </h2>
           <p className="text-brand-text-muted leading-relaxed mb-8">
             {t("join_text")}
           </p>
-          <Button href="/recruitment">{t("join_cta")}</Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/recruitment">{t("join_cta")}</Button>
+            <Button href="/contracts" variant="secondary">Request Contract</Button>
+          </div>
         </div>
       </Section>
     </>

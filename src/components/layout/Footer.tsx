@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { EXTERNAL_LINKS } from "@/config/external-links";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -76,7 +77,7 @@ export default function Footer() {
             </h4>
             <div className="space-y-2">
               <a
-                href="#"
+                href={EXTERNAL_LINKS.discord}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-sm text-brand-text-muted hover:text-brand-red transition-colors"
@@ -84,7 +85,7 @@ export default function Footer() {
                 {t("discord")}
               </a>
               <a
-                href="#"
+                href={EXTERNAL_LINKS.rsiOrg}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-sm text-brand-text-muted hover:text-brand-red transition-colors"
@@ -95,14 +96,21 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-brand-text-muted">
-            {t("copyright", { year })}
-          </p>
-          <p className="text-xs text-brand-text-muted/60">
-            {t("disclaimer")}
-          </p>
+        {/* Classification strip */}
+        <div className="mt-12 pt-6 border-t border-brand-red/20">
+          <div className="bg-brand-red/5 border border-brand-red/10 py-2 px-4 mb-6 flex items-center justify-center">
+            <span className="text-[9px] text-brand-red/60 tracking-[0.3em] uppercase font-semibold">
+              STANTON SYSTEM — RESTRICTED COMMUNICATION CHANNEL — FLUXX PMC OPERATIONAL NETWORK
+            </span>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-brand-text-muted">
+              {t("copyright", { year })}
+            </p>
+            <p className="text-xs text-brand-text-muted/60">
+              {t("disclaimer")}
+            </p>
+          </div>
         </div>
       </div>
     </footer>
