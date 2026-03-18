@@ -586,22 +586,22 @@
     "pricing": [
       {
         "tier": "Security Operations",
-        "price": "1,000 - 5,000 UEC per operator / day",
+        "price": "10,000 - 15,000 UEC per operator / day",
         "details": "Depends on threat level, location, and duration"
       },
       {
         "tier": "Escort Missions",
-        "price": "10,000 - 30,000 UEC per ship / day",
+        "price": "20,000 - 70,000 UEC per ship / day",
         "details": "Multi-ship discounts available for extended contracts"
       },
       {
         "tier": "Combat Operations",
-        "price": "Custom quote",
+        "price": "20,000 - 70,000 UEC per day",
         "details": "Based on mission complexity, duration, and asset deployment"
       },
       {
         "tier": "Reconnaissance",
-        "price": "5,000 - 15,000 UEC per specialist / day",
+        "price": "7,000 - 25,000 UEC per specialist / day",
         "details": "Intelligence reports and ongoing monitoring available"
       }
     ]

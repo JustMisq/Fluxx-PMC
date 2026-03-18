@@ -586,22 +586,22 @@
     "pricing": [
       {
         "tier": "Operaciones de Seguridad",
-        "price": "1.000 - 5.000 UEC por operador / día",
+        "price": "10.000 - 15.000 UEC por operador / día",
         "details": "Variable según nivel de amenaza, ubicación y duración"
       },
       {
         "tier": "Misiones de Escolta",
-        "price": "10.000 - 30.000 UEC por nave / día",
+        "price": "20.000 - 70.000 UEC por nave / día",
         "details": "Descuentos multi-nave disponibles para contratos extendidos"
       },
       {
         "tier": "Operaciones de Combate",
-        "price": "Cotización personalizada",
+        "price": "20.000 - 70.000 UEC por día",
         "details": "Basado en complejidad de misión, duración y despliegue de activos"
       },
       {
         "tier": "Reconocimiento",
-        "price": "5.000 - 15.000 UEC por especialista / día",
+        "price": "7.000 - 25.000 UEC por especialista / día",
         "details": "Informes de inteligencia y monitoreo continuo disponibles"
       }
     ]

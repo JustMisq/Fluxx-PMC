@@ -586,22 +586,22 @@
     "pricing": [
       {
         "tier": "Opérations de Sécurité",
-        "price": "1 000 - 5 000 UEC par opérateur / jour",
+        "price": "10 000 - 15 000 UEC par opérateur / jour",
         "details": "Variable selon niveau de menace, localisation et durée"
       },
       {
         "tier": "Missions d'Escorte",
-        "price": "10 000 - 30 000 UEC par vaisseau / jour",
+        "price": "20 000 - 70 000 UEC par vaisseau / jour",
         "details": "Réductions multi-vaisseaux disponibles pour contrats étendus"
       },
       {
         "tier": "Opérations de Combat",
-        "price": "Devis personnalisé",
+        "price": "20 000 - 70 000 UEC par jour",
         "details": "Basé sur complexité de mission, durée et déploiement d'actifs"
       },
       {
         "tier": "Reconnaissance",
-        "price": "5 000 - 15 000 UEC par spécialiste / jour",
+        "price": "7 000 - 25 000 UEC par spécialiste / jour",
         "details": "Rapports de renseignement et surveillance continue disponibles"
       }
     ]
