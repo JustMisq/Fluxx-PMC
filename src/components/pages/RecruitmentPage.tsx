@@ -30,8 +30,8 @@ export default function RecruitmentPage() {
       <Section className="bg-brand-red/5 border-y-2 border-brand-red/30">
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-6">
-            <StatusBadge label="WARNING" variant="amber" />
-            <span className="text-[10px] text-brand-text-muted/50 tracking-wider">
+            <StatusBadge label="ADVISORY" variant="amber" />
+            <span className="text-[10px] text-brand-text-muted/50 tracking-wider font-mono">
               FLUXX-HR-PROTOCOL-7
             </span>
           </div>
@@ -39,18 +39,29 @@ export default function RecruitmentPage() {
             Selection Policy
           </h2>
           <p className="text-brand-text-muted leading-relaxed mb-4">
-            FLUXX PMC does not accept all applicants. We are not a casual gaming group. We are a structured military organization operating under strict operational doctrine.
+            FLUXX PMC does not accept all applicants. We are not a casual gaming group. We are not a &quot;community.&quot; We are a structured military organization operating under strict operational doctrine with zero room for passengers.
           </p>
           <p className="text-brand-text-muted leading-relaxed mb-6">
-            Each candidate undergoes a multi-phase evaluation. Only operators who demonstrate discipline, reliability, and tactical competence are granted clearance for deployment.
+            Each candidate undergoes a multi-phase evaluation pipeline. Only operators who demonstrate discipline, reliability, tactical competence, and the ability to perform under pressure are granted operational clearance.
           </p>
-          <div className="bg-brand-dark/50 border border-brand-red/20 p-4 mt-4">
-            <p className="text-[10px] text-brand-red/70 tracking-[0.2em] uppercase font-bold mb-2">
-              CURRENT ACCEPTANCE RATE
-            </p>
-            <div className="flex items-baseline gap-3">
-              <span className="text-3xl font-black text-brand-red">72%</span>
-              <span className="text-xs text-brand-text-muted">of applicants cleared for service</span>
+          <div className="flex gap-4 mt-4">
+            <div className="bg-brand-dark/50 border border-brand-red/20 p-4 flex-1">
+              <p className="text-[10px] text-brand-red/70 tracking-[0.2em] uppercase font-bold mb-2">
+                CURRENT ACCEPTANCE RATE
+              </p>
+              <div className="flex items-baseline gap-3">
+                <span className="text-3xl font-black text-brand-red">72%</span>
+                <span className="text-xs text-brand-text-muted">of candidates cleared for service</span>
+              </div>
+            </div>
+            <div className="bg-brand-dark/50 border border-white/10 p-4 flex-1">
+              <p className="text-[10px] text-brand-text-muted/60 tracking-[0.2em] uppercase font-bold mb-2">
+                EVALUATION PIPELINE
+              </p>
+              <div className="flex items-baseline gap-3">
+                <span className="text-3xl font-black text-white">5</span>
+                <span className="text-xs text-brand-text-muted">phase selection process</span>
+              </div>
             </div>
           </div>
         </div>
@@ -58,18 +69,18 @@ export default function RecruitmentPage() {
 
       {/* ─── RECRUITMENT PROCESS ─── */}
       <Section>
-        <SectionLabel label="Workflow" />
+        <SectionLabel label="Evaluation Pipeline" />
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          Recruitment Pipeline
+          Selection Process
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
           {[
-            { num: "01", title: "Application", desc: "Submit RSI handle via Discord recruitment channel" },
-            { num: "02", title: "Screening", desc: "Background check & profile verification" },
-            { num: "03", title: "Assessment", desc: "Live tactical evaluation with command staff" },
-            { num: "04", title: "Probation", desc: "30-day operational trial period" },
-            { num: "05", title: "Deployment", desc: "Full clearance & division assignment" },
+            { num: "01", title: "Intake", desc: "Submit RSI handle via Discord recruitment intake. Incomplete submissions are discarded.", status: "OPEN" },
+            { num: "02", title: "Screening", desc: "Background verification & profile analysis. Combat history and organizational record reviewed.", status: "AUTOMATED" },
+            { num: "03", title: "Assessment", desc: "Live tactical evaluation with command staff. Performance under pressure is the only metric.", status: "SCHEDULED" },
+            { num: "04", title: "Probation", desc: "30-day operational trial. Monitored deployments with assigned fire team. No second chances.", status: "MONITORED" },
+            { num: "05", title: "Clearance", desc: "Full operational clearance and division assignment. You are now FLUXX.", status: "AUTHORIZED" },
           ].map((step, i) => (
             <motion.div
               key={step.num}
@@ -82,7 +93,8 @@ export default function RecruitmentPage() {
               <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-brand-red to-transparent" />
               <span className="text-4xl font-black text-brand-red/20 absolute top-2 right-3">{step.num}</span>
               <h3 className="text-sm font-bold text-white mb-2 mt-6">{step.title}</h3>
-              <p className="text-xs text-brand-text-muted leading-relaxed">{step.desc}</p>
+              <p className="text-xs text-brand-text-muted leading-relaxed mb-3">{step.desc}</p>
+              <p className="text-[8px] text-brand-red/50 tracking-[0.2em] uppercase font-bold">{step.status}</p>
             </motion.div>
           ))}
         </div>
@@ -92,7 +104,7 @@ export default function RecruitmentPage() {
       <Section className="bg-brand-gray/30">
         <SectionLabel label="Rank Structure" />
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          Operator Progression
+          Operator Progression Tiers
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -155,19 +167,19 @@ export default function RecruitmentPage() {
         </div>
       </Section>
 
-      {/* ─── OPERATIONAL BENEFITS ─── */}
+      {/* ─── AFTER CLEARANCE ─── */}
       <Section>
-        <SectionLabel label="Operational Advantages" />
+        <SectionLabel label="Post-Evaluation" />
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          What Deployment Offers
+          What Operational Deployment Provides
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
-            { title: "Structured Command Operations", desc: "Every mission runs through established protocols with clear objectives, chain of command, and rules of engagement." },
-            { title: "Coordinated Multi-Unit Teamplay", desc: "Operate alongside trained squads with defined roles, callsigns, and real-time tactical coordination." },
-            { title: "High-Stakes Tactical Missions", desc: "From escort operations to full-scale assaults — experience organized military gameplay at its peak." },
-            { title: "Merit-Based Rank Progression", desc: "Advance through proven performance. Earn your rank, your clearance, and your place in command structure." },
+            { title: "Structured Command Operations", desc: "Every mission runs through established protocols with clear objectives, chain of command, and rules of engagement. No improvisation. No chaos." },
+            { title: "Coordinated Combined Arms", desc: "Operate alongside trained units with defined roles, callsigns, and real-time tactical coordination across multiple domains." },
+            { title: "High-Threat Tactical Missions", desc: "From escort formations to full-scale assaults — experience organized military operations at their most intense." },
+            { title: "Merit-Based Advancement", desc: "Rank is earned through demonstrated performance in the field. Prove yourself under fire and advance through the command structure." },
           ].map((benefit, i) => (
             <motion.div
               key={benefit.title}
@@ -363,13 +375,13 @@ export default function RecruitmentPage() {
           className="relative z-10 text-center max-w-2xl mx-auto"
         >
           <p className="text-xs text-brand-red/70 tracking-[0.2em] uppercase font-semibold mb-4">
-            Ready to Deploy
+            Initiate Evaluation
           </p>
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
-            Join the Operation
+            Start Your Evaluation
           </h2>
           <p className="text-lg text-brand-text-muted mb-10 leading-relaxed">
-            Submit your application through our secure channels. FLUXX Command will evaluate your profile and contact you directly.
+            Submit your candidacy through our secure channels. FLUXX Command will assess your profile and initiate the evaluation pipeline. There are no shortcuts.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
@@ -380,7 +392,7 @@ export default function RecruitmentPage() {
               whileTap={{ scale: 0.98 }}
               className="inline-flex items-center justify-center px-12 py-4 text-sm font-semibold tracking-[0.2em] uppercase bg-brand-red text-white border border-brand-red hover:bg-transparent hover:text-brand-red transition-all duration-300"
             >
-              Discord Server
+              Start Evaluation →
             </motion.a>
             <motion.a
               href={EXTERNAL_LINKS.rsiOrg}

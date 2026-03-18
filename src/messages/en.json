@@ -1,120 +1,120 @@
 {
   "meta": {
     "title": "FLUXX PMC — Private Military Corporation",
-    "description": "Elite private military corporation operating across the Stanton system. Security, tactical operations, escorts, and strategic recon."
+    "description": "Elite private military corporation operating across the Stanton system. Precision force projection, asset security, armed escort, and strategic reconnaissance."
   },
   "nav": {
-    "home": "Home",
-    "about": "About",
+    "home": "Command",
+    "about": "Dossier",
     "operations": "Operations",
-    "fleet": "Fleet",
+    "fleet": "Fleet Registry",
     "contracts": "Contracts",
-    "recruitment": "Recruitment",
-    "contact": "Contact",
+    "recruitment": "Enlistment",
+    "contact": "Comms",
     "language": "Language"
   },
   "hero": {
     "title": "FLUXX PMC",
-    "subtitle": "Private Military Corporation operating across the Stanton system.",
-    "tagline": "We do not seek war. We execute it.",
-    "cta_contract": "Request Contract",
-    "cta_join": "Join the Corporation"
+    "subtitle": "When diplomacy satisfies the politician and the enemy waits for nothing — you call us.",
+    "tagline": "Authorized Force. Calculated Violence. Zero Compromise.",
+    "cta_contract": "Submit Operational Request",
+    "cta_join": "Apply for Evaluation"
   },
   "home": {
-    "overview_label": "Operational Overview",
-    "overview_title": "Full-Spectrum Military Solutions",
-    "overview_text": "FLUXX PMC delivers precision military services across all theaters of operation within the Stanton system. From high-value asset protection to full-scale tactical deployments, our operators execute with disciplined efficiency and zero tolerance for failure.",
+    "overview_label": "Capabilities Assessment",
+    "overview_title": "Full-Spectrum Force Projection",
+    "overview_text": "FLUXX PMC maintains persistent operational capability across all theaters within the Stanton system. From high-value asset denial to coordinated multi-domain strike packages, our units execute under centralized command with lethal precision and absolute accountability.",
     "overview_cards": {
       "security": {
-        "title": "Security Operations",
-        "text": "Comprehensive protection for high-value assets, personnel, and installations. Our security teams deploy advanced counter-intrusion measures and maintain 24/7 vigilance across all contracted zones.",
-        "highlight": "Perimeter Defense • Threat Response • Asset Protection"
+        "title": "Static & Mobile Security",
+        "text": "Layered defense perimeters, counter-intrusion protocols, and rapid-response QRF elements. Our security units enforce denial zones and neutralize threats before they materialize.",
+        "highlight": "Area Denial • QRF • Counter-Intrusion"
       },
       "tactical": {
-        "title": "Tactical Operations",
-        "text": "Precision strike capabilities for hostile environment neutralization. FLUXX assault teams are trained for zero-margin engagements in space, atmosphere, and ground theaters.",
-        "highlight": "Strike Ops • Assault • Neutralization"
+        "title": "Direct Action Operations",
+        "text": "Coordinated strike packages with integrated fire support. FLUXX assault elements are cleared for zero-margin engagements across space, atmospheric, and ground domains.",
+        "highlight": "Strike Packages • Assault • Target Elimination"
       },
       "escort": {
-        "title": "Escort & Convoy",
-        "text": "Armed escort services for cargo transports, VIP shuttles, and fleet movements. Multi-ship formations with layered defensive protocols ensure safe passage through contested corridors.",
-        "highlight": "Fleet Protection • VIP Escort • Route Security"
+        "title": "Armed Escort & Convoy Defense",
+        "text": "Multi-ship escort formations with 360-degree threat coverage. Layered defensive screens with immediate counter-attack protocols upon hostile contact identification.",
+        "highlight": "Convoy Screen • VIP Movement • Route Dominance"
       },
       "recon": {
-        "title": "Reconnaissance",
-        "text": "Covert intelligence gathering and surveillance operations. Our recon division maps hostile territory, tracks threat movements, and provides real-time tactical intelligence to command.",
-        "highlight": "Intelligence • Surveillance • Threat Analysis"
+        "title": "ISR & Electronic Warfare",
+        "text": "Low-signature intelligence, surveillance, and reconnaissance operations. Our SIGINT cells map hostile dispositions and feed real-time targeting data to command elements.",
+        "highlight": "SIGINT • Target Acquisition • Threat Mapping"
       }
     },
-    "divisions_label": "Operational Divisions",
-    "divisions_title": "Specialized Combat Units",
+    "divisions_label": "Force Organization",
+    "divisions_title": "Operational Divisions",
     "divisions": {
       "assault": {
         "title": "Assault Division",
-        "text": "Front-line combat specialists trained for direct engagement. Equipped for ship-to-ship warfare, boarding operations, and planetary assault scenarios.",
+        "text": "Direct action specialists. Ship-to-ship engagement, boarding operations, planetary assault, and hostile force neutralization. The sharp end of every FLUXX deployment.",
         "specialties": "Ship Combat, Boarding Ops, Planetary Assault",
         "strength": "4 Squadrons",
-        "status": "ACTIVE"
+        "status": "DEPLOYED"
       },
       "recon": {
         "title": "Recon Division",
-        "text": "Stealth operators specializing in intelligence gathering, target acquisition, and electronic warfare. The eyes and ears of every FLUXX operation.",
-        "specialties": "Surveillance, EW, Target Acquisition",
+        "text": "Intelligence operatives conducting covert surveillance, electronic warfare, and target acquisition. Nothing moves in our AO without Recon knowing about it.",
+        "specialties": "ISR, EW, Target Acquisition",
         "strength": "2 Squadrons",
         "status": "ACTIVE"
       },
       "logistics": {
-        "title": "Logistics Division",
-        "text": "Supply chain and operational support specialists. Responsible for fleet maintenance, ammunition resupply, fuel management, and forward base establishment.",
-        "specialties": "Resupply, Maintenance, Base Ops",
+        "title": "Logistics & Support",
+        "text": "Forward base establishment, ammunition resupply, fuel management, and fleet sustainment. Without logistics, the war machine stops. We don't stop.",
+        "specialties": "Resupply, Sustainment, Forward Ops",
         "strength": "3 Units",
         "status": "ACTIVE"
       },
       "medical": {
-        "title": "Medical Support",
-        "text": "Combat medics and trauma specialists providing battlefield medical support. Equipped with dedicated medical ships for extraction and emergency triage.",
-        "specialties": "Trauma Care, Extraction, Triage",
+        "title": "Medical Division",
+        "text": "Battlefield trauma response, CASEVAC operations, and field triage under fire. Dedicated medical assets ensure our operators come home. Always.",
+        "specialties": "Trauma Response, CASEVAC, Field Triage",
         "strength": "2 Units",
         "status": "ACTIVE"
       }
     },
-    "trust_label": "Operational Track Record",
-    "trust_title": "Proven in Combat",
+    "trust_label": "Combat Record",
+    "trust_title": "Verified Through Contact",
     "trust_stats": [
       {
         "number": "500+",
-        "label": "Successful Operations"
+        "label": "Operations Completed"
       },
       {
         "number": "98%",
-        "label": "Mission Completion Rate"
+        "label": "Mission Success Rate"
       },
       {
         "number": "24/7",
-        "label": "Operational Coverage"
+        "label": "Force Readiness"
       },
       {
         "number": "150+",
-        "label": "Active Personnel"
+        "label": "Active Operators"
       }
     ],
-    "trust_text": "FLUXX PMC has executed hundreds of contracts across the most contested space in the Stanton system. Our operators have been tested under live fire and have delivered results when seconds determine survival.",
-    "contract_preview_label": "How We Can Help",
-    "contract_preview_title": "Select Your Mission Type",
+    "trust_text": "Every number above was earned under live fire. FLUXX has operated in the most hostile corridors of the Stanton system and delivered results when others pulled back. Our track record is not a marketing claim — it is an after-action report.",
+    "contract_preview_label": "Mission Selection",
+    "contract_preview_title": "Identify Your Threat Profile",
     "contract_preview_types": {
       "security": {
         "title": "Security",
-        "description": "Static & mobile protection",
+        "description": "Static & mobile asset denial",
         "threat": "Low to Medium",
-        "fullDescription": "Comprehensive perimeter defense and static security operations for installations, mining operations, and high-value assets.",
-        "duration": "Ongoing / 30-90 day cycles",
-        "team_size": "8-24 personnel",
+        "fullDescription": "Comprehensive perimeter lockdown and counter-intrusion operations for installations, mining facilities, and high-value assets. Our security units establish overlapping fields of fire and maintain persistent threat monitoring.",
+        "duration": "Ongoing / 30-90 day rotations",
+        "team_size": "8-24 operators",
         "capabilities": [
-          "24/7 perimeter monitoring",
-          "Counter-intrusion response",
-          "Threat assessment & mitigation",
-          "VIP personal protection",
-          "Installation hardening"
+          "24/7 threat surveillance perimeter",
+          "Counter-intrusion rapid response",
+          "Threat assessment & neutralization protocols",
+          "Principal protection details",
+          "Facility hardening & access control"
         ],
         "deployment_time": "48-72 hours"
       },
@@ -122,258 +122,258 @@
         "title": "Combat Ops",
         "description": "Offensive strike capability",
         "threat": "High to Critical",
-        "fullDescription": "Full-scale offensive operations with coordinated multi-ship formations and integrated ground support. Tactical strikes against hostile forces.",
-        "duration": "Mission-based / 7-30 days",
-        "team_size": "16-48 personnel",
+        "fullDescription": "Full-scale offensive operations with coordinated multi-ship strike packages and integrated ground assault elements. Tactical engagement against hostile forces with overwhelming firepower concentration.",
+        "duration": "Campaign-based / 7-30 days",
+        "team_size": "16-48 operators",
         "capabilities": [
-          "Ship-to-ship combat",
-          "Area denial operations",
-          "Assault insertions",
-          "Hostile target neutralization",
-          "Real-time fire support"
+          "Ship-to-ship engagement dominance",
+          "Area denial & interdiction",
+          "Assault insertion under fire",
+          "Hostile target elimination",
+          "Integrated fire support coordination"
         ],
         "deployment_time": "24-48 hours"
       },
       "escort": {
         "title": "Escort",
-        "description": "Armed convoy & transport",
+        "description": "Armed convoy defense",
         "threat": "Medium to High",
-        "fullDescription": "Armed escort services protecting cargo transports, VIP shuttles, and fleet movements through contested space. Multi-ship defensive formations.",
-        "duration": "Per-mission / Single to multi-week duration",
-        "team_size": "4-16 personnel",
+        "fullDescription": "Armed escort formations protecting cargo transports, VIP shuttles, and fleet movements through hostile corridors. Multi-layer defensive screens with immediate counter-attack capability.",
+        "duration": "Per-mission / Single to multi-week rotations",
+        "team_size": "4-16 operators",
         "capabilities": [
-          "Convoy formation defense",
-          "Threat interception",
-          "Multi-vector coverage",
-          "Rapid response protocols",
-          "Route security planning"
+          "Multi-vector convoy screen",
+          "Threat interception & engagement",
+          "360-degree defensive umbrella",
+          "Emergency extraction protocols",
+          "Route dominance & advance scouting"
         ],
         "deployment_time": "12-24 hours"
       },
       "recon": {
         "title": "Recon",
-        "description": "Intelligence & surveillance",
+        "description": "ISR & electronic warfare",
         "threat": "Variable",
-        "fullDescription": "Covert intelligence gathering, target mapping, and threat assessment in contested or unexplored territories. Electronic warfare and sensor operations.",
+        "fullDescription": "Covert intelligence collection, target mapping, and threat assessment in denied or contested territories. Electronic warfare and SIGINT operations for pre-strike intelligence preparation.",
         "duration": "Mission-based / 3-21 days",
-        "team_size": "2-8 personnel",
+        "team_size": "2-8 specialists",
         "capabilities": [
-          "Low-signature surveillance",
-          "Electronic warfare",
-          "Target acquisition & mapping",
-          "Route reconnaissance",
-          "Real-time threat intelligence"
+          "Low-signature area surveillance",
+          "Electronic warfare & signal disruption",
+          "Target acquisition & battle damage assessment",
+          "Route reconnaissance & threat corridor mapping",
+          "Real-time intelligence feed to command"
         ],
         "deployment_time": "36-48 hours"
       }
     },
-    "differentiators_label": "Why Choose FLUXX",
-    "differentiators_title": "We Execute. Others Talk.",
+    "differentiators_label": "Why FLUXX",
+    "differentiators_title": "Others Promise. We Execute.",
     "differentiators": [
       {
-        "title": "Hierarchical Command",
-        "text": "Every operation runs through a command structure that ensures accountability, rapid decision-making, and mission success. No freelance chaos."
+        "title": "Centralized Command Authority",
+        "text": "Every operation flows through a verified chain of command. No rogue elements. No freelance chaos. Every operator knows who gives the order, and every order has accountability attached."
       },
       {
-        "title": "Doctrine-Driven",
-        "text": "We operate under established protocols and rules of engagement. Our operators know the mission. Your objectives are crystal clear."
+        "title": "Doctrine Over Ego",
+        "text": "We operate under established tactical doctrine and strict rules of engagement. Our operators don't improvise — they execute the plan. Your objectives become our mission parameters."
       },
       {
-        "title": "Organic Support",
-        "text": "Medical, logistics, and real-time intelligence integrated into every operation. You get the full force, not isolated units."
+        "title": "Organic Combined Arms",
+        "text": "Medical, logistics, ISR, and fire support integrated into every deployment. You contract the full force — not isolated units hoping for the best. Every element supports the whole."
       },
       {
-        "title": "24/7 Operational Readiness",
-        "text": "The galaxy doesn't sleep. We maintain constant alert posture with rapid-response teams ready for immediate deployment at your call."
+        "title": "Persistent Operational Readiness",
+        "text": "Threats don't operate on a schedule. FLUXX maintains 24/7 alert posture with quick-reaction forces staged for immediate deployment. When you call, we are already moving."
       }
     ],
-    "fleet_label": "Fleet Overview",
-    "fleet_title": "Operational Assets",
-    "fleet_text": "FLUXX PMC maintains a diversified fleet of combat, support, and reconnaissance vessels. Our assets range from heavy assault fighters to dedicated medical frigates — ensuring full-spectrum operational capability across any theater.",
-    "fleet_cta": "View Full Fleet",
-    "join_title": "Report for Duty",
-    "join_text": "FLUXX PMC is actively recruiting combat-ready pilots, ground operators, and support specialists. Discipline. Proficiency. Commitment. If you meet the standard — your position is waiting.",
-    "join_cta": "Begin Application"
+    "fleet_label": "Asset Registry",
+    "fleet_title": "Fleet Readiness",
+    "fleet_text": "FLUXX PMC operates a diversified arsenal of combat, ISR, and support platforms. Every asset is mission-configured, crew-certified, and maintained at deployment-ready status. Our fleet doesn't sit in hangars — it holds the line.",
+    "fleet_cta": "Access Fleet Registry",
+    "join_title": "Report for Evaluation",
+    "join_text": "FLUXX PMC is selectively recruiting combat-rated pilots, ground warfare specialists, and support operators. We do not accept applications — we accept candidates who survive our evaluation pipeline. Discipline. Proficiency. Zero exceptions.",
+    "join_cta": "Start Evaluation Process"
   },
   "about": {
     "hero_label": "Organization Dossier",
     "hero_title": "Forged in the Void",
-    "hero_text": "FLUXX PMC was established on a singular doctrine: precision, discipline, and an uncompromising commitment to the mission are the only standards that matter. We are not mercenaries — we are a professional military corporation built on operational excellence and accountable command.",
-    "overview_label": "Company Overview",
-    "overview_title": "Who We Are",
-    "overview_text": "FLUXX Private Military Corporation is an independent defense contractor operating primarily within the Stanton system. We provide full-spectrum military services to corporations, logistics operators, mining outfits, and private entities who require professional armed support.\n\nOur personnel are drawn from experienced combat veterans, former military aviators, and specialized operators who have proven themselves in live-fire environments. Every member of FLUXX has earned their position through merit, performance, and an uncompromising dedication to the mission.",
-    "mission_label": "Mission & Values",
-    "mission_title": "Our Doctrine",
+    "hero_text": "FLUXX PMC was not created — it was forged. Built by operators who understood that the frontier doesn't reward hesitation, and that professional violence, applied with discipline, is the only language that hostile space respects.",
+    "overview_label": "Organization Profile",
+    "overview_title": "What FLUXX Is",
+    "overview_text": "FLUXX Private Military Corporation is an independent defense contractor operating within the Stanton system. We provide full-spectrum military services to corporations, logistics operators, mining outfits, and sovereign entities that require professional armed force projection.\n\nOur operators are not recruits — they are combat-proven veterans, former military aviators, and specialized warfare operators who have demonstrated lethality, discipline, and reliability under fire. Every member of FLUXX earned their position. No one was given a place.",
+    "mission_label": "Operational Doctrine",
+    "mission_title": "Core Principles",
     "mission_values": {
       "precision": {
-        "title": "Precision Above All",
-        "text": "Every operation is planned with surgical accuracy. We do not rely on overwhelming force — we rely on calculated, decisive action that achieves objectives with minimal collateral impact."
+        "title": "Precision Over Firepower",
+        "text": "Every operation is planned with surgical accuracy. We do not rely on overwhelming volume — we rely on calculated, decisive action that achieves objectives with minimal expenditure and zero collateral tolerance."
       },
       "discipline": {
-        "title": "Discipline Defines Us",
-        "text": "FLUXX operators adhere to strict rules of engagement and a chain of command that ensures accountability at every level. Discipline is not optional — it is the foundation of everything we do."
+        "title": "Discipline Is Non-Negotiable",
+        "text": "FLUXX operators adhere to strict rules of engagement and an unbroken chain of command. Discipline is not a value — it is the operating system. Deviation is not tolerated. Period."
       },
       "reliability": {
-        "title": "Reliability Under Fire",
-        "text": "When the situation deteriorates, FLUXX stands firm. Our clients trust us because we deliver results regardless of how hostile the environment becomes."
+        "title": "Reliability Under Extreme Conditions",
+        "text": "When the tactical situation deteriorates and others withdraw, FLUXX holds the line. Our clients trust us because we have never failed to deliver under fire."
       },
       "discretion": {
-        "title": "Operational Discretion",
-        "text": "Client confidentiality and operational security are paramount. FLUXX maintains strict information compartmentalization and never discloses operational details beyond need-to-know channels."
+        "title": "Absolute Operational Security",
+        "text": "Client operations, routes, and asset details are compartmentalized and encrypted. FLUXX maintains strict OPSEC protocols — what happens on contract stays classified. No exceptions."
       }
     },
-    "doctrine_label": "Operational Doctrine",
+    "doctrine_label": "Combat Philosophy",
     "doctrine_title": "How We Fight",
-    "doctrine_text": "FLUXX operates under a unified command doctrine that emphasizes speed, coordination, and overwhelming tactical advantage at the point of engagement. Our operations are built on three pillars:",
+    "doctrine_text": "FLUXX operates under a unified command doctrine that prioritizes speed, overwhelming tactical advantage at the point of contact, and seamless multi-domain coordination. Our operations are built on three pillars:",
     "doctrine_pillars": {
       "intel": {
-        "title": "Intelligence First",
-        "text": "No operation begins without comprehensive reconnaissance. Our Intel division maps the operational environment, identifies threats and opportunities, and provides commanders with actionable data before any engagement order is issued."
+        "title": "Intelligence Dominance",
+        "text": "No operation begins without comprehensive battlespace preparation. Our ISR division maps the operational environment, identifies threats, and provides commanders with actionable intelligence before any engagement order is authorized."
       },
       "coordination": {
-        "title": "Multi-Domain Coordination",
-        "text": "FLUXX deploys across space, atmosphere, and ground simultaneously. Our command structure supports seamless coordination between ship-based assets, ground teams, and support elements — ensuring no domain is left unsecured."
+        "title": "Multi-Domain Integration",
+        "text": "FLUXX deploys across space, atmosphere, and ground simultaneously. Our command architecture supports seamless coordination between ship-based strike elements, ground assault teams, and support assets — no domain left uncontrolled."
       },
       "extraction": {
-        "title": "Decisive Execution",
-        "text": "When the order is given, FLUXX operators execute with speed and violence of action that denies the enemy any opportunity to adapt. We strike fast, achieve the objective, and extract — leaving nothing to chance."
+        "title": "Violence of Action",
+        "text": "When the execution order drops, FLUXX operators engage with speed and concentrated force that denies the enemy any opportunity to adapt. We strike hard, complete the objective, and extract — leaving nothing to chance."
       }
     },
-    "why_label": "Why FLUXX",
-    "why_title": "Why Corporations Choose FLUXX",
+    "why_label": "Strategic Advantage",
+    "why_title": "Why Organizations Choose FLUXX",
     "why_reasons": {
       "track_record": {
-        "title": "Proven Track Record",
-        "text": "Hundreds of successful operations across every environment in the Stanton system. Our completion rate speaks for itself."
+        "title": "Combat-Verified Record",
+        "text": "500+ operations completed across every environment in the Stanton system. A 98% success rate that wasn't built on marketing — it was built on after-action reports."
       },
       "professionalism": {
-        "title": "Military Professionalism",
-        "text": "We conduct ourselves as a professional military force — not a loosely organized group of freelancers. Clients receive structured briefings, clear communication, and accountable leadership."
+        "title": "Military-Grade Professionalism",
+        "text": "We conduct ourselves as a professional military force. Clients receive structured briefings, encrypted communication channels, and accountable leadership — not Discord chaos."
       },
       "scalability": {
         "title": "Scalable Force Projection",
-        "text": "Whether you need a two-ship escort or a full fleet deployment, FLUXX scales to meet the threat level. Our modular force structure allows rapid task organization for any mission profile."
+        "text": "From a two-ship escort to a full division-level deployment, FLUXX scales to meet the threat. Our modular task organization allows rapid force packaging for any mission profile."
       },
       "confidentiality": {
-        "title": "Absolute Confidentiality",
-        "text": "Every contract is handled with the utmost discretion. FLUXX never discusses client operations, routes, or asset details with any external party. Period."
+        "title": "Zero-Leak Confidentiality",
+        "text": "Every contract is handled under strict OPSEC protocols. FLUXX never discusses client operations, routes, or asset details with any external party. Your operation is classified from intake to debrief."
       }
     },
-    "history_label": "History",
-    "history_title": "Our Story",
-    "history_text": "FLUXX PMC was established in the Stanton system by a cadre of experienced combat operators who recognized the growing demand for professional military services in an increasingly volatile frontier. What began as a small tactical unit providing escort services has evolved into a full-spectrum private military corporation capable of executing complex multi-domain operations.\n\nThrough disciplined growth, strategic recruitment, and an unwavering commitment to operational excellence, FLUXX has expanded from a single squadron to a multi-division organization with assets deployed across the system. Our reputation was not built through marketing — it was earned in the field, one successful operation at a time."
+    "history_label": "Classified Archive",
+    "history_title": "Origin & Evolution",
+    "history_text": "FLUXX PMC was established in the Stanton system by a cadre of combat-hardened operators who recognized a critical gap: the frontier needed professional military capability, not glorified escort services. What began as a four-ship tactical cell providing high-risk escort runs has evolved into a multi-division private military corporation capable of executing complex combined-arms operations across the entire system.\n\nThrough selective recruitment, relentless operational standards, and a willingness to take contracts others refused, FLUXX grew from a single squadron into an organization with persistent force presence across Stanton. Our reputation was not built through spectacle — it was earned in the dark, one successful operation at a time."
   },
   "operations": {
     "hero_label": "Operational Command",
-    "hero_title": "Operational Command",
-    "hero_text": "FLUXX Operational Command coordinates all active deployments, mission planning, and force projection across the Stanton system. Every engagement is doctrine-driven, command-authorized, and executed with zero tolerance for deviation.",
-    "missions_label": "Mission Types",
+    "hero_title": "Operations Center",
+    "hero_text": "FLUXX Operational Command coordinates all active deployments, force projection, and mission execution across the Stanton system. Every engagement is doctrine-driven, command-authorized, and executed under strict ROE. Deviation is not tolerated.",
+    "missions_label": "Mission Profiles",
     "missions_title": "Operational Capabilities",
     "missions": {
       "security": {
         "title": "Security Operations",
-        "short_desc": "Static and mobile security for installations. Perimeter defense and 24/7 threat response.",
-        "text": "Static and mobile security for installations, mining operations, and corporate facilities. Our security teams establish layered defense perimeters, conduct regular threat assessments, and maintain rapid response capabilities for any incursion scenario.",
-        "detail": "Includes: perimeter defense, counter-intrusion, threat monitoring, VIP protection, installation security."
+        "short_desc": "Static and mobile asset denial. Layered perimeters, counter-intrusion, and 24/7 QRF.",
+        "text": "Static and mobile security for installations, mining operations, and corporate facilities. Our security units establish overlapping defense perimeters, conduct persistent threat assessment, and maintain rapid-response capability for any incursion scenario.",
+        "detail": "Includes: perimeter denial, counter-intrusion, threat surveillance, principal protection, facility hardening."
       },
       "combat": {
         "title": "Combat Deployments",
-        "short_desc": "Full-scale offensive operations with coordinated multi-ship assault formations.",
-        "text": "Full-scale offensive operations against hostile forces. FLUXX combat teams deploy in coordinated multi-ship formations with ground support elements, executing assault, interdiction, and area denial missions with lethal efficiency.",
-        "detail": "Includes: assault operations, area denial, interdiction, hostile force neutralization, defensive operations."
+        "short_desc": "Full-scale offensive operations. Coordinated multi-ship strike packages with ground integration.",
+        "text": "Full-scale offensive operations against hostile forces. FLUXX combat elements deploy in coordinated multi-ship formations with integrated ground assault teams, executing assault, interdiction, and area denial missions with lethal efficiency.",
+        "detail": "Includes: assault operations, area denial, interdiction, hostile force elimination, defensive operations."
       },
       "recon": {
-        "title": "Recon Missions",
-        "short_desc": "Covert intelligence gathering and threat mapping in contested space.",
-        "text": "Covert intelligence gathering and surveillance in contested or unknown space. Our recon operators utilize low-signature vessels and advanced sensor arrays to map enemy positions, track movements, and identify vulnerabilities before the main force commits.",
+        "title": "ISR Operations",
+        "short_desc": "Covert intelligence collection and threat mapping in denied/contested space.",
+        "text": "Covert intelligence, surveillance, and reconnaissance in contested or denied space. Our ISR operators utilize low-signature vessels and advanced sensor arrays to map enemy dispositions, track force movements, and identify vulnerabilities before the main force commits.",
         "detail": "Includes: surveillance, target acquisition, electronic warfare, route reconnaissance, threat mapping."
       },
       "escort": {
-        "title": "Escort Operations",
-        "short_desc": "Armed convoy protection through contested corridors with layered defensive coverage.",
-        "text": "Armed convoy protection for cargo transports, passenger vessels, and fleet movements through contested corridors. FLUXX escort formations maintain 360-degree threat coverage and execute immediate counter-attack protocols upon hostile contact.",
-        "detail": "Includes: convoy escort, VIP transport, route security, cargo protection, fleet screening."
+        "title": "Escort Formations",
+        "short_desc": "Armed convoy defense through hostile corridors. Multi-layer threat screening.",
+        "text": "Armed convoy defense for cargo transports, personnel vessels, and fleet movements through contested corridors. FLUXX escort formations maintain 360-degree threat coverage and execute immediate counter-attack protocols upon hostile contact.",
+        "detail": "Includes: convoy screen, VIP transport, route dominance, cargo protection, fleet screening."
       }
     },
-    "doctrine_label": "Core Operations",
-    "doctrine_title": "Operational Doctrine",
+    "doctrine_label": "Combat Doctrine",
+    "doctrine_title": "Operational Principles",
     "doctrine": {
       "precision": {
         "title": "Precision",
-        "text": "Every operation calculated to minimize collateral. No excess force."
+        "text": "Every operation calculated to minimize expenditure and maximize effect. No excess force."
       },
       "discipline": {
         "title": "Discipline",
-        "text": "Established protocols. Clear hierarchies. Accountability at every level."
+        "text": "Established protocols. Unbroken chain of command. Accountability at every echelon."
       },
       "speed": {
         "title": "Speed",
-        "text": "Rapid response & execution. Seconds determine survival in contested space."
+        "text": "Rapid response and decisive execution. In contested space, seconds determine who lives."
       },
       "mission": {
-        "title": "Mission Priority",
-        "text": "Objectives achieved. Personnel returned. Contracts fulfilled completely."
+        "title": "Mission First",
+        "text": "Objectives achieved. Operators returned. Contracts fulfilled. No exceptions."
       }
     },
-    "process_label": "Deployment Process",
+    "process_label": "Deployment Pipeline",
     "process_title": "From Contract to Completion",
     "process_steps": {
       "step1": {
         "title": "Contract Intake",
-        "text": "Client submits a contract request detailing the operational requirement, threat assessment, and desired outcome. FLUXX command reviews and assigns a mission coordinator."
+        "text": "Client submits operational requirements, threat assessment, and desired outcomes. FLUXX command reviews, assigns a mission coordinator, and initiates planning."
       },
       "step2": {
-        "title": "Intelligence & Planning",
-        "text": "Our Intel division conducts preliminary reconnaissance, assesses the operational environment, and develops a comprehensive mission plan including force composition, rules of engagement, and contingency protocols."
+        "title": "Intelligence Preparation",
+        "text": "Our ISR division conducts preliminary reconnaissance, assesses the battlespace, and develops a comprehensive mission plan including force composition, ROE, and contingency protocols."
       },
       "step3": {
-        "title": "Force Assembly",
-        "text": "Based on the mission plan, FLUXX assembles the appropriate task force — selecting operators, ships, and support assets matched to the specific threat profile and operational requirements."
+        "title": "Force Packaging",
+        "text": "Based on the threat assessment, FLUXX assembles the task force — selecting operators, platforms, and support assets matched to the specific threat profile and operational requirements."
       },
       "step4": {
-        "title": "Mission Briefing",
-        "text": "All operators receive a detailed mission briefing covering objectives, timelines, contingencies, and communication protocols. Every team member understands their role and the overall intent."
+        "title": "Mission Brief",
+        "text": "All operators receive a detailed mission briefing covering objectives, timelines, contingencies, and PACE communications plan. Every unit understands their role and the commander's intent."
       },
       "step5": {
         "title": "Execution",
-        "text": "The operation is launched under centralized command. Real-time adjustments are made as conditions evolve, with command maintaining situational awareness throughout the engagement."
+        "text": "The operation is launched under centralized command with decentralized execution. Real-time adjustments flow through the C2 architecture as conditions evolve."
       },
       "step6": {
-        "title": "Debrief & Report",
-        "text": "Post-mission, FLUXX conducts a thorough debrief and provides the client with an after-action report detailing mission outcomes, force performance, and any intelligence gathered during the operation."
+        "title": "ENDEX & Debrief",
+        "text": "Post-mission, FLUXX conducts a thorough after-action review and provides the client with a detailed report covering mission outcomes, force performance, and intelligence gathered."
       }
     },
-    "structure_label": "Operational Structure",
-    "structure_title": "Command Architecture",
-    "structure_text": "FLUXX operates under a hierarchical command structure designed for clear accountability and rapid decision-making in combat environments.",
+    "structure_label": "Command Architecture",
+    "structure_title": "Chain of Command",
+    "structure_text": "FLUXX operates under a hierarchical command structure designed for clear accountability, rapid decision-making, and decentralized execution in high-threat environments.",
     "structure_hierarchy": {
       "command": {
         "title": "Strategic Command",
-        "text": "Senior leadership responsible for corporate strategy, major contract negotiations, and overall force posture. Sets operational priorities and allocates resources."
+        "text": "Senior leadership. Corporate strategy, major contract authorization, and overall force posture. Sets operational priorities and allocates resources across the organization."
       },
       "operations": {
         "title": "Operations Command",
-        "text": "Manages day-to-day operational planning and mission coordination. Translates strategic directives into actionable mission orders and oversees force deployment."
+        "text": "Day-to-day operational planning and mission coordination. Translates strategic directives into actionable mission orders and oversees all force deployments."
       },
       "division": {
-        "title": "Division Leads",
-        "text": "Each operational division (Assault, Recon, Logistics, Medical) is led by an experienced commander responsible for unit readiness, training standards, and mission execution."
+        "title": "Division Commanders",
+        "text": "Each operational division (Assault, Recon, Logistics, Medical) is led by a combat-proven commander responsible for unit readiness, training standards, and mission execution."
       },
       "squad": {
         "title": "Squadron Leaders",
-        "text": "Tactical-level commanders who lead teams in the field. Squadron leaders have authority to make real-time decisions within the commander's intent and rules of engagement."
+        "text": "Tactical-level commanders who lead units in the field. Authority to make real-time decisions within the commander's intent and rules of engagement."
       }
     }
   },
   "contracts": {
     "hero_label": "Contract Bureau",
-    "hero_title": "Engage Our Services",
-    "hero_text": "FLUXX PMC delivers professional military services on a contract basis. From single-ship escort to full division deployments — every contract is command-reviewed, threat-assessed, and operationally planned before a single asset leaves the hangar.",
-    "why_label": "Why Hire FLUXX",
+    "hero_title": "Engage Our Force",
+    "hero_text": "FLUXX PMC delivers professional military capability on a contract basis. From single-ship escort to full division-level deployments — every contract is command-reviewed, threat-assessed, and operationally planned before a single asset leaves the hangar.",
+    "why_label": "Why Contract FLUXX",
     "why_title": "Professional Military Partnership",
-    "why_text": "When you contract FLUXX PMC, you are not hiring freelancers — you are engaging a professional military organization with established doctrine, trained operators, and a proven track record. Every contract receives dedicated command oversight, structured communication, and accountability at every level.",
-    "types_label": "Contract Types",
-    "types_title": "Available Service Contracts",
+    "why_text": "When you contract FLUXX PMC, you are not hiring freelancers — you are engaging a professional military organization with established doctrine, combat-proven operators, and an unbroken mission record. Every contract receives dedicated command oversight, encrypted communication, and accountability at every echelon.",
+    "types_label": "Service Contracts",
+    "types_title": "Available Contract Types",
     "types": {
       "security": {
         "title": "Security Contracts",
@@ -485,64 +485,64 @@
         "threat_rating": "Variable (Low to Extreme)"
       }
     },
-    "process_label": "Contract Process",
-    "process_title": "How FLUXX Contracts Work",
+    "process_label": "Engagement Protocol",
+    "process_title": "Contract Execution Pipeline",
     "process": [
       {
         "step": "1",
-        "title": "Initial Consultation",
-        "text": "Submit your contract request with preliminary operational requirements. FLUXX command reviews and schedules a detailed consultation."
+        "title": "Initial Request",
+        "text": "Submit your operational requirements via the secure contract form. FLUXX Command reviews and assigns a dedicated mission coordinator within 48 hours."
       },
       {
         "step": "2",
-        "title": "Requirements Analysis",
-        "text": "Our operations team analyzes threat level, duration, asset requirements, and operational environment to develop an accurate assessment."
+        "title": "Threat Assessment",
+        "text": "Our intelligence division analyzes threat level, operational environment, duration, and asset requirements to develop an accurate force recommendation."
       },
       {
         "step": "3",
         "title": "Mission Planning",
-        "text": "FLUXX develops a comprehensive mission plan including force composition, rules of engagement, risk assessment, and contingency protocols."
+        "text": "FLUXX develops a comprehensive mission plan including force composition, rules of engagement, risk mitigation, and contingency protocols."
       },
       {
         "step": "4",
-        "title": "Contract Negotiation",
-        "text": "Command presents the plan with accurate pricing, timelines, and terms. All conditions are negotiated and formalized in the contract document."
+        "title": "Contract Authorization",
+        "text": "Command presents the operational plan with pricing, timelines, and terms. All conditions are formalized. Both parties sign before any deployment order is issued."
       },
       {
         "step": "5",
-        "title": "Force Assembly",
-        "text": "Upon contract signature, FLUXX assembles the dedicated task force and conducts final operational briefings before deployment."
+        "title": "Force Packaging",
+        "text": "Upon contract authorization, FLUXX assembles the dedicated task force and conducts final operational briefings. All assets are mission-configured."
       },
       {
         "step": "6",
-        "title": "Execution & Support",
-        "text": "Mission execution with real-time command oversight, daily status reports, and adjustments as operational conditions evolve."
+        "title": "Execution & Oversight",
+        "text": "Mission execution with real-time command oversight, daily SITREP reporting, and tactical adjustments as operational conditions evolve."
       }
     ],
     "terms_label": "Contract Terms & SLA",
-    "terms_title": "Our Commitments",
+    "terms_title": "Operational Commitments",
     "terms": [
       {
         "title": "Operational Security",
-        "text": "All operational details, client information, and mission parameters remain strictly confidential. FLUXX maintains secure communications channels for all contracts."
+        "text": "All operational details, client information, and mission parameters are classified. FLUXX maintains encrypted communications and strict need-to-know protocols for all contracts."
       },
       {
-        "title": "Dedicated Command",
-        "text": "Every contract receives a dedicated command staff member as primary liaison. Direct communication access to mission commanders at all times."
+        "title": "Dedicated Command Liaison",
+        "text": "Every contract receives a dedicated command officer as primary liaison. Direct encrypted communication access to mission commanders at all operational hours."
       },
       {
-        "title": "Performance Guarantee",
-        "text": "FLUXX guarantees mission objectives will be met as defined in contract specifications. Failure to meet objectives results in service credit or refund."
+        "title": "Mission Guarantee",
+        "text": "FLUXX guarantees mission objectives will be met as defined in contract specifications. Failure to meet stated objectives results in service credit or full contract adjustment."
       },
       {
-        "title": "24/7 Support",
-        "text": "Full operational support during contract execution. Command center monitoring, emergency protocols, and tactical adjustments on demand."
+        "title": "24/7 Operational Support",
+        "text": "Full operational support during contract execution. Command center monitoring, emergency protocols, force augmentation, and tactical adjustment on demand."
       }
     ],
-    "form_label": "Request a Contract",
-    "form_title": "Submit Contract Request",
-    "form_name": "Organization Name",
-    "form_contact": "Contact Method (Discord/Email)",
+    "form_label": "Submit Operational Request",
+    "form_title": "Contract Request — Classified",
+    "form_name": "Organization / Callsign",
+    "form_contact": "Secure Contact (Discord / Encrypted Channel)",
     "form_type": "Contract Type",
     "form_duration": "Desired Duration",
     "form_duration_options": {
@@ -553,24 +553,24 @@
       "annual": "Annual Contract",
       "ongoing": "Ongoing (Open-Ended)"
     },
-    "form_location": "Operational Area / Route",
-    "form_threat_level": "Threat Assessment",
+    "form_location": "Area of Operations / Route",
+    "form_threat_level": "Threat Assessment Level",
     "form_threat_options": {
       "low": "Low (Routine ops in safe space)",
       "medium": "Medium (Contested space, minor threats)",
       "high": "High (Active combat zones, significant threats)",
       "extreme": "Extreme (Full warfare scenario)"
     },
-    "form_team_size": "Desired Team Size",
+    "form_team_size": "Force Requirement",
     "form_team_size_options": {
-      "small": "Small (1-5 operators/ships)",
-      "medium": "Medium (6-15 operators/ships)",
-      "large": "Large (16-30 operators/ships)",
-      "full_division": "Full Division (30+ operators/ships)"
+      "small": "Fire Team (1-5 operators/ships)",
+      "medium": "Squad (6-15 operators/ships)",
+      "large": "Platoon (16-30 operators/ships)",
+      "full_division": "Division (30+ operators/ships)"
     },
-    "form_budget": "Available Budget (UEC)",
-    "form_assets": "Specific Assets Required",
-    "form_description": "Detailed Mission Description",
+    "form_budget": "Budget Allocation (UEC)",
+    "form_assets": "Required Assets / Platforms",
+    "form_description": "Detailed Mission Brief",
     "form_type_options": {
       "security": "Security Contract",
       "escort": "Escort Mission",
@@ -578,11 +578,11 @@
       "recon": "Strategic Recon",
       "other": "Other / Custom"
     },
-    "form_submit": "Submit Contract Request",
-    "form_success": "Contract request submitted successfully. FLUXX Operations Command will review your request and contact you within 48 hours with preliminary assessment and scheduling options.",
-    "form_disclaimer": "All contract requests are reviewed by FLUXX Operations Command. Submission does not guarantee acceptance. FLUXX reserves the right to decline any contract that conflicts with our operational doctrine, values, or existing contracts. All information submitted is treated as confidential and proprietary.",
-    "pricing_label": "Service Pricing",
-    "pricing_title": "Contract Pricing Guidance",
+    "form_submit": "Submit Operational Request",
+    "form_success": "Operational request received and logged. FLUXX Operations Command will review your submission and respond within 48 hours with a preliminary threat assessment and deployment recommendation.",
+    "form_disclaimer": "All submissions are reviewed by FLUXX Operations Command. Submission does not guarantee contract acceptance. FLUXX reserves the right to decline any request that conflicts with operational doctrine, existing deployments, or organizational values. All information is classified and compartmentalized.",
+    "pricing_label": "Force Pricing",
+    "pricing_title": "Contract Cost Framework",
     "pricing": [
       {
         "tier": "Security Operations",
@@ -607,23 +607,23 @@
     ]
   },
   "recruitment": {
-    "hero_label": "Personnel Division",
-    "hero_title": "Join FLUXX PMC",
-    "hero_text": "FLUXX PMC selectively recruits operators who meet our standards of discipline, tactical proficiency, and commitment. If you can perform under pressure and follow command — there may be a position for you.",
-    "divisions_label": "Operational Divisions",
+    "hero_label": "Personnel Command",
+    "hero_title": "Selection & Evaluation",
+    "hero_text": "FLUXX PMC does not recruit — we select. Our evaluation pipeline is designed to identify operators who possess the discipline, tactical proficiency, and mental resilience required for high-threat military operations. If you cannot perform under pressure, you will not pass.",
+    "divisions_label": "Force Structure",
     "divisions_title": "Operational Roles",
     "divisions": {
       "pilots_logistics": {
         "title": "Pilots & Logistics",
-        "description": "The spine of FLUXX operations. Our pilots command the skies while logistics keeps the machine running. Both roles are essential and often overlap in small teams.",
+        "description": "The backbone of FLUXX force projection. Our pilots command the battlespace while logistics ensures the war machine never stops. Both roles are critical — and there is no room for passengers.",
         "roles": {
           "pilots": {
             "title": "Combat Pilots",
-            "text": "Experienced aviators capable of operating in high-threat environments. Must demonstrate proficiency in ship-to-ship combat, formation flying, and multi-role operations."
+            "text": "Experienced aviators cleared for high-threat flight operations. Must demonstrate proficiency in ship-to-ship engagement, formation flying, and multi-role mission execution."
           },
           "logistics": {
-            "title": "Logistics Coordinator",
-            "text": "Operations support specialists who manage supply chains, vehicle maintenance, and mission coordination. Must be comfortable with multi-tasking and problem-solving under pressure."
+            "title": "Logistics Operators",
+            "text": "Force sustainment specialists managing supply chains, platform maintenance, and mission coordination. Must operate effectively under pressure with zero margin for error."
           }
         },
         "units": [
@@ -640,7 +640,7 @@
       },
       "assault": {
         "title": "Assault Division",
-        "description": "Direct action specialists trained for boarding operations, planetary assault, and hostile environment neutralization. Our heavy hitters who execute the hardest missions.",
+        "description": "Direct action specialists trained for boarding operations, planetary assault, and hostile force elimination. The operators who execute the missions nobody else will take.",
         "operational_units": [
           { "name": "SPECTRE", "role": "Tactical Unit - Multi-mission support" },
           { "name": "LEVIATHAN", "role": "Boarding Division - Ship & station assault" },
@@ -658,7 +658,7 @@
       },
       "recon": {
         "title": "Recon Division",
-        "description": "Intelligence operatives who gather data, conduct surveillance, and map the operational environment. The eyes and ears of FLUXX command.",
+        "description": "Intelligence operatives who gather data, conduct surveillance, and map the battlespace before the main force commits. The difference between a successful operation and a disaster starts here.",
         "operational_cells": [
           { "name": "VIPER-4", "role": "Tactical Surveillance & Support" },
           { "name": "GHOST-3", "role": "Cartography & Exploration" },
@@ -675,76 +675,76 @@
         ]
       }
     },
-    "requirements_label": "Mandatory Requirements",
-    "requirements_title": "Baseline Standards",
+    "requirements_label": "Minimum Standards",
+    "requirements_title": "Non-Negotiable Requirements",
     "requirements_list": {
-      "r1": "Active Star Citizen account in good standing",
-      "r2": "Disciplined approach to organized military operations",
-      "r3": "Strict adherence to chain of command",
-      "r4": "Commitment to scheduled operational deployments",
-      "r5": "Professional communication and situational awareness",
-      "r6": "Zero tolerance for internal conflict or insubordination"
+      "r1": "Active Star Citizen account with verified RSI handle",
+      "r2": "Demonstrated discipline in structured military operations",
+      "r3": "Absolute adherence to chain of command — no exceptions",
+      "r4": "Commitment to scheduled deployments and operational readiness",
+      "r5": "Professional communication and situational awareness under fire",
+      "r6": "Zero tolerance for insubordination, drama, or operational compromise"
     },
-    "apply_label": "Get Started",
-    "apply_title": "How to Apply",
-    "apply_text": "Submit your application through our official channels. All applicants undergo background evaluation and tactical assessment.",
-    "apply_discord": "Join Discord",
-    "apply_org": "View Star Citizen Org",
-    "apply_step1": "Join the FLUXX Discord server",
-    "apply_step2": "Navigate to the recruitment channel",
-    "apply_step3": "Submit your application with your RSI handle",
-    "apply_step4": "Complete a brief interview with a recruiter",
-    "apply_step5": "Receive division assignment and onboarding"
+    "apply_label": "Initiate Evaluation",
+    "apply_title": "Start Your Evaluation",
+    "apply_text": "Submit your candidacy through our official channels. All applicants undergo background evaluation, tactical assessment, and a probationary deployment period. There are no shortcuts.",
+    "apply_discord": "Access Discord — Recruitment Channel",
+    "apply_org": "View RSI Organization Profile",
+    "apply_step1": "Access the FLUXX Discord server",
+    "apply_step2": "Navigate to the recruitment intake channel",
+    "apply_step3": "Submit your RSI handle and operational background",
+    "apply_step4": "Complete tactical assessment with command staff",
+    "apply_step5": "Receive division assignment and begin probation"
   },
   "contact": {
-    "hero_label": "Communications",
-    "hero_title": "Reach Command",
-    "hero_text": "All inbound communications are processed through secure channels. Contract inquiries, recruitment applications, and partnership discussions are monitored and triaged by FLUXX Operations Command within 48 hours.",
-    "inquiry_label": "What Can We Help With",
-    "inquiry_title": "Choose Your Path",
+    "hero_label": "Secure Communications",
+    "hero_title": "Contact Command",
+    "hero_text": "All inbound communications are processed through encrypted channels. Contract inquiries, enlistment applications, and partnership proposals are monitored and triaged by FLUXX Operations Command within 48 hours.",
+    "inquiry_label": "Communication Pathways",
+    "inquiry_title": "Select Your Channel",
     "inquiries": [
       {
         "title": "Contract Request",
-        "description": "Interested in hiring FLUXX for security, escort, combat, or reconnaissance operations? Start your contract inquiry through Discord."
+        "description": "Require FLUXX force projection for security, escort, combat, or ISR operations? Initiate your contract request through our secure Discord channel."
       },
       {
-        "title": "Recruitment",
-        "description": "Want to join FLUXX PMC? Learn about our divisions, roles, and the application process. Discord is your first stop."
+        "title": "Enlistment Inquiry",
+        "description": "Interested in joining FLUXX PMC? Review our divisions, operational roles, and evaluation pipeline. Discord recruitment intake is your entry point."
       },
       {
-        "title": "General Inquiry",
-        "description": "Questions about FLUXX operations, organization, or capabilities? Our community on Discord or the RSI organization page can help."
+        "title": "General Intelligence",
+        "description": "Questions about FLUXX capabilities, organizational structure, or operational posture? Our community channels and RSI organization page provide answers."
       },
       {
-        "title": "Partnership Opportunities",
-        "description": "Interested in coordinating operations or strategic partnerships? Discord command staff can discuss opportunities."
+        "title": "Strategic Partnership",
+        "description": "Interested in inter-organizational operations or strategic alliances? FLUXX Command staff evaluates all partnership proposals through Discord."
       }
     ],
-    "channels_label": "Communication Channels",
-    "channels_title": "How to Reach Us",
+    "channels_label": "Secure Channels",
+    "channels_title": "Communication Methods",
     "channels": {
       "discord": {
-        "title": "Discord Server",
-        "text": "Primary communication hub for FLUXX PMC. Join for real-time updates, contract inquiries, recruitment applications, and direct contact with command staff. All request types welcome here."
+        "title": "Discord — Primary C2",
+        "text": "Primary command and control hub for FLUXX PMC. Real-time operational updates, contract intake, enlistment processing, and direct communication with command elements. All request types processed here."
       },
       "org": {
         "title": "RSI Organization",
-        "text": "Official Star Citizen organization page. View our roster, fleet composition, organizational structure, and member profiles. Great for understanding our organization before engaging."
+        "text": "Official Star Citizen organization profile. Review our roster, fleet registry, organizational structure, and operational status. Essential intelligence before engaging with FLUXX."
       }
     }
   },
   "footer": {
-    "description": "Private Military Corporation operating across the Stanton system. Professional military services for corporations, logistics operators, and private entities.",
+    "description": "Private Military Corporation. Stanton System. Authorized force projection, asset security, armed escort, and strategic reconnaissance for qualified clients.",
     "nav_title": "Navigation",
     "operations_title": "Operations",
-    "connect_title": "Connect",
-    "discord": "Discord Server",
-    "org_page": "RSI Org Page",
+    "connect_title": "Secure Channels",
+    "discord": "Discord — Command Hub",
+    "org_page": "RSI Organization",
     "copyright": "© {year} FLUXX PMC. All rights reserved.",
     "disclaimer": "FLUXX PMC is a fictional organization within Star Citizen. Not affiliated with Cloud Imperium Games."
   },
   "common": {
-    "learn_more": "Learn More",
+    "learn_more": "View Details",
     "view_all": "View All",
     "back_to_top": "Back to Top"
   }

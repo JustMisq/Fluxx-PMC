@@ -62,7 +62,7 @@ function ContractTypesSection({ t, contractTypes }: any) {
         </div>
 
         <div className="mt-12 text-center">
-          <Button href="/contracts">View All Contract Types</Button>
+          <Button href="/contracts">View All Contract Types →</Button>
         </div>
       </Section>
 
@@ -144,7 +144,7 @@ function ContractTypesSection({ t, contractTypes }: any) {
                 {/* CTA */}
                 <div className="border-t border-white/10 pt-6">
                   <Button href="/contracts" className="w-full">
-                    Request This Contract Type
+                    Submit Operational Request →
                   </Button>
                 </div>
               </div>
@@ -218,6 +218,9 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-grid opacity-40" />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/30 via-transparent to-brand-dark" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-red/5 rounded-full blur-3xl" />
+          {/* Additional depth layers */}
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-brand-red/3 via-transparent to-transparent" />
+          <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-brand-red/3 rounded-full blur-[100px]" />
         </div>
 
         {/* Scan line effect */}
@@ -227,10 +230,28 @@ export default function HomePage() {
         </div>
 
         {/* Corner HUD elements */}
-        <div className="absolute top-24 left-6 w-12 h-12 border-t border-l border-brand-red/15 pointer-events-none z-10" />
-        <div className="absolute top-24 right-6 w-12 h-12 border-t border-r border-brand-red/15 pointer-events-none z-10" />
-        <div className="absolute bottom-16 left-6 w-12 h-12 border-b border-l border-brand-red/15 pointer-events-none z-10" />
-        <div className="absolute bottom-16 right-6 w-12 h-12 border-b border-r border-brand-red/15 pointer-events-none z-10" />
+        <div className="absolute top-24 left-6 w-16 h-16 border-t-2 border-l-2 border-brand-red/15 pointer-events-none z-10" />
+        <div className="absolute top-24 right-6 w-16 h-16 border-t-2 border-r-2 border-brand-red/15 pointer-events-none z-10" />
+        <div className="absolute bottom-16 left-6 w-16 h-16 border-b-2 border-l-2 border-brand-red/15 pointer-events-none z-10" />
+        <div className="absolute bottom-16 right-6 w-16 h-16 border-b-2 border-r-2 border-brand-red/15 pointer-events-none z-10" />
+
+        {/* Side data streams */}
+        <div className="absolute top-1/3 left-6 hidden lg:block pointer-events-none z-10">
+          <div className="space-y-1 opacity-30">
+            <p className="text-[8px] font-mono text-brand-red/70 tracking-widest">SYS::ONLINE</p>
+            <p className="text-[8px] font-mono text-brand-text-muted/40 tracking-widest">LAT: 18.342°</p>
+            <p className="text-[8px] font-mono text-brand-text-muted/40 tracking-widest">LONG: -72.119°</p>
+            <p className="text-[8px] font-mono text-green-500/50 tracking-widest">THREAT: NOMINAL</p>
+          </div>
+        </div>
+        <div className="absolute top-1/3 right-6 hidden lg:block pointer-events-none z-10 text-right">
+          <div className="space-y-1 opacity-30">
+            <p className="text-[8px] font-mono text-brand-red/70 tracking-widest">STANTON SECTOR</p>
+            <p className="text-[8px] font-mono text-brand-text-muted/40 tracking-widest">FREQ: ENCRYPTED</p>
+            <p className="text-[8px] font-mono text-brand-text-muted/40 tracking-widest">AUTH: VERIFIED</p>
+            <p className="text-[8px] font-mono text-green-500/50 tracking-widest">COMMS: ACTIVE</p>
+          </div>
+        </div>
 
         {/* Classification banner at top */}
         <div className="absolute top-16 lg:top-20 left-0 right-0 z-20">
@@ -249,7 +270,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="relative text-center px-4 max-w-4xl mx-auto z-20">
+        <div className="relative text-center px-4 max-w-5xl mx-auto z-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -262,18 +283,18 @@ export default function HomePage() {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="flex items-center justify-center gap-3 mb-6"
             >
-              <div className="w-12 h-px bg-brand-red/30" />
+              <div className="w-16 h-px bg-brand-red/30" />
               <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-brand-red/60">
                 Private Military Corporation
               </span>
-              <div className="w-12 h-px bg-brand-red/30" />
+              <div className="w-16 h-px bg-brand-red/30" />
             </motion.div>
 
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold text-white tracking-tight mb-4">
+            <h1 className="text-6xl sm:text-8xl lg:text-9xl font-black text-white tracking-tight mb-6 text-glow">
               {hero("title")}
             </h1>
 
-            <p className="text-lg sm:text-xl text-brand-text-muted mb-3 tracking-wide">
+            <p className="text-base sm:text-lg text-brand-text-muted mb-3 tracking-wide max-w-2xl mx-auto leading-relaxed">
               {hero("subtitle")}
             </p>
 
@@ -281,7 +302,7 @@ export default function HomePage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="text-sm text-brand-red tracking-[0.3em] uppercase font-medium mb-12"
+              className="text-xs text-brand-red tracking-[0.3em] uppercase font-bold mb-14"
             >
               {hero("tagline")}
             </motion.p>
@@ -310,7 +331,7 @@ export default function HomePage() {
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
-            className="w-px h-8 bg-gradient-to-b from-brand-red/50 to-transparent"
+            className="w-px h-12 bg-gradient-to-b from-brand-red/50 to-transparent"
           />
         </motion.div>
       </section>
@@ -326,23 +347,27 @@ export default function HomePage() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
                 </span>
                 <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-green-500">
-                  OPERATIONAL
+                  FORCE OPERATIONAL
                 </span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-white/10" />
               <span className="hidden sm:inline text-[10px] text-brand-text-muted/60 tracking-wider">
-                ACTIVE CONTRACTS: <span className="text-white font-semibold">3</span>
+                ACTIVE CONTRACTS: <span className="text-brand-red font-bold">3</span>
               </span>
               <div className="hidden md:block w-px h-4 bg-white/10" />
               <span className="hidden md:inline text-[10px] text-brand-text-muted/60 tracking-wider">
-                RESPONSE TIME: <span className="text-white font-semibold">&lt;15 MIN</span>
+                QRF RESPONSE: <span className="text-white font-semibold">&lt;15 MIN</span>
               </span>
               <div className="hidden lg:block w-px h-4 bg-white/10" />
               <span className="hidden lg:inline text-[10px] text-brand-text-muted/60 tracking-wider">
                 THEATER: <span className="text-white font-semibold">STANTON</span>
               </span>
+              <div className="hidden xl:block w-px h-4 bg-white/10" />
+              <span className="hidden xl:inline text-[10px] text-brand-text-muted/60 tracking-wider">
+                THREAT LEVEL: <span className="text-amber-500 font-bold">ELEVATED</span>
+              </span>
             </div>
-            <span className="text-[9px] text-brand-text-muted/40 tracking-wider">
+            <span className="text-[9px] text-brand-text-muted/40 tracking-wider font-mono">
               FLUXX-SITREP-{new Date().toISOString().slice(0, 10).replace(/-/g, "")}
             </span>
           </div>
@@ -469,8 +494,9 @@ export default function HomePage() {
       {/* ─── JOIN CTA ─── */}
       <Section className="relative overflow-hidden">
         <div className="absolute -right-32 -top-32 w-96 h-96 bg-brand-red/5 rounded-full blur-3xl" />
+        <div className="absolute -left-32 -bottom-32 w-64 h-64 bg-brand-red/3 rounded-full blur-3xl" />
         <div className="relative z-10 text-center max-w-2xl mx-auto">
-          <StatusBadge label="RECRUITING" variant="green" pulse />
+          <StatusBadge label="ACCEPTING CANDIDATES" variant="green" pulse />
           <h2 className="text-3xl lg:text-5xl font-black text-white mb-4 mt-6">
             {t("join_title")}
           </h2>
@@ -479,7 +505,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/recruitment">{t("join_cta")}</Button>
-            <Button href="/contracts" variant="secondary">Request Contract</Button>
+            <Button href="/contracts" variant="secondary">Submit Operational Request</Button>
           </div>
         </div>
       </Section>

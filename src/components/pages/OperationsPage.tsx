@@ -8,6 +8,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import Card from "@/components/ui/Card";
 import StepCard from "@/components/ui/StepCard";
 import StatusBadge from "@/components/ui/StatusBadge";
+import ThreatLevel from "@/components/ui/ThreatLevel";
 
 export default function OperationsPage() {
   const t = useTranslations("operations");
@@ -22,6 +23,30 @@ export default function OperationsPage() {
         status={{ label: "OPS ACTIVE", variant: "green" }}
       />
 
+      {/* ─── THREAT ASSESSMENT BAR ─── */}
+      <div className="bg-brand-gray border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <span className="text-[9px] text-brand-text-muted/60 tracking-widest uppercase font-bold">Current Threat Assessment</span>
+            <ThreatLevel level="medium" />
+          </div>
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <span className="text-[9px] text-brand-text-muted/60 tracking-widest uppercase">Theater</span>
+              <span className="text-xs text-white font-mono">STANTON</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-[9px] text-brand-text-muted/60 tracking-widest uppercase">DEFCON</span>
+              <span className="text-xs text-amber-400 font-mono font-bold">3</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-[9px] text-brand-text-muted/60 tracking-widest uppercase">Force Posture</span>
+              <StatusBadge label="READY" variant="green" pulse />
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* ─── MISSION PROFILES ─── */}
       <Section>
         <SectionLabel label={t("missions_label")} />
@@ -30,8 +55,14 @@ export default function OperationsPage() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-          {["security", "combat", "recon", "escort"].map((key, i) => {
+          {(["security", "combat", "recon", "escort"] as const).map((key, i) => {
             const missionData = t.raw(`missions.${key}`) as any;
+            const threat: Record<string, { level: "low" | "medium" | "high" | "critical"; label: string }> = {
+              security: { level: "medium", label: "LOW-MED" },
+              combat: { level: "high", label: "HIGH" },
+              recon: { level: "medium", label: "MODERATE" },
+              escort: { level: "medium", label: "MODERATE" },
+            };
             return (
               <motion.div
                 key={key}
@@ -39,16 +70,27 @@ export default function OperationsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="relative bg-brand-gray border border-white/5 hover:border-brand-red/30 transition-colors p-6 group"
+                className="relative bg-brand-gray border border-white/5 hover:border-brand-red/30 transition-colors p-6 group corner-brackets"
               >
                 <div className="absolute top-0 right-0 w-1 h-12 bg-gradient-to-b from-brand-red to-transparent group-hover:h-16 transition-all duration-300" />
+
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-[9px] font-mono text-brand-red/60 tracking-widest uppercase">
+                    MIS-{String(i + 1).padStart(3, "0")}
+                  </p>
+                  <span className="text-[9px] text-amber-400/70 tracking-widest font-bold">
+                    THREAT: {threat[key].label}
+                  </span>
+                </div>
 
                 <h3 className="text-base font-semibold text-white mb-2">
                   {missionData?.title}
                 </h3>
-                <p className="text-xs text-brand-text-muted leading-relaxed">
+                <p className="text-xs text-brand-text-muted leading-relaxed mb-3">
                   {missionData?.short_desc}
                 </p>
+
+                <ThreatLevel level={threat[key].level} />
               </motion.div>
             );
           })}
@@ -121,22 +163,22 @@ export default function OperationsPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
-              level: "Level 1",
+              level: "TIER 1",
+              clearance: "ALPHA",
               title: "Strategic Command",
-              desc: "Senior leadership & corporate strategy. Force allocation & contract oversight.",
-              color: "brand-red",
+              desc: "Senior leadership & corporate strategy. Force allocation, contract oversight, and cross-theater coordination.",
             },
             {
-              level: "Level 2",
+              level: "TIER 2",
+              clearance: "BRAVO",
               title: "Field Operations",
-              desc: "Mission planning & coordination. Real-time tactical oversight during deployment.",
-              color: "brand-red",
+              desc: "Mission planning & coordination. Real-time tactical oversight during deployment. Direct comms with Strategic Command.",
             },
             {
-              level: "Level 3",
+              level: "TIER 3",
+              clearance: "CHARLIE",
               title: "Operational Units",
-              desc: "Division leads & squad commanders. Direct execution & team management.",
-              color: "brand-red",
+              desc: "Division leads & squad commanders. Direct execution, team management, and after-action reporting.",
             },
           ].map((item, i) => (
             <motion.div
@@ -147,9 +189,12 @@ export default function OperationsPage() {
               transition={{ delay: i * 0.1, duration: 0.5 }}
               className="border-t-2 border-brand-red pt-6"
             >
-              <p className="text-xs text-brand-red/70 tracking-wider uppercase font-semibold mb-3">
-                {item.level}
-              </p>
+              <div className="flex items-center justify-between mb-3">
+                <p className="text-xs text-brand-red/70 tracking-wider uppercase font-semibold">
+                  {item.level}
+                </p>
+                <span className="text-[9px] font-mono text-brand-text-muted/50 tracking-widest">CLEARANCE: {item.clearance}</span>
+              </div>
               <h3 className="text-lg font-semibold text-white mb-2">
                 {item.title}
               </h3>
@@ -173,12 +218,12 @@ export default function OperationsPage() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
           {[
-            { label: "Current Status", value: "ACTIVE", highlight: true },
-            { label: "Response Time", value: "< 15 min", highlight: false },
-            { label: "Theater", value: "Stanton", highlight: false },
-            { label: "Units Ready", value: "18", highlight: true },
+            { label: "Force Status", value: "ACTIVE", highlight: true },
+            { label: "QRF Response", value: "< 15 min", highlight: false },
+            { label: "AO", value: "Stanton", highlight: false },
+            { label: "Combat Ready", value: "18", highlight: true },
             { label: "Active Ops", value: "3", highlight: false },
-            { label: "Mission Rate", value: "98%", highlight: true },
+            { label: "Mission Success", value: "98%", highlight: true },
           ].map((stat, i) => (
             <motion.div
               key={stat.label}

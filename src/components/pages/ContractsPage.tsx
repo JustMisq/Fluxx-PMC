@@ -88,20 +88,20 @@ export default function ContractsPage() {
       <Section>
         <div className="flex items-center justify-between mb-8">
           <div>
-            <SectionLabel label="Real-Time Status" />
+            <SectionLabel label="Force Readiness" />
             <h2 className="text-3xl lg:text-4xl font-bold text-white">
               Operational Readiness
             </h2>
           </div>
-          <StatusBadge label="SYSTEMS ACTIVE" variant="green" pulse />
+          <StatusBadge label="ALL SYSTEMS NOMINAL" variant="green" pulse />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { label: "Force Status", value: "ACTIVE", highlight: true },
+            { label: "Force Status", value: "DEPLOYED", highlight: true },
             { label: "Active Contracts", value: "3", highlight: true },
             { label: "Theater of Operations", value: "Stanton System", highlight: false },
-            { label: "Rapid Response", value: "< 15 min", highlight: false },
+            { label: "QRF Response", value: "< 15 min", highlight: false },
           ].map((stat, i) => (
             <motion.div
               key={stat.label}
@@ -133,29 +133,29 @@ export default function ContractsPage() {
       <Section className="bg-brand-red/5 border-y-2 border-brand-red/30">
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-6">
-            <StatusBadge label="PROTOCOL" variant="amber" />
-            <span className="text-[10px] text-brand-text-muted/50 tracking-wider">
-              FLUXX-CTR-REVIEW
+            <StatusBadge label="MANDATORY PROTOCOL" variant="amber" />
+            <span className="text-[10px] text-brand-text-muted/50 tracking-wider font-mono">
+              FLUXX-CTR-AUTH-001
             </span>
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Contract Validation Protocol
+            Contract Authorization Protocol
           </h2>
           <p className="text-brand-text-muted leading-relaxed mb-4">
-            All contract requests are processed through FLUXX Operations Command. No deployment is authorized without threat assessment validation and resource allocation approval.
+            All contract requests are processed through FLUXX Operations Command. No deployment is authorized without threat assessment validation, force allocation approval, and ROE confirmation. There are no exceptions to this protocol.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
             <div className="bg-brand-dark/50 border border-brand-red/20 p-4">
-              <p className="text-[9px] text-brand-red/70 tracking-[0.2em] uppercase font-bold mb-2">Condition 1</p>
-              <p className="text-xs text-brand-text-muted">Complete mission briefing required prior to deployment authorization</p>
+              <p className="text-[9px] text-brand-red/70 tracking-[0.2em] uppercase font-bold mb-2">Condition Alpha</p>
+              <p className="text-xs text-brand-text-muted">Complete mission briefing and threat assessment required prior to deployment authorization</p>
             </div>
             <div className="bg-brand-dark/50 border border-brand-red/20 p-4">
-              <p className="text-[9px] text-brand-red/70 tracking-[0.2em] uppercase font-bold mb-2">Condition 2</p>
-              <p className="text-xs text-brand-text-muted">Payment terms and ROE must be established before force commitment</p>
+              <p className="text-[9px] text-brand-red/70 tracking-[0.2em] uppercase font-bold mb-2">Condition Bravo</p>
+              <p className="text-xs text-brand-text-muted">Payment terms and rules of engagement must be formalized before any force commitment</p>
             </div>
             <div className="bg-brand-dark/50 border border-brand-red/20 p-4">
-              <p className="text-[9px] text-brand-red/70 tracking-[0.2em] uppercase font-bold mb-2">Condition 3</p>
-              <p className="text-xs text-brand-text-muted">Extraction is not guaranteed under extreme hostile conditions</p>
+              <p className="text-[9px] text-brand-red/70 tracking-[0.2em] uppercase font-bold mb-2">Condition Charlie</p>
+              <p className="text-xs text-brand-text-muted">Extraction cannot be guaranteed under extreme hostile conditions — client acknowledges risk</p>
             </div>
           </div>
         </div>
@@ -605,13 +605,13 @@ export default function ContractsPage() {
           className="relative z-10 text-center max-w-2xl mx-auto"
         >
           <p className="text-xs text-brand-red/70 tracking-[0.2em] uppercase font-semibold mb-4">
-            Ready to Deploy
+            Request Deployment
           </p>
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
             Submit Operational Request
           </h2>
           <p className="text-lg text-brand-text-muted mb-8 leading-relaxed">
-            Send your mission parameters and our command staff will evaluate and deploy the appropriate units.
+            Provide your mission parameters. FLUXX Operations Command will assess, plan, and deploy the appropriate force package.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -619,7 +619,7 @@ export default function ContractsPage() {
             onClick={() => document.getElementById("contract-form")?.scrollIntoView({ behavior: "smooth" })}
             className="inline-flex items-center justify-center px-12 py-4 text-sm font-semibold tracking-[0.2em] uppercase bg-brand-red text-white border border-brand-red hover:bg-transparent hover:text-brand-red transition-all duration-300"
           >
-            Submit Request
+            Request Deployment →
           </motion.button>
         </motion.div>
       </Section>
@@ -649,10 +649,10 @@ export default function ContractsPage() {
 
                 <div className="border-t border-white/10 pt-6">
                   <p className="text-xs text-brand-red/70 tracking-[0.15em] uppercase font-medium mb-4">
-                    Join the Community
+                    Secure Communication Channel
                   </p>
                   <p className="text-brand-text-muted text-sm leading-relaxed mb-6">
-                    The fastest way to stay updated on your contract and coordinate with FLUXX command is through our Discord server. Join now to get real-time updates, direct communication with our operators, and mission briefings.
+                    The fastest way to track your contract status and coordinate with FLUXX command is through our secure Discord channel. Access now for real-time updates, encrypted communication with operators, and mission briefings.
                   </p>
                   <a
                     href={EXTERNAL_LINKS.discord}
@@ -660,7 +660,7 @@ export default function ContractsPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-8 py-3 text-xs font-semibold tracking-[0.2em] uppercase bg-brand-red text-white border border-brand-red hover:bg-brand-red-light hover:border-brand-red-light transition-all duration-300"
                   >
-                  Join Discord Server
+                  Access Command Channel →
                 </a>
                 </div>
               </div>
