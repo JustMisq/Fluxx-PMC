@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import AboutPage from "@/components/pages/AboutPage";
 
 export const metadata: Metadata = {
-  title: "About FLUXX PMC — Forged in the Void",
+  title: "Organization Dossier — Forged in the Void",
   description:
-    "Learn about FLUXX PMC's mission, values, and operational doctrine. Professional military excellence across the Stanton system.",
+    "FLUXX PMC organization profile: mission, core values, operational doctrine, command structure, and history. Combat-verified private military corporation in the Stanton system.",
   openGraph: {
-    title: "About FLUXX PMC",
-    description: "Our mission, values, and operational doctrine",
+    title: "About FLUXX PMC — Forged in the Void",
+    description: "Our mission, doctrine, and combat-verified track record",
     url: "https://fluxxpmc.com/about",
     type: "website",
   },

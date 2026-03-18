@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import OperationsPage from "@/components/pages/OperationsPage";
 
 export const metadata: Metadata = {
-  title: "Operations | FLUXX PMC",
+  title: "Operations Center — Mission Profiles & Doctrine",
   description:
-    "Explore FLUXX PMC's operational capabilities. Security operations, combat deployments, reconnaissance missions, and escort operations.",
+    "FLUXX PMC operational capabilities: security operations, combat deployments, ISR missions, and armed escort formations. Doctrine-driven execution with real-time command oversight.",
   openGraph: {
-    title: "Operations",
-    description: "Our operational capabilities and mission types",
+    title: "FLUXX PMC Operations Center",
+    description: "Mission profiles, deployment pipeline, and operational status",
     url: "https://fluxxpmc.com/operations",
     type: "website",
   },

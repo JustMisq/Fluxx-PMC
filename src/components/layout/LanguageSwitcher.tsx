@@ -1,27 +1,43 @@
 "use client";
 
-import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
+import { useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { setLocale } from "@/i18n/actions";
+
+const languages = [
+  { code: "en", label: "English", flag: "🇬🇧" },
+  { code: "fr", label: "Français", flag: "🇫🇷" },
+  { code: "es", label: "Español", flag: "🇪🇸" },
+] as const;
 
 export default function LanguageSwitcher() {
   const t = useTranslations("nav");
+  const locale = useLocale();
+  const router = useRouter();
+  const [isPending, startTransition] = useTransition();
   const [isOpen, setIsOpen] = useState(false);
 
-  // Currently only English is supported
-  // To add more languages, extend this and configure next-intl routing
-  const languages = [
-    { code: "en", label: "English", flag: "🇬🇧" },
-    // Future: { code: "fr", label: "Français", flag: "🇫🇷" },
-  ] as const;
+  const currentLang = languages.find((l) => l.code === locale) ?? languages[0];
 
-  const currentLang = languages[0]; // Always English for now
+  function handleChange(code: string) {
+    setIsOpen(false);
+    startTransition(async () => {
+      await setLocale(code);
+      router.refresh();
+    });
+  }
 
   return (
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-xs font-medium tracking-[0.15em] uppercase text-brand-text-muted hover:text-brand-red transition-colors"
+        className={`flex items-center gap-2 px-3 py-2 text-xs font-medium tracking-[0.15em] uppercase transition-colors ${
+          isPending
+            ? "text-brand-red animate-pulse"
+            : "text-brand-text-muted hover:text-brand-red"
+        }`}
         aria-label={t("language")}
       >
         <span>{currentLang.flag}</span>
@@ -40,12 +56,12 @@ export default function LanguageSwitcher() {
             {languages.map((lang) => (
               <button
                 key={lang.code}
-                onClick={() => {
-                  // Currently a no-op since only English is available
-                  // Future: router.push(`/${lang.code}${pathname}`)
-                  setIsOpen(false);
-                }}
-                className="w-full text-left px-4 py-2 text-sm text-brand-text-muted hover:text-white hover:bg-brand-red/10 transition-colors flex items-center gap-2"
+                onClick={() => handleChange(lang.code)}
+                className={`w-full text-left px-4 py-2 text-sm transition-colors flex items-center gap-2 ${
+                  lang.code === locale
+                    ? "text-brand-red bg-brand-red/5"
+                    : "text-brand-text-muted hover:text-white hover:bg-brand-red/10"
+                }`}
               >
                 <span>{lang.flag}</span>
                 <span>{lang.label}</span>
